@@ -4,7 +4,7 @@
   app.directive('header', function() {
     return {
       restrict: 'E',
-      templateUrl: 'header.html'
+      templateUrl: '/snippets/header.html'
     };
   });
 })()
