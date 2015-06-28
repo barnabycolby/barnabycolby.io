@@ -1,9 +1,17 @@
 {
-  "name" : "barnabycolby.io",
-  "version" : "0.0.1",
-  "description" : "The source code, testing and build automation for the barnabycolby.io website.",
-  "repository" : {
-    "type" : "git",
-    "url"  : "https://github.com/barneycolby/barnabycolby.io.git"
+  "name": "barnabycolby.io",
+  "version": "0.0.1",
+  "description": "The source code, testing and build automation for the barnabycolby.io website.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barneycolby/barnabycolby.io.git"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-karma": "*",
+    "karma": "*",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*",
+    "phantomjs": "*"
   }
 }
