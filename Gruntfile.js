@@ -26,5 +26,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-karma');
 
   grunt.registerTask('test', ['karma:development']);
+  grunt.registerTask('default', ['test']);
 
 }
