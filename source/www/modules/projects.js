@@ -14,4 +14,4 @@
       controllerAs: 'projectsController'
     };
   }]);
-})()
+})();

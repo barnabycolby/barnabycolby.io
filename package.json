@@ -12,6 +12,7 @@
     "karma": "*",
     "karma-jasmine": "*",
     "karma-phantomjs-launcher": "*",
-    "phantomjs": "*"
+    "phantomjs": "*",
+    "grunt-contrib-jshint": "*"
   }
 }

@@ -2,7 +2,7 @@ module.exports = function (grunt) {
   
   grunt.initConfig({
 
-    karma: {
+    'karma': {
       options: {
         frameworks: ['jasmine'],
         exclues: ['**/*.swp'],
@@ -21,11 +21,20 @@ module.exports = function (grunt) {
       }
     },
 
+    'jshint': {
+      all: ['Gruntfile.js', 'source/www/modules/**/*.js']
+    }
+
   });
 
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('test', ['karma:development']);
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('lint', ['jshint']);
+  grunt.registerTask('default', [
+    'test',
+    'lint'
+  ]);
 
-}
+};
