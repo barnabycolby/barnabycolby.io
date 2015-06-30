@@ -2,7 +2,7 @@ module.exports = function (grunt) {
   
   grunt.initConfig({
 
-    'karma': {
+    karma: {
       options: {
         frameworks: ['jasmine'],
         exclues: ['**/*.swp'],
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
       }
     },
 
-    'jshint': {
+    jshint: {
       all: ['Gruntfile.js', 'source/www/modules/**/*.js']
     }
 
