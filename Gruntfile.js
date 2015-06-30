@@ -22,7 +22,8 @@ module.exports = function (grunt) {
     },
 
     jshint: {
-      all: ['Gruntfile.js', 'source/www/modules/**/*.js']
+      gruntfile: ['Gruntfile.js'],
+      source: ['source/www/modules/**/*.js']
     }
 
   });
@@ -33,8 +34,9 @@ module.exports = function (grunt) {
   grunt.registerTask('test', ['karma:development']);
   grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('default', [
+    'lint:gruntfile',
     'test',
-    'lint'
+    'lint:source'
   ]);
 
 };
