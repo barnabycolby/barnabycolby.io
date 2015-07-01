@@ -13,6 +13,12 @@
     "karma-jasmine": "*",
     "karma-phantomjs-launcher": "*",
     "phantomjs": "*",
-    "grunt-contrib-jshint": "*"
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-uglify": "*"
+  },
+  "scripts": {
+    "postinstall": "bower install" 
   }
 }

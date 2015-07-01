@@ -14,9 +14,22 @@ module.exports = function (grunt) {
         browsers: ['PhantomJS'],
         singleRun: true
       },
-      development: {
+      source: {
         options: {
-          files: ['test/**/*.spec.js']
+          files: [
+            'bower_components/angular/angular.min.js',
+            'source/**/*.js',
+            'test/**/*.spec.js'
+          ]
+        }
+      },
+      production: {
+        options: {
+          files: [
+            'bower_components/angular/angular.min.js',
+            'production/**/*.js',
+            'test/**/*.spec.js'
+          ]
         }
       }
     },
@@ -24,19 +37,44 @@ module.exports = function (grunt) {
     jshint: {
       gruntfile: ['Gruntfile.js'],
       source: ['source/www/modules/**/*.js']
+    },
+
+    clean: ['production'],
+
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'source',
+        src: ['**/*', '!**/*.js'],
+        dest: 'production/',
+      }
+    },
+
+    uglify: {
+      main: {
+        expand: true,
+        cwd: 'source/',
+        src: '**/*.js',
+        dest: 'production/'
+      }
     }
 
   });
 
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('test', ['karma:development']);
-  grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('default', [
-    'lint:gruntfile',
-    'test',
-    'lint:source'
+    'jshint:gruntfile',
+    'karma:source',
+    'jshint:source',
+    'clean',
+    'copy',
+    'uglify',
+    'karma:production'
   ]);
 
 };
