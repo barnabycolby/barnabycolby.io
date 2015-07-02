@@ -13,6 +13,7 @@
     "karma-jasmine": "*",
     "karma-phantomjs-launcher": "*",
     "phantomjs": "*",
+    "karma-ng-html2js-preprocessor": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-copy": "*",
