@@ -18,6 +18,7 @@ module.exports = function (grunt) {
         options: {
           files: [
             'bower_components/angular/angular.min.js',
+            'bower_components/angular-mocks/angular-mocks.js',
             'source/**/*.js',
             'test/**/*.spec.js'
           ]
@@ -27,6 +28,7 @@ module.exports = function (grunt) {
         options: {
           files: [
             'bower_components/angular/angular.min.js',
+            'bower_components/angular-mocks/angular-mocks.js',
             'production/**/*.js',
             'test/**/*.spec.js'
           ]
@@ -77,6 +79,11 @@ module.exports = function (grunt) {
     'copy',
     'uglify',
     'karma:production'
+  ]);
+
+  grunt.registerTask('test', [
+    'jshint:test',
+    'karma:source'
   ]);
 
 };
