@@ -36,7 +36,8 @@ module.exports = function (grunt) {
 
     jshint: {
       gruntfile: ['Gruntfile.js'],
-      source: ['source/www/modules/**/*.js']
+      source: ['source/www/modules/**/*.js'],
+      test: ['test/**/*.spec.js']
     },
 
     clean: ['production'],
@@ -69,6 +70,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'jshint:gruntfile',
+    'jshint:test',
     'karma:source',
     'jshint:source',
     'clean',
