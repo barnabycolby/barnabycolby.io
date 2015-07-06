@@ -1,4 +1,6 @@
 (function () {
+  "use strict";
+
   var app = angular.module('projects', ['header']);
 
   app.directive('projects', ['$http', function($http) {

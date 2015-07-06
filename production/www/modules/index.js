@@ -1,1 +1,1 @@
-!function(){angular.module("index",["header"])}();
+!function(){"use strict";angular.module("index",["header"])}();

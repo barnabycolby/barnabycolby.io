@@ -1,4 +1,6 @@
 (function() {
+  "use strict";
+
   var app = angular.module('header', []);
 
   app.directive('header', function() {
