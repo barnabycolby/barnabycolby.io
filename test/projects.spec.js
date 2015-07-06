@@ -25,6 +25,16 @@ describe('The projects element directive', function () {
     expect(element.find('h3').length).toBe(0);
   });
 
+  it('does not expand to anything when projects.json contains an empty array', function () {
+    $httpBackend.whenGET('/data/projects.json').respond(200, '[]');
+
+    var element = $compile("<projects></projects>")($rootScope);
+    $rootScope.$digest();
+    $httpBackend.flush();
+
+    expect(element.find('h3').length).toBe(0);
+  });
+
   it('creates a h3 element for each object in the array with the correct text', function () {
     $httpBackend.whenGET('/data/projects.json').respond(200, '[{"name":"Website"},{"name":"Backup Server"},{"name":"VPN Server"}]');
 
