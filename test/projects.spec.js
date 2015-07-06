@@ -13,10 +13,6 @@ describe('The projects element directive', function () {
     $compile = $injector.get('$compile');
     $rootScope = $injector.get('$rootScope');
     $httpBackend = $injector.get('$httpBackend');
-
-    // As we are using the mock http service we must tell it to pass
-    // through requests for the projects.html snippet
-    $httpBackend.expectGET('/snippets/projects.html');
   }));
 
   it('does not expand to anything when projects.json is empty', function () {
@@ -24,6 +20,7 @@ describe('The projects element directive', function () {
 
     var element = $compile("<projects></projects>")($rootScope);
     $rootScope.$digest();
+    $httpBackend.flush();
 
     expect(element.find('h3').length).toBe(0);
   });
