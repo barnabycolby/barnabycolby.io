@@ -1,23 +1,36 @@
-describe('The header element directive', function () {
-  var $compile, $rootScope;
+/*global
+    describe, beforeEach, module, inject, it, expect
+*/
 
-  // Load the header module, which contains the header directive
-  beforeEach(module('header'));
+(function () {
+    'use strict';
+    describe('The header element directive', function () {
+        var $compile, $rootScope;
 
-  // Load the templates
-  beforeEach(module('/snippets/header.html'));
+        // Load the header module, which contains the header directive
+        beforeEach(module('header'));
 
-  // Store references to $rootScope and $compile
-  // so they are available in all tests in this describe block
-  beforeEach(inject(function (_$compile_, _$rootScope_) {
-    $compile = _$compile_;
-    $rootScope = _$rootScope_;
-  }));
+        // Load the templates
+        beforeEach(module('/snippets/header.html'));
 
-  it('contains my name as a link to the homepage', function () {
-    var element = $compile("<header></header>")($rootScope);
-    $rootScope.$digest();
+        // Store references to $rootScope and $compile
+        // so they are available in all tests in this describe block
+        /*jslint nomen: true*/
+        beforeEach(inject(function (_$compile_, _$rootScope_) {
+            $compile = _$compile_;
+            $rootScope = _$rootScope_;
+        }));
+        /*jslint nomen: false*/
 
-    expect(element.html()).toContain("<a href=\"/\">Barnaby Colby</a>");
-  });
-});
+        it('contains my name as a link to the homepage', function () {
+            var element, nameAsHomepageLinkMatches;
+
+            element = $compile("<header></header>")($rootScope);
+            $rootScope.$digest();
+
+            nameAsHomepageLinkMatches = element.find('a[href="/"]:contains("Barnaby Colby")');
+
+            expect(nameAsHomepageLinkMatches.length).toBeGreaterThan(0);
+        });
+    });
+}());

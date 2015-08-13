@@ -1,5 +1,6 @@
+/*global angular */
 (function () {
-  "use strict";
+    "use strict";
 
-  var app = angular.module('index', ['header']);
-})();
+    angular.module('index', ['header']);
+}());

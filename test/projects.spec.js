@@ -1,51 +1,59 @@
-describe('The projects element directive', function () {
-  var $compile, $rootScope, $httpBackend;
+/*global
+    describe, beforeEach, module, inject, it, expect
+*/
 
-  // Load the project module, which contains the projects directive
-  beforeEach(module('projects'));
+(function () {
+    'use strict';
+    describe('The projects element directive', function () {
+        var $compile, $rootScope, $httpBackend;
 
-  // Load the templates
-  beforeEach(module('/snippets/projects.html'));
+        // Load the project module, which contains the projects directive
+        beforeEach(module('projects'));
 
-  // Store references to $rootScope and $compile
-  // so they are available in all tests in this describe block
-  beforeEach(inject(function ($injector) {
-    $compile = $injector.get('$compile');
-    $rootScope = $injector.get('$rootScope');
-    $httpBackend = $injector.get('$httpBackend');
-  }));
+        // Load the templates
+        beforeEach(module('/snippets/projects.html'));
 
-  it('does not expand to anything when projects.json is empty', function () {
-    $httpBackend.whenGET('/data/projects.json').respond(200, '');
+        // Store references to $rootScope and $compile
+        // so they are available in all tests in this describe block
+        beforeEach(inject(function ($injector) {
+            $compile = $injector.get('$compile');
+            $rootScope = $injector.get('$rootScope');
+            $httpBackend = $injector.get('$httpBackend');
+        }));
 
-    var element = $compile("<projects></projects>")($rootScope);
-    $rootScope.$digest();
-    $httpBackend.flush();
+        it('does not expand to anything when projects.json is empty', function () {
+            $httpBackend.whenGET('/data/projects.json').respond(200, '');
 
-    expect(element.find('h3').length).toBe(0);
-  });
+            var element = $compile("<projects></projects>")($rootScope);
+            $rootScope.$digest();
+            $httpBackend.flush();
 
-  it('does not expand to anything when projects.json contains an empty array', function () {
-    $httpBackend.whenGET('/data/projects.json').respond(200, '[]');
+            expect(element.find('h3').length).toBe(0);
+        });
 
-    var element = $compile("<projects></projects>")($rootScope);
-    $rootScope.$digest();
-    $httpBackend.flush();
+        it('does not expand to anything when projects.json contains an empty array', function () {
+            $httpBackend.whenGET('/data/projects.json').respond(200, '[]');
 
-    expect(element.find('h3').length).toBe(0);
-  });
+            var element = $compile("<projects></projects>")($rootScope);
+            $rootScope.$digest();
+            $httpBackend.flush();
 
-  it('creates a h3 element for each object in the array with the correct text', function () {
-    $httpBackend.whenGET('/data/projects.json').respond(200, '[{"name":"Website"},{"name":"Backup Server"},{"name":"VPN Server"}]');
+            expect(element.find('h3').length).toBe(0);
+        });
 
-    var element = $compile("<projects></projects>")($rootScope);
-    $rootScope.$digest();
-    $httpBackend.flush();
+        it('creates a h3 element for each object in the array with the correct text', function () {
+            var element, h3s;
+            $httpBackend.whenGET('/data/projects.json').respond(200, '[{"name":"Website"},{"name":"Backup Server"},{"name":"VPN Server"}]');
 
-    var h3s = element.find('h3');
-    expect(h3s.length).toBe(3);
-    expect(h3s.eq(0).text()).toBe('Website');
-    expect(h3s.eq(1).text()).toBe('Backup Server');
-    expect(h3s.eq(2).text()).toBe('VPN Server');
-  });
-});
+            element = $compile("<projects></projects>")($rootScope);
+            $rootScope.$digest();
+            $httpBackend.flush();
+
+            h3s = element.find('h3');
+            expect(h3s.length).toBe(3);
+            expect(h3s.eq(0).text()).toBe('Website');
+            expect(h3s.eq(1).text()).toBe('Backup Server');
+            expect(h3s.eq(2).text()).toBe('VPN Server');
+        });
+    });
+}());

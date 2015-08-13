@@ -1,12 +1,13 @@
-(function() {
-  "use strict";
+/*global angular */
+(function () {
+    "use strict";
 
-  var app = angular.module('header', []);
+    var app = angular.module('header', []);
 
-  app.directive('header', function() {
-    return {
-      restrict: 'E',
-      templateUrl: '/snippets/header.html'
-    };
-  });
-})();
+    app.directive('header', function () {
+        return {
+            restrict: 'E',
+            templateUrl: '/snippets/header.html'
+        };
+    });
+}());

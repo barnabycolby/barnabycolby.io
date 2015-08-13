@@ -1,109 +1,114 @@
-module.exports = function (grunt) {
-  
-  grunt.initConfig({
+/*global module */
+(function () {
+    'use strict';
 
-    karma: {
-      options: {
-        frameworks: ['jasmine'],
-        exclues: ['**/*.swp'],
-        reporters: ['progress'],
-        port: 9876,
-        colors: true,
-        logLevel: 'INFO',
-        autoWatch: false,
-        browsers: ['PhantomJS'],
-        singleRun: true,
-        plugins: [
-          'karma-jasmine',
-          'karma-phantomjs-launcher',
-          'karma-ng-html2js-preprocessor'
-        ]
-      },
-      source: {
-        options: {
-          preprocessors: {
-            'source/www/snippets/**/*.html': ['ng-html2js']
-          },
-          files: [
-            'bower_components/jquery/dist/jquery.min.js',
-            'bower_components/angular/angular.min.js',
-            'bower_components/angular-mocks/angular-mocks.js',
-            'source/www/modules/**/*.js',
-            'source/www/snippets/**/*.html',
-            'test/**/*.spec.js'
-          ],
-          ngHtml2JsPreprocessor: {
-            stripPrefix: 'source/www'
-          }
-        }
-      },
-      production: {
-        options: {
-          preprocessors: {
-            'production/www/snippets/**/*.html': ['ng-html2js']
-          },
-          files: [
-            'bower_components/angular/angular.min.js',
-            'bower_components/angular-mocks/angular-mocks.js',
-            'production/www/modules/**/*.js',
-            'production/www/snippets/**/*.html',
-            'test/**/*.spec.js'
-          ],
-          ngHtml2JsPreprocessor: {
-            stripPrefix: 'production/www'
-          }
-        }
-      }
-    },
+    module.exports = function (grunt) {
 
-    jslint: {
-      gruntfile: ['Gruntfile.js'],
-      source: ['source/www/modules/**/*.js'],
-      test: ['test/**/*.spec.js']
-    },
+        grunt.initConfig({
 
-    clean: ['production'],
+            karma: {
+                options: {
+                    frameworks: ['jasmine'],
+                    exclues: ['**/*.swp'],
+                    reporters: ['progress'],
+                    port: 9876,
+                    colors: true,
+                    logLevel: 'INFO',
+                    autoWatch: false,
+                    browsers: ['PhantomJS'],
+                    singleRun: true,
+                    plugins: [
+                        'karma-jasmine',
+                        'karma-phantomjs-launcher',
+                        'karma-ng-html2js-preprocessor'
+                    ]
+                },
+                source: {
+                    options: {
+                        preprocessors: {
+                            'source/www/snippets/**/*.html': ['ng-html2js']
+                        },
+                        files: [
+                            'bower_components/jquery/dist/jquery.min.js',
+                            'bower_components/angular/angular.min.js',
+                            'bower_components/angular-mocks/angular-mocks.js',
+                            'source/www/modules/**/*.js',
+                            'source/www/snippets/**/*.html',
+                            'test/**/*.spec.js'
+                        ],
+                        ngHtml2JsPreprocessor: {
+                            stripPrefix: 'source/www'
+                        }
+                    }
+                },
+                production: {
+                    options: {
+                        preprocessors: {
+                            'production/www/snippets/**/*.html': ['ng-html2js']
+                        },
+                        files: [
+                            'bower_components/angular/angular.min.js',
+                            'bower_components/angular-mocks/angular-mocks.js',
+                            'production/www/modules/**/*.js',
+                            'production/www/snippets/**/*.html',
+                            'test/**/*.spec.js'
+                        ],
+                        ngHtml2JsPreprocessor: {
+                            stripPrefix: 'production/www'
+                        }
+                    }
+                }
+            },
 
-    copy: {
-      main: {
-        expand: true,
-        cwd: 'source',
-        src: ['**/*', '!**/*.js'],
-        dest: 'production/',
-      }
-    },
+            jslint: {
+                gruntfile: ['Gruntfile.js'],
+                source: ['source/www/modules/**/*.js'],
+                test: ['test/**/*.spec.js']
+            },
 
-    uglify: {
-      main: {
-        expand: true,
-        cwd: 'source/',
-        src: '**/*.js',
-        dest: 'production/'
-      }
-    }
+            clean: ['production'],
 
-  });
+            copy: {
+                main: {
+                    expand: true,
+                    cwd: 'source',
+                    src: ['**/*', '!**/*.js'],
+                    dest: 'production/'
+                }
+            },
 
-  grunt.loadNpmTasks('grunt-karma');
-  grunt.loadNpmTasks('grunt-jslint');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+            uglify: {
+                main: {
+                    expand: true,
+                    cwd: 'source/',
+                    src: '**/*.js',
+                    dest: 'production/'
+                }
+            }
 
-  grunt.registerTask('default', [
-    'jslint:gruntfile',
-    'jslint:test',
-    'karma:source',
-    'jslint:source',
-    'clean',
-    'copy',
-    'uglify',
-    'karma:production'
-  ]);
+        });
 
-  grunt.registerTask('test', [
-    'jslint:test',
-    'karma:source'
-  ]);
+        grunt.loadNpmTasks('grunt-karma');
+        grunt.loadNpmTasks('grunt-jslint');
+        grunt.loadNpmTasks('grunt-contrib-clean');
+        grunt.loadNpmTasks('grunt-contrib-copy');
+        grunt.loadNpmTasks('grunt-contrib-uglify');
 
-};
+        grunt.registerTask('default', [
+            'jslint:gruntfile',
+            'jslint:test',
+            'karma:source',
+            'jslint:source',
+            'clean',
+            'copy',
+            'uglify',
+            'karma:production'
+        ]);
+
+        grunt.registerTask('test', [
+            'jslint:test',
+            'karma:source'
+        ]);
+
+    };
+}());
