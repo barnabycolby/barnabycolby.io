@@ -47,6 +47,7 @@
                             'production/www/snippets/**/*.html': ['ng-html2js']
                         },
                         files: [
+                            'bower_components/jquery/dist/jquery.min.js',
                             'bower_components/angular/angular.min.js',
                             'bower_components/angular-mocks/angular-mocks.js',
                             'production/www/modules/**/*.js',
