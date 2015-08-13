@@ -22,13 +22,15 @@
         }));
         /*jslint nomen: false*/
 
-        it('contains my email address', function () {
-            var element;
+        it('contains a link to my email address', function () {
+            var element, mailToLinkMatches;
 
             element = $compile("<footer></footer>")($rootScope);
             $rootScope.$digest();
 
-            expect(element.text()).toContain("barneycolby@gmail.com");
+            mailToLinkMatches = element.find('a[href="mailto:barneycolby@gmail.com"]');
+
+            expect(mailToLinkMatches.length).toBeGreaterThan(0);
         });
     });
 }());
