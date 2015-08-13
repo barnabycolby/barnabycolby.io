@@ -2,5 +2,5 @@
 (function () {
     "use strict";
 
-    angular.module('index', ['header']);
+    angular.module('index', ['header', 'footer']);
 }());
