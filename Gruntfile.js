@@ -106,14 +106,18 @@
             'karma:production'
         ]);
 
+        grunt.registerTask('movetoprod', [
+            'clean',
+            'copy',
+            'uglify'
+        ]);
+
         grunt.registerTask('testsource', [
             'karma:source'
         ]);
 
         grunt.registerTask('testprod', [
-            'clean',
-            'copy',
-            'uglify',
+            'movetoprod',
             'karma:production'
         ]);
 
