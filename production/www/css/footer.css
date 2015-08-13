@@ -1,7 +1,22 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 90px;
+}
+
 #footer {
     position: absolute;
-    height: 60px;
+    height: 90px;
     bottom: 0;
     width: 100%;
     background-color: #F8F8F8;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#copyright {
+    margin-top: 5px;
 }
