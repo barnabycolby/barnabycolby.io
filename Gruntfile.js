@@ -105,9 +105,20 @@
             'karma:production'
         ]);
 
-        grunt.registerTask('test', [
-            'jslint:test',
+        grunt.registerTask('testsource', [
             'karma:source'
+        ]);
+
+        grunt.registerTask('testprod', [
+            'clean',
+            'copy',
+            'uglify',
+            'karma:production'
+        ]);
+
+        grunt.registerTask('test', [
+            'testsource',
+            'testprod'
         ]);
 
     };
