@@ -2,7 +2,7 @@
 (function () {
     "use strict";
 
-    var app = angular.module('projects', ['header']);
+    var app = angular.module('projects', ['header', 'footer']);
 
     app.directive('projects', ['$http', function ($http) {
         return {
