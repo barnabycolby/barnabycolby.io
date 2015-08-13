@@ -15,7 +15,7 @@
     "phantomjs": "*",
     "karma-ng-html2js-preprocessor": "*",
     "grunt-contrib-clean": "*",
-    "grunt-contrib-jshint": "*",
+    "grunt-jslint": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-uglify": "*"
   },

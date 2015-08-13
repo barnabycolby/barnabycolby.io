@@ -56,7 +56,7 @@ module.exports = function (grunt) {
       }
     },
 
-    jshint: {
+    jslint: {
       gruntfile: ['Gruntfile.js'],
       source: ['source/www/modules/**/*.js'],
       test: ['test/**/*.spec.js']
@@ -85,16 +85,16 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-karma');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-jslint');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask('default', [
-    'jshint:gruntfile',
-    'jshint:test',
+    'jslint:gruntfile',
+    'jslint:test',
     'karma:source',
-    'jshint:source',
+    'jslint:source',
     'clean',
     'copy',
     'uglify',
@@ -102,7 +102,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('test', [
-    'jshint:test',
+    'jslint:test',
     'karma:source'
   ]);
 
