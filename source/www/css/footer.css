@@ -26,3 +26,15 @@ body {
         display: none;
     }
 }
+
+/* The focus state of bootstrap buttons looks identical to the hover state
+ * This is confusing from a UX standpoint, so I am going to prevent any colour change
+ * The dotted focus outline should be enough */
+#footer .btn-default:focus, #footer .btn-default.focus {
+    background-color: #fff;
+}
+/* We must also override the hover colour, otherwise a button with focus and hover
+ * would still be styled by the rule above */
+#footer .btn-default:hover {
+    background-color: #e6e6e6;
+}
