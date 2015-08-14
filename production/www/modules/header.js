@@ -1,1 +1,1 @@
-!function(){"use strict";var a=angular.module("header",[]);a.directive("header",function(){return{restrict:"E",templateUrl:"/snippets/header.html"}})}();
+!function(){"use strict";var a=angular.module("header",[]);a.config(["$locationProvider",function(a){a.html5Mode(!0)}]),a.directive("header",function(){return{restrict:"E",templateUrl:"/snippets/header.html"}}),a.controller("NavigationLinkController",["$scope","$location",function(a,b){a.isActive=function(a){return a===b.path()}}])}();

@@ -5,9 +5,9 @@
         </div>
 
         <!-- Navigation links -->
-        <nav class="headernav" role="navigation">
+        <nav ng-controller="NavigationLinkController" class="headernav" role="navigation">
             <ul class="nav navbar-nav">
-              <li><a href="/projects.html">Projects</a></li>
+                <li ng-class="{ active: isActive('/projects.html') }"><a href="/projects.html">Projects</a></li>
             </ul>
         </nav>
 
