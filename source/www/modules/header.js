@@ -6,7 +6,11 @@
 
     // We must configure the location provider before it can be used
     app.config(['$locationProvider', function ($locationProvider) {
-        $locationProvider.html5Mode(true);
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: true,
+            rewriteLinks: false
+        });
     }]);
 
     app.directive('header', function () {
