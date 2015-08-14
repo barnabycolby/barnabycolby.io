@@ -1,4 +1,4 @@
-/*global module */
+/*global module, require */
 (function () {
     'use strict';
 
@@ -85,6 +85,22 @@
                     src: '**/*.js',
                     dest: 'production/'
                 }
+            },
+
+            postcss: {
+                options: {
+                    map: {
+                        inline: false,
+                        annotation: 'production/www/css/maps'
+                    },
+                    processors: [
+                        require('autoprefixer-core')({browsers: '> 5%'}),
+                        require('cssnano')()
+                    ]
+                },
+                production: {
+                    src: 'production/www/css/*.css'
+                }
             }
 
         });
@@ -94,6 +110,7 @@
         grunt.loadNpmTasks('grunt-contrib-clean');
         grunt.loadNpmTasks('grunt-contrib-copy');
         grunt.loadNpmTasks('grunt-contrib-uglify');
+        grunt.loadNpmTasks('grunt-postcss');
 
         grunt.registerTask('default', [
             'jslint:gruntfile',
@@ -103,13 +120,15 @@
             'clean',
             'copy',
             'uglify',
+            'postcss:production',
             'karma:production'
         ]);
 
         grunt.registerTask('movetoprod', [
             'clean',
             'copy',
-            'uglify'
+            'uglify',
+            'postcss:production'
         ]);
 
         grunt.registerTask('testsource', [

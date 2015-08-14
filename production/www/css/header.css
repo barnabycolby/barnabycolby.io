@@ -1,16 +1,2 @@
-@media (max-width: 767px) {
-    /* Center the brand */
-    #header .navbar-header {
-        text-align: center;
-        margin-top: 10px;
-    }
-    #header .navbar-header .navbar-brand {
-        float: none;
-    }
-
-    /* Center the navigation links */
-    #header .headernav ul {
-        display: flex;
-        justify-content: space-between;
-    }
-}
+@media (max-width:767px){#header .navbar-header{text-align:center;margin-top:10px}#header .navbar-header .navbar-brand{float:none}#header .headernav ul{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}}
+/*# sourceMappingURL=maps/header.css.map */
