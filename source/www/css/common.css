@@ -1,0 +1,4 @@
+/* Override bootstrap bottom margin on alerts */
+#noscriptalert {
+    margin-bottom: 0;
+}
