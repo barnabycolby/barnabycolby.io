@@ -90,6 +90,7 @@
             less: {
                 source: {
                     options: {
+                        paths: ['.'],
                         plugins: [
                             new (require('less-plugin-autoprefix'))({browsers: '> 5%'}),
                             new (require('less-plugin-clean-css'))()

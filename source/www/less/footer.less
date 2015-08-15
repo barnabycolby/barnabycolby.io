@@ -1,3 +1,5 @@
+@import "bower_components/bootstrap/less/variables.less";
+
 html {
     position: relative;
     min-height: 100%;
@@ -13,7 +15,7 @@ body {
     height: 90px;
     bottom: 0;
     width: 100%;
-    background-color: #F8F8F8;
+    background-color: @navbar-default-bg;
     padding-top: 15px;
     padding-bottom: 15px;
 
@@ -30,11 +32,11 @@ body {
     // This is confusing from a UX standpoint, so I am going to prevent any colour change
     // The dotted focus outline should be enough
     .btn-default:focus, .btn-default.focus {
-        background-color: #fff;
+        background-color: @btn-default-bg;
     }
     // We must also override the hover colour, otherwise a button with focus and hover
     // would still be styled by the rule above
     .btn-default:hover {
-        background-color: #e6e6e6;
+        background-color: darken(@btn-default-bg, 10%);
     }
 }
