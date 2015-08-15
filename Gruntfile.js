@@ -96,7 +96,7 @@
                         ]
                     },
                     files: {
-                        'production/www/css/stylesheet.css': 'source/www/less/*.less'
+                        'production/www/css/stylesheet.css': 'source/www/less/stylesheet.less'
                     }
                 }
             }
