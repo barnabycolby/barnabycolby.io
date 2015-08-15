@@ -1,1 +1,0 @@
-!function(){"use strict";var a=angular.module("footer",[]);a.directive("footer",function(){return{restrict:"E",templateUrl:"/snippets/footer.html"}})}();

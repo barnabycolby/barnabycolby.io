@@ -2,6 +2,8 @@
 (function () {
     'use strict';
 
+    var productionModulesJSLocation = 'production/www/js/modules.js';
+
     module.exports = function (grunt) {
 
         grunt.initConfig({
@@ -50,7 +52,7 @@
                             'bower_components/jquery/dist/jquery.min.js',
                             'bower_components/angular/angular.min.js',
                             'bower_components/angular-mocks/angular-mocks.js',
-                            'production/www/modules/**/*.js',
+                            productionModulesJSLocation,
                             'production/www/snippets/**/*.html',
                             'test/**/*.spec.js'
                         ],
@@ -73,17 +75,15 @@
                 main: {
                     expand: true,
                     cwd: 'source',
-                    src: ['**/*', '!**/*.js', '!www/less/**'],
+                    src: ['**/*', '!www/modules/**', '!www/less/**'],
                     dest: 'production/'
                 }
             },
 
             uglify: {
                 main: {
-                    expand: true,
-                    cwd: 'source/',
-                    src: '**/*.js',
-                    dest: 'production/'
+                    src: productionModulesJSLocation,
+                    dest: productionModulesJSLocation
                 }
             },
 
@@ -99,6 +99,16 @@
                         'production/www/css/stylesheet.css': 'source/www/less/stylesheet.less'
                     }
                 }
+            },
+
+            concat: {
+                options: {
+                    stripBanners: true
+                },
+                source: {
+                    src: ['source/www/modules/**/*.js'],
+                    dest: productionModulesJSLocation
+                }
             }
 
         });
@@ -109,6 +119,7 @@
         grunt.loadNpmTasks('grunt-contrib-copy');
         grunt.loadNpmTasks('grunt-contrib-uglify');
         grunt.loadNpmTasks('grunt-contrib-less');
+        grunt.loadNpmTasks('grunt-contrib-concat');
 
         grunt.registerTask('default', [
             'jslint:gruntfile',
@@ -117,6 +128,7 @@
             'jslint:source',
             'clean',
             'copy',
+            'concat',
             'uglify',
             'less:source',
             'karma:production'

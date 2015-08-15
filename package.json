@@ -9,6 +9,7 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "*",
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "*",
