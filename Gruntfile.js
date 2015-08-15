@@ -75,7 +75,7 @@
                 main: {
                     expand: true,
                     cwd: 'source',
-                    src: ['**/*', '!www/modules/**', '!www/less/**'],
+                    src: ['**/*', '!www/modules/**', '!www/less/**', '!www/boilerplate.html'],
                     dest: 'production/'
                 }
             },
