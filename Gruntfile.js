@@ -73,7 +73,7 @@
                 main: {
                     expand: true,
                     cwd: 'source',
-                    src: ['**/*', '!**/*.js'],
+                    src: ['**/*', '!**/*.js', '!www/less/**'],
                     dest: 'production/'
                 }
             },
@@ -87,19 +87,16 @@
                 }
             },
 
-            postcss: {
-                options: {
-                    map: {
-                        inline: false,
-                        annotation: 'production/www/css/maps'
+            less: {
+                source: {
+                    options: {
+                        plugins: [
+                            new (require('less-plugin-autoprefix'))({browsers: '> 5%'})
+                        ]
                     },
-                    processors: [
-                        require('autoprefixer-core')({browsers: '> 5%'}),
-                        require('cssnano')()
-                    ]
-                },
-                production: {
-                    src: 'production/www/css/*.css'
+                    files: {
+                        'production/www/css/stylesheet.css': 'source/www/less/*.less'
+                    }
                 }
             }
 
@@ -110,7 +107,7 @@
         grunt.loadNpmTasks('grunt-contrib-clean');
         grunt.loadNpmTasks('grunt-contrib-copy');
         grunt.loadNpmTasks('grunt-contrib-uglify');
-        grunt.loadNpmTasks('grunt-postcss');
+        grunt.loadNpmTasks('grunt-contrib-less');
 
         grunt.registerTask('default', [
             'jslint:gruntfile',
@@ -120,15 +117,14 @@
             'clean',
             'copy',
             'uglify',
-            'postcss:production',
+            'less:source',
             'karma:production'
         ]);
 
         grunt.registerTask('movetoprod', [
             'clean',
             'copy',
-            'uglify',
-            'postcss:production'
+            'uglify'
         ]);
 
         grunt.registerTask('testsource', [

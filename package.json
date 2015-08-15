@@ -7,19 +7,18 @@
     "url": "https://github.com/barneycolby/barnabycolby.io.git"
   },
   "devDependencies": {
-    "autoprefixer-core": "*",
-    "cssnano": "^2.2.0",
     "grunt": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-copy": "*",
+    "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "*",
     "grunt-jslint": "*",
     "grunt-karma": "*",
-    "grunt-postcss": "*",
     "karma": "*",
     "karma-jasmine": "*",
     "karma-ng-html2js-preprocessor": "*",
     "karma-phantomjs-launcher": "*",
+    "less-plugin-autoprefix": "^1.4.2",
     "phantomjs": "*"
   },
   "scripts": {

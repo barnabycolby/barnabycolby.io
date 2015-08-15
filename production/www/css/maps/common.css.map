@@ -1,1 +1,0 @@
-{"version":3,"sources":["../common.css"],"names":[],"mappings":"AACA,eACI,eAAiB,CACpB","file":"../common.css","sourcesContent":["/* Override bootstrap bottom margin on alerts */\n#noscriptalert {\n    margin-bottom: 0;\n}\n"]}
