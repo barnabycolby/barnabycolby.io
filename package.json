@@ -19,6 +19,7 @@
     "karma-ng-html2js-preprocessor": "*",
     "karma-phantomjs-launcher": "*",
     "less-plugin-autoprefix": "^1.4.2",
+    "less-plugin-clean-css": "^1.5.1",
     "phantomjs": "*"
   },
   "scripts": {
