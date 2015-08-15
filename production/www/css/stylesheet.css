@@ -1,4 +1,3 @@
-/* Override bootstrap bottom margin on alerts */
 #noscriptalert {
   margin-bottom: 0;
 }
@@ -20,29 +19,27 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-#copyright {
+#footer #copyright {
   margin-top: 5px;
 }
 @media (max-width: 300px) {
-  #rightsreserved {
+  #footer #rightsreserved {
     display: none;
   }
 }
-/* The focus state of bootstrap buttons looks identical to the hover state
- * This is confusing from a UX standpoint, so I am going to prevent any colour change
- * The dotted focus outline should be enough */
 #footer .btn-default:focus,
 #footer .btn-default.focus {
   background-color: #fff;
 }
-/* We must also override the hover colour, otherwise a button with focus and hover
- * would still be styled by the rule above */
 #footer .btn-default:hover {
   background-color: #e6e6e6;
 }
 
 @media (max-width: 767px) {
-  /* Center the brand */
+  #header {
+    /* Center the brand */
+    /* Center the navigation links */
+  }
   #header .navbar-header {
     text-align: center;
     margin-top: 10px;
@@ -50,8 +47,7 @@ body {
   #header .navbar-header .navbar-brand {
     float: none;
   }
-  /* Center the navigation links */
-  #header .headernav ul {
+  #header .navigationlinks ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;

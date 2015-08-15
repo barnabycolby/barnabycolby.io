@@ -1,16 +1,19 @@
-@media (max-width: 767px) {
-    /* Center the brand */
-    #header .navbar-header {
-        text-align: center;
-        margin-top: 10px;
-    }
-    #header .navbar-header .navbar-brand {
-        float: none;
-    }
+#header {
+    @media (max-width: 767px) {
+        /* Center the brand */
+        .navbar-header {
+            text-align: center;
+            margin-top: 10px;
 
-    /* Center the navigation links */
-    #header .headernav ul {
-        display: flex;
-        justify-content: space-between;
+            .navbar-brand {
+                float: none;
+            }
+        }
+
+        /* Center the navigation links */
+        .navigationlinks ul {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 }
