@@ -74,9 +74,9 @@
             copy: {
                 main: {
                     expand: true,
-                    cwd: 'source',
-                    src: ['**/*', '!www/modules/**', '!www/less/**', '!www/boilerplate.html'],
-                    dest: 'production/'
+                    cwd: 'source/www',
+                    src: ['favicon.ico', 'data/**'],
+                    dest: 'production/www'
                 }
             },
 
@@ -110,6 +110,35 @@
                     src: ['source/www/modules/**/*.js'],
                     dest: productionModulesJSLocation
                 }
+            },
+
+            htmlmin: {
+                options: {
+                    removeComments: true,
+                    removeCommentsFromCDATA: true,
+                    removeCDATASectionsFromCDATA: true,
+                    collapseWhitespace: true,
+                    collapseBooleanAttributes: true,
+                    removeRedundantAttributes: true,
+                    removeIgnored: true,
+                    keepClosingSlash: true,
+                    minifyJS: true,
+                    minifyCSS: true,
+                    // SSI statements need to be ignored
+                    ignoreCustomComments: [new RegExp('#(.*)')]
+                },
+                webpages: {
+                    expand: true,
+                    cwd: 'source/www',
+                    src: ['*.html', '!boilerplate.html'],
+                    dest: 'production/www/'
+                },
+                snippets: {
+                    expand: true,
+                    cwd: 'source/www/snippets',
+                    src: ['**/*.html'],
+                    dest: 'production/www/snippets/'
+                }
             }
 
         });
@@ -121,6 +150,7 @@
         grunt.loadNpmTasks('grunt-contrib-uglify');
         grunt.loadNpmTasks('grunt-contrib-less');
         grunt.loadNpmTasks('grunt-contrib-concat');
+        grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
         grunt.registerTask('default', [
             'jslint:gruntfile',
@@ -129,6 +159,7 @@
             'jslint:source',
             'clean',
             'copy',
+            'htmlmin',
             'concat',
             'uglify',
             'less:source',
