@@ -2,8 +2,6 @@
 (function () {
     'use strict';
 
-    var productionModulesJSLocation = 'production/www/js/modules.js';
-
     module.exports = function (grunt) {
 
         require('time-grunt')(grunt);
@@ -54,7 +52,7 @@
                             'bower_components/jquery/dist/jquery.min.js',
                             'bower_components/angular/angular.min.js',
                             'bower_components/angular-mocks/angular-mocks.js',
-                            productionModulesJSLocation,
+                            'production/www/js/modules.min.js',
                             'production/www/snippets/**/*.html',
                             'test/**/*.spec.js'
                         ],
@@ -84,8 +82,8 @@
 
             uglify: {
                 main: {
-                    src: productionModulesJSLocation,
-                    dest: productionModulesJSLocation
+                    src: 'production/www/js/modules.js',
+                    dest: 'production/www/js/modules.min.js'
                 }
             },
 
@@ -99,7 +97,7 @@
                         ]
                     },
                     files: {
-                        'production/www/css/stylesheet.css': 'source/www/less/stylesheet.less'
+                        'production/www/css/stylesheet.min.css': 'source/www/less/stylesheet.less'
                     }
                 }
             },
@@ -110,7 +108,7 @@
                 },
                 source: {
                     src: ['source/www/modules/**/*.js'],
-                    dest: productionModulesJSLocation
+                    dest: 'production/www/js/modules.js'
                 }
             },
 
