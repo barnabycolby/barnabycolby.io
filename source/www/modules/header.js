@@ -21,7 +21,7 @@
     app.directive('header', function () {
         return {
             restrict: 'E',
-            templateUrl: '/snippets/header.html'
+            templateUrl: '/snippets/header.tmpl.html'
         };
     });
 

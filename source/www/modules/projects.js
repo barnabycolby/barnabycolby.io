@@ -12,7 +12,7 @@
     app.directive('projects', ['$http', function ($http) {
         return {
             restrict: 'E',
-            templateUrl: '/snippets/projects.html',
+            templateUrl: '/snippets/projects.tmpl.html',
             controller: function () {
                 var projectsController = this;
                 $http.get('/data/projects.json').success(function (data) {

@@ -11,7 +11,7 @@
         beforeEach(module('projects'));
 
         // Load the templates
-        beforeEach(module('/snippets/projects.html'));
+        beforeEach(module('/snippets/projects.tmpl.html'));
 
         // Store references to $rootScope and $compile
         // so they are available in all tests in this describe block

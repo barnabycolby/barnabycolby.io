@@ -11,7 +11,7 @@
         beforeEach(module('footer'));
 
         // Load the templates
-        beforeEach(module('/snippets/footer.html'));
+        beforeEach(module('/snippets/footer.tmpl.html'));
 
         // Store references to $rootScope and $compile
         // so they are available in all tests in this describe block

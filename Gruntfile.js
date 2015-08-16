@@ -139,6 +139,27 @@
                     src: ['**/*.html'],
                     dest: 'production/www/snippets/'
                 }
+            },
+
+            htmlangular: {
+                options: {
+                    relaxerror: ['Comments seen before doctype. Internet Explorer will go into the quirks mode.'],
+                    customtags: ['header', 'footer', 'projects'],
+                    reportpath: null,
+                    charset: false
+                },
+                source: {
+                    expand: true,
+                    cwd: 'source/www/',
+                    // commonheadtags.tmpl.html must be ignored as htmlangular is not smart enough to wrap head tags for the W3C validator
+                    src: ['*.html', 'snippets/*.html', '!snippets/commonheadtags.tmpl.html']
+                },
+                production: {
+                    expand: true,
+                    cwd: 'production/www/',
+                    // commonheadtags.tmpl.html must be ignored as htmlangular is not smart enough to wrap head tags for the W3C validator
+                    src: ['*.html', 'snippets/*.html', '!snippets/commonheadtags.tmpl.html']
+                }
             }
 
         });
@@ -151,19 +172,22 @@
         grunt.loadNpmTasks('grunt-contrib-less');
         grunt.loadNpmTasks('grunt-contrib-concat');
         grunt.loadNpmTasks('grunt-contrib-htmlmin');
+        grunt.loadNpmTasks('grunt-html-angular-validate');
 
         grunt.registerTask('default', [
             'jslint:gruntfile',
             'jslint:test',
             'karma:source',
             'jslint:source',
+            'htmlangular:source',
             'clean',
             'copy',
             'htmlmin',
             'concat',
             'uglify',
             'less:source',
-            'karma:production'
+            'karma:production',
+            'htmlangular:production'
         ]);
 
         grunt.registerTask('movetoprod', [

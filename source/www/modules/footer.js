@@ -11,7 +11,7 @@
     app.directive('footer', function () {
         return {
             restrict: 'E',
-            templateUrl: '/snippets/footer.html'
+            templateUrl: '/snippets/footer.tmpl.html'
         };
     });
 }());

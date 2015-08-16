@@ -12,7 +12,7 @@
             var $compile, $rootScope;
 
             // Load the templates
-            beforeEach(module('/snippets/header.html'));
+            beforeEach(module('/snippets/header.tmpl.html'));
 
             // Store references to $rootScope and $compile
             // so they are available in all tests in this describe block
