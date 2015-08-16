@@ -16,6 +16,7 @@
     "grunt-contrib-uglify": "*",
     "grunt-html-angular-validate": "^0.5.1",
     "grunt-jslint": "*",
+    "grunt-jsonmin": "^0.2.4",
     "grunt-karma": "*",
     "karma": "*",
     "karma-jasmine": "*",

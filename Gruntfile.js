@@ -160,6 +160,15 @@
                     // commonheadtags.tmpl.html must be ignored as htmlangular is not smart enough to wrap head tags for the W3C validator
                     src: ['*.html', 'snippets/*.html', '!snippets/commonheadtags.tmpl.html']
                 }
+            },
+
+            jsonmin: {
+                source: {
+                    expand: true,
+                    cwd: 'source/',
+                    src: 'www/data/**/*.json',
+                    dest: 'production/'
+                }
             }
 
         });
@@ -173,6 +182,7 @@
         grunt.loadNpmTasks('grunt-contrib-concat');
         grunt.loadNpmTasks('grunt-contrib-htmlmin');
         grunt.loadNpmTasks('grunt-html-angular-validate');
+        grunt.loadNpmTasks('grunt-jsonmin');
 
         grunt.registerTask('default', [
             'jslint:gruntfile',
@@ -186,6 +196,7 @@
             'concat',
             'uglify',
             'less:source',
+            'jsonmin:source',
             'karma:production',
             'htmlangular:production'
         ]);
