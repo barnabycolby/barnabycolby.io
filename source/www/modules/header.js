@@ -1,3 +1,8 @@
+// ============================= header.js ============================ //
+// AngularJS module containing directives and controllers for the
+// header.
+// ==================================================================== //
+
 /*global angular */
 (function () {
     "use strict";

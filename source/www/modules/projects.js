@@ -1,3 +1,8 @@
+// =========================== projects.js ============================ //
+// AngularJS module for the projects.html page. Creates HTML based on
+// a projects.json data file.
+// ==================================================================== //
+
 /*global angular */
 (function () {
     "use strict";
