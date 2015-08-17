@@ -1,6 +1,6 @@
 {
     "default": [
-        "newer:jslint:gruntfile",
+        "newer:jslint:grunt",
         "newer:jslint:test",
         "karma:source",
         "newer:jslint:source",

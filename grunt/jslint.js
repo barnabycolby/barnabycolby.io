@@ -4,9 +4,15 @@
 
     module.exports = {
 
-        gruntfile: ['Gruntfile.js'],
-        source: ['source/www/modules/**/*.js'],
-        test: ['test/**/*.spec.js']
+        grunt: {
+            src: ['Gruntfile.js', 'grunt/**/*.js']
+        },
+        source: {
+            src: ['source/www/modules/**/*.js']
+        },
+        test: {
+            src: ['test/**/*.spec.js']
+        }
 
     };
 }());
