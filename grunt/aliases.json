@@ -1,18 +1,17 @@
 {
     "default": [
-        "jslint:gruntfile",
-        "jslint:test",
+        "newer:jslint:gruntfile",
+        "newer:jslint:test",
         "karma:source",
-        "jslint:source",
-        "htmlangular:source",
-        "clean",
-        "copy",
-        "htmlmin",
-        "concat",
-        "uglify",
-        "less:source",
-        "jsonmin:source",
+        "newer:jslint:source",
+        "newer:htmlangular:source",
+        "newer:copy",
+        "newer:htmlmin",
+        "newer:concat",
+        "newer:uglify",
+        "newer:less:source",
+        "newer:jsonmin:source",
         "karma:production",
-        "htmlangular:production"
+        "newer:htmlangular:production"
     ]
 }

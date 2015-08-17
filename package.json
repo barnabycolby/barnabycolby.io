@@ -18,6 +18,8 @@
     "grunt-jslint": "*",
     "grunt-jsonmin": "^0.2.4",
     "grunt-karma": "*",
+    "grunt-newer": "^1.1.1",
+    "grunt-newer-less": "^1.0.2",
     "karma": "*",
     "karma-jasmine": "*",
     "karma-ng-html2js-preprocessor": "*",
