@@ -5,8 +5,8 @@
     module.exports = {
 
         main: {
-            src: 'production/www/js/modules.js',
-            dest: 'production/www/js/modules.min.js'
+            src: '<%= destinationWorkingDirectory %>/js/modules.js',
+            dest: '<%= destinationWorkingDirectory %>/js/modules.min.js'
         }
 
     };

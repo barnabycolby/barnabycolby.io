@@ -13,7 +13,7 @@
                 ]
             },
             files: {
-                'production/www/css/stylesheet.min.css': 'source/www/less/stylesheet.less'
+                '<%= destinationWorkingDirectory %>/css/stylesheet.min.css': '<%= sourceWorkingDirectory %>/less/stylesheet.less'
             }
         }
 

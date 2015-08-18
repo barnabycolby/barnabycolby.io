@@ -6,9 +6,9 @@
 
         main: {
             expand: true,
-            cwd: 'source/www',
+            cwd: '<%= sourceWorkingDirectory %>',
             src: ['favicon.ico', 'data/**'],
-            dest: 'production/www'
+            dest: '<%= destinationWorkingDirectory %>'
         }
 
     };

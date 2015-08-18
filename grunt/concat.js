@@ -8,8 +8,8 @@
             stripBanners: true
         },
         source: {
-            src: ['source/www/modules/**/*.js'],
-            dest: 'production/www/js/modules.js'
+            src: '<%= sourceWorkingDirectory %>/modules/**/*.js',
+            dest: '<%= destinationWorkingDirectory %>/js/modules.js'
         }
 
     };

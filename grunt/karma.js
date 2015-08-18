@@ -23,36 +23,36 @@
         source: {
             options: {
                 preprocessors: {
-                    'source/www/snippets/**/*.html': ['ng-html2js']
+                    '<%= sourceWorkingDirectory %>/snippets/**/*.html': ['ng-html2js']
                 },
                 files: [
                     'bower_components/jquery/dist/jquery.min.js',
                     'bower_components/angular/angular.min.js',
                     'bower_components/angular-mocks/angular-mocks.js',
-                    'source/www/modules/**/*.js',
-                    'source/www/snippets/**/*.html',
+                    '<%= sourceWorkingDirectory %>/modules/**/*.js',
+                    '<%= sourceWorkingDirectory %>/snippets/**/*.html',
                     'test/**/*.spec.js'
                 ],
                 ngHtml2JsPreprocessor: {
-                    stripPrefix: 'source/www'
+                    stripPrefix: '<%= sourceWorkingDirectory %>'
                 }
             }
         },
         production: {
             options: {
                 preprocessors: {
-                    'production/www/snippets/**/*.html': ['ng-html2js']
+                    '<%= destinationWorkingDirectory %>/snippets/**/*.html': ['ng-html2js']
                 },
                 files: [
                     'bower_components/jquery/dist/jquery.min.js',
                     'bower_components/angular/angular.min.js',
                     'bower_components/angular-mocks/angular-mocks.js',
-                    'production/www/js/modules.min.js',
-                    'production/www/snippets/**/*.html',
+                    '<%= destinationWorkingDirectory %>/js/modules.min.js',
+                    '<%= destinationWorkingDirectory %>/snippets/**/*.html',
                     'test/**/*.spec.js'
                 ],
                 ngHtml2JsPreprocessor: {
-                    stripPrefix: 'production/www'
+                    stripPrefix: '<%= destinationWorkingDirectory %>'
                 }
             }
         }

@@ -6,9 +6,9 @@
 
         source: {
             expand: true,
-            cwd: 'source/',
-            src: 'www/data/**/*.json',
-            dest: 'production/'
+            cwd: '<%= sourceWorkingDirectory %>',
+            src: 'data/**/*.json',
+            dest: '<%= destinationWorkingDirectory %>'
         }
 
     };

@@ -8,7 +8,7 @@
             src: ['Gruntfile.js', 'grunt/**/*.js']
         },
         source: {
-            src: ['source/www/modules/**/*.js']
+            src: ['<%= sourceWorkingDirectory %>/modules/**/*.js']
         },
         test: {
             src: ['test/**/*.spec.js']

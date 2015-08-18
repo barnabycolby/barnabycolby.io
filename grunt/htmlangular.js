@@ -12,13 +12,13 @@
         },
         source: {
             expand: true,
-            cwd: 'source/www/',
+            cwd: '<%= sourceWorkingDirectory %>',
             // commonheadtags.tmpl.html must be ignored as htmlangular is not smart enough to wrap head tags for the W3C validator
             src: ['*.html', 'snippets/*.html', '!snippets/commonheadtags.tmpl.html']
         },
         production: {
             expand: true,
-            cwd: 'production/www/',
+            cwd: '<%= destinationWorkingDirectory %>',
             // commonheadtags.tmpl.html must be ignored as htmlangular is not smart enough to wrap head tags for the W3C validator
             src: ['*.html', 'snippets/*.html', '!snippets/commonheadtags.tmpl.html']
         }

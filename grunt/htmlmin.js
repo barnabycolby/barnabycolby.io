@@ -20,15 +20,15 @@
         },
         webpages: {
             expand: true,
-            cwd: 'source/www',
+            cwd: '<%= sourceWorkingDirectory %>',
             src: ['*.html', '!boilerplate.html'],
-            dest: 'production/www/'
+            dest: '<%= destinationWorkingDirectory %>'
         },
         snippets: {
             expand: true,
-            cwd: 'source/www/snippets',
-            src: ['**/*.html'],
-            dest: 'production/www/snippets/'
+            cwd: '<%= sourceWorkingDirectory %>',
+            src: ['snippets/**/*.html'],
+            dest: '<%= destinationWorkingDirectory %>'
         }
 
     };
