@@ -14,4 +14,8 @@
             templateUrl: '/snippets/footer.tmpl.html'
         };
     });
+
+    app.controller('FooterController', ['$scope', function ($scope) {
+        $scope.date = new Date();
+    }]);
 }());

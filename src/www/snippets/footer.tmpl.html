@@ -2,7 +2,7 @@
 <!-- HTML template for the footer.                                     -->
 <!-- ================================================================= -->
 
-<nav id="footer">
+<nav id="footer" ng-controller="FooterController">
     <div class="container text-center">
         <!-- Contact options -->
         <a href="mailto:barneycolby@gmail.com" target="_blank" class="btn btn-default">
@@ -15,6 +15,6 @@
               <span class="fa fa-github" aria-hidden="true"></span>
         </a>
 
-        <p id="copyright" class="text-muted">&copy; 2015 Barnaby Colby.<span id="rightsreserved"> All rights reserved</span></p>
+        <p id="copyright" class="text-muted">&copy; {{date | date:'yyyy'}} Barnaby Colby.<span id="rightsreserved"> All rights reserved</span></p>
     </div>
 </nav>
