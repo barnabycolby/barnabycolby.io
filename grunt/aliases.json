@@ -9,6 +9,7 @@
         "newer:htmlmin",
         "newer:concat",
         "newer:uglify",
+        "newer:csscomb",
         "newer:less:source",
         "newer:jsonmin:source",
         "karma:production",

@@ -2,23 +2,30 @@
 // Styling rules for the header.
 // ==================================================================== //
 
-@import "bower_components/bootstrap/less/variables.less";
+@import 'bower_components/bootstrap/less/variables.less';
 
-#header {
-    @media (max-width: @screen-xs-max) {
+#header
+{
+    @media (max-width: @screen-xs-max)
+    {
         /* Center the brand */
-        .navbar-header {
-            text-align: center;
+        .navbar-header
+        {
             margin-top: 10px;
 
-            .navbar-brand {
+            text-align: center;
+
+            .navbar-brand
+            {
                 float: none;
             }
         }
 
         /* Center the navigation links */
-        .navigationlinks ul {
+        .navigationlinks ul
+        {
             display: flex;
+
             justify-content: space-between;
         }
     }

@@ -13,6 +13,7 @@
     "grunt-contrib-htmlmin": "^0.4.0",
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "*",
+    "grunt-csscomb": "^3.1.0",
     "grunt-html-angular-validate": "^0.5.1",
     "grunt-jslint": "*",
     "grunt-jsonmin": "^0.2.4",
