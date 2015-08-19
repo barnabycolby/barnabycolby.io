@@ -11,7 +11,9 @@
         <!-- Navigation links -->
         <nav ng-controller="NavigationLinkController" class="navigationlinks">
             <ul class="nav navbar-nav">
-                <li ng-class="{ active: isActive('/projects.html') }"><a href="/projects.html">Projects</a></li>
+                <li ng-repeat="link in links" ng-class="{ active: isActive(link.href) }">
+                    <a ng-href="{{link.href}}">{{link.text}}</a>
+                </li>
             </ul>
         </nav>
 

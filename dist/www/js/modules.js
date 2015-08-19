@@ -43,10 +43,21 @@
         };
     });
 
-    app.controller('NavigationLinkController', ['$scope', '$location', function ($scope, $location) {
+    app.controller('NavigationLinkController', ['$scope', '$location', '$http', function ($scope, $location, $http) {
         $scope.isActive = function (pathToCheck) {
             return pathToCheck === $location.path();
         };
+
+        $http.get('/data/navigation.json').then(
+            // success
+            function (response) {
+                $scope.links = response.data;
+            },
+            // failure
+            function () {
+                $scope.links = [];
+            }
+        );
     }]);
 }());
 

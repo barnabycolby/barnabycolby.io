@@ -1,12 +1,12 @@
 /*global
-    describe, beforeEach, module, inject, it, expect
+    describe, beforeEach, module, inject, it, expect, console
 */
 
 (function () {
     'use strict';
 
     describe('Header directive ->', function () {
-        var $compile, $rootScope;
+        var $compile, $rootScope, $httpBackend;
 
         beforeEach(module('header'));
 
@@ -15,12 +15,13 @@
 
         // Store references to $rootScope and $compile
         // so they are available in all tests in this describe block
-        /*jslint nomen: true*/
-        beforeEach(inject(function (_$compile_, _$rootScope_) {
-            $compile = _$compile_;
-            $rootScope = _$rootScope_;
+        beforeEach(inject(function ($injector) {
+            $compile = $injector.get('$compile');
+            $rootScope = $injector.get('$rootScope');
+            $httpBackend = $injector.get('$httpBackend');
+
+            $httpBackend.whenGET('/data/navigation.json').respond(200, '[{"text":"Projects","href":"/projects.html"}]');
         }));
-        /*jslint nomen: false*/
 
         it('contains my name as a link to the homepage', function () {
             var element, nameAsHomepageLinkMatches;
