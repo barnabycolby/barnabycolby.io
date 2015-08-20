@@ -2,10 +2,10 @@
     "default": [
         "newer:jslint:grunt",
         "newer:jslint:test",
-        "newer:json_schema",
-        "karma:source",
         "newer:jslint:source",
+        "newer:json_schema",
         "newer:htmlangular:source",
+        "karma:source",
         "newer:copy",
         "newer:htmlmin",
         "newer:concat",
