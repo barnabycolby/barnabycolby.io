@@ -4,6 +4,9 @@
 
     module.exports = {
 
+        options: {
+            validateFormatsStrict: true
+        },
         projects: {
             files: {
                 '<%= sourceWorkingDirectory %>/schemas/projects.json': '<%= sourceWorkingDirectory %>/data/projects.json'

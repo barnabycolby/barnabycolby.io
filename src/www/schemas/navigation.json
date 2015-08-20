@@ -1,19 +1,17 @@
 {
     "type": "array",
     "required": true,
-    "items": [
-        {
-            "type": "object",
-            "properties": {
-                "text": {
-                    "type": "string",
-                    "required": true
-                },
-                "href": {
-                    "type": "string",
-                    "required": true
-                }
+    "items": {
+        "type": "object",
+        "properties": {
+            "text": {
+                "type": "string",
+                "required": true
+            },
+            "href": {
+                "type": "string",
+                "required": true
             }
         }
-    ]
+    }
 }
