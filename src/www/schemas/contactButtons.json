@@ -1,0 +1,20 @@
+{
+    "type": "array",
+    "required": true,
+    "items": [
+        {
+            "type": "object",
+            "required": true,
+            "properties": {
+                "href": {
+                    "type": "string",
+                    "required": true
+                },
+                "faCode": {
+                    "type": "string",
+                    "required": true
+                }
+            }
+        }
+    ]
+}

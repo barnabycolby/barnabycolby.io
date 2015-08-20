@@ -6,7 +6,7 @@
 
         options: {
             relaxerror: ['Comments seen before doctype. Internet Explorer will go into the quirks mode.'],
-            customtags: ['header', 'footer', 'projects'],
+            customtags: ['header', 'footer', 'projects', 'contactbuttons'],
             reportpath: null,
             charset: false
         },

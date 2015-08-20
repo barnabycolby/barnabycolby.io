@@ -4,16 +4,7 @@
 
 <nav id="footer" ng-controller="FooterController">
     <div class="container text-center">
-        <!-- Contact options -->
-        <a href="mailto:barneycolby@gmail.com" target="_blank" class="btn btn-default">
-              <span class="fa fa-envelope-o" aria-hidden="true"></span>
-        </a>
-        <a href="https://uk.linkedin.com/in/barneycolby" target="_blank" class="btn btn-default">
-              <span class="fa fa-linkedin" aria-hidden="true"></span>
-        </a>
-        <a href="https://github.com/barneycolby" target="_blank" class="btn btn-default">
-              <span class="fa fa-github" aria-hidden="true"></span>
-        </a>
+        <contactbuttons></contactbuttons>
 
         <p id="copyright" class="text-muted">&copy; {{date | date:'yyyy'}} Barnaby Colby.<span id="rightsreserved"> All rights reserved</span></p>
     </div>

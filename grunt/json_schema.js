@@ -13,6 +13,11 @@
             files: {
                 '<%= sourceWorkingDirectory %>/schemas/navigation.json': '<%= sourceWorkingDirectory %>/data/navigation.json'
             }
+        },
+        contactButtons: {
+            files: {
+                '<%= sourceWorkingDirectory %>/schemas/contactButtons.json': '<%= sourceWorkingDirectory %>/data/contactButtons.json'
+            }
         }
 
     };

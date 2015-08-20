@@ -15,22 +15,29 @@
 
         // Store references to $rootScope and $compile
         // so they are available in all tests in this describe block
-        /*jslint nomen: true*/
-        beforeEach(inject(function (_$compile_, _$rootScope_) {
-            $compile = _$compile_;
-            $rootScope = _$rootScope_;
-        }));
-        /*jslint nomen: false*/
+        beforeEach(inject(function ($injector) {
+            var $httpBackend, contactButtonsJSON;
 
-        it('contains a link to my email address', function () {
-            var element, mailToLinkMatches;
+            $compile = $injector.get('$compile');
+            $rootScope = $injector.get('$rootScope');
+            $httpBackend = $injector.get('$httpBackend');
+
+            contactButtonsJSON = [
+                { "href": "http://github.com", "faCode": "github" }
+            ];
+            $httpBackend.whenGET('/snippets/contactButtons.tmpl.html')
+                .respond(200, JSON.stringify(contactButtonsJSON));
+        }));
+
+        it('contains a set of contact buttons', function () {
+            var element, contactButtonsMatches;
 
             element = $compile("<footer></footer>")($rootScope);
             $rootScope.$digest();
 
-            mailToLinkMatches = element.find('a[href="mailto:barneycolby@gmail.com"]');
+            contactButtonsMatches = element.find('contactbuttons');
 
-            expect(mailToLinkMatches.length).toBeGreaterThan(0);
+            expect(contactButtonsMatches.length).toBeGreaterThan(0);
         });
     });
 }());
