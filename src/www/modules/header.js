@@ -18,6 +18,17 @@
         });
     }]);
 
+    /**
+     * @memberof headerModule
+     * @ngdoc directive
+     * @name header
+     *
+     * @description
+     * Generates the HTML for the header common to all webpages, including navigation links and branding.
+     *
+     * @example
+     * <header></header>
+     */
     app.directive('header', function () {
         return {
             restrict: 'E',

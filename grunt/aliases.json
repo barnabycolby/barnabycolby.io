@@ -14,6 +14,7 @@
         "newer:less:source",
         "newer:jsonmin:source",
         "karma:production",
-        "newer:htmlangular:production"
+        "newer:htmlangular:production",
+        "jsdoc"
     ]
 }

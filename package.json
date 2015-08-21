@@ -13,6 +13,7 @@
     "url": "https://github.com/barneycolby/barnabycolby.io.git"
   },
   "devDependencies": {
+    "angular-jsdoc": "^1.0.9",
     "grunt": "*",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "*",
@@ -21,11 +22,13 @@
     "grunt-contrib-uglify": "*",
     "grunt-csscomb": "^3.1.0",
     "grunt-html-angular-validate": "^0.5.1",
+    "grunt-jsdoc": "^0.6.7",
     "grunt-jslint": "*",
     "grunt-json-schema": "^0.4.0",
     "grunt-jsonmin": "^0.2.4",
     "grunt-karma": "*",
     "grunt-newer": "^1.1.1",
+    "jsdoc": "^3.3.2",
     "karma": "*",
     "karma-jasmine": "*",
     "karma-ng-html2js-preprocessor": "*",

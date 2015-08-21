@@ -9,6 +9,16 @@
 
     var app = angular.module('projects', ['header', 'footer']);
 
+    /**
+     * @memberof projectsModule
+     * @ngdoc directive
+     * @name projects
+     *
+     * @description Generates a block of HTML describing the projects Barney is currently working on. The data about the projects is retrieved from the /data/projects.json file.
+     *
+     * @example
+     * <projects></projects>
+     */
     app.directive('projects', ['$http', function ($http) {
         return {
             restrict: 'E',
