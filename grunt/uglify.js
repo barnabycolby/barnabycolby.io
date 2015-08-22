@@ -5,6 +5,12 @@
     module.exports = {
 
         main: {
+            options: {
+                sourceMap: true,
+                sourceMapIn: function (sourceFilePath) {
+                    return (sourceFilePath + '.map');
+                }
+            },
             src: '<%= destinationWorkingDirectory %>/js/modules.js',
             dest: '<%= destinationWorkingDirectory %>/js/modules.min.js'
         }
