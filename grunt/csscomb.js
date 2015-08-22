@@ -4,7 +4,7 @@
 
     module.exports = {
 
-        source: {
+        main: {
             expand: true,
             cwd: '<%= sourceWorkingDirectory %>',
             src: 'less/**/*.less',

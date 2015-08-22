@@ -16,7 +16,7 @@
             // commonheadtags.tmpl.html must be ignored as htmlangular is not smart enough to wrap head tags for the W3C validator
             src: ['*.html', 'snippets/*.html', '!snippets/commonheadtags.tmpl.html']
         },
-        production: {
+        distribution: {
             expand: true,
             cwd: '<%= destinationWorkingDirectory %>',
             // commonheadtags.tmpl.html must be ignored as htmlangular is not smart enough to wrap head tags for the W3C validator

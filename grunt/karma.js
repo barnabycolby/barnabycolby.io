@@ -38,7 +38,7 @@
                 }
             }
         },
-        production: {
+        distribution: {
             options: {
                 preprocessors: {
                     '<%= destinationWorkingDirectory %>/snippets/**/*.html': ['ng-html2js']

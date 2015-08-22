@@ -7,7 +7,7 @@
         options: {
             stripBanners: true
         },
-        source: {
+        main: {
             src: '<%= sourceWorkingDirectory %>/modules/**/*.js',
             dest: '<%= destinationWorkingDirectory %>/js/modules.js'
         }
