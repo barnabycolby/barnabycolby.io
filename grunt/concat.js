@@ -10,7 +10,10 @@
                 sourceMap: true
             },
             src: '<%= sourceWorkingDirectory %>/modules/**/*.js',
-            dest: '<%= destinationWorkingDirectory %>/js/modules.js'
+            // The destination file is generated in the same location
+            // so that the source map filenames do not start with
+            // ../../../src/www/... when displayed in the browser
+            dest: '<%= sourceWorkingDirectory %>/modules/modules.js'
         }
 
     };

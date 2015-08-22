@@ -11,7 +11,7 @@
                     return (sourceFilePath + '.map');
                 }
             },
-            src: '<%= destinationWorkingDirectory %>/js/modules.js',
+            src: '<%= sourceWorkingDirectory %>/modules/modules.js',
             dest: '<%= destinationWorkingDirectory %>/js/modules.min.js'
         }
 

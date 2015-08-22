@@ -15,6 +15,7 @@
   "devDependencies": {
     "angular-jsdoc": "^1.0.9",
     "grunt": "*",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",
     "grunt-contrib-copy": "*",
     "grunt-contrib-htmlmin": "^0.4.0",
