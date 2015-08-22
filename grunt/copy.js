@@ -7,7 +7,7 @@
         main: {
             expand: true,
             cwd: '<%= sourceWorkingDirectory %>',
-            src: ['favicon.ico', 'data/**'],
+            src: 'favicon.ico',
             dest: '<%= destinationWorkingDirectory %>'
         }
 
