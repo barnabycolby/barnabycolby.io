@@ -11,8 +11,10 @@
                 new (require('less-plugin-clean-css'))()
             ]
         },
-        files: {
-            '<%= destinationWorkingDirectory %>/css/stylesheet.min.css': '<%= sourceWorkingDirectory %>/less/stylesheet.less'
+        main: {
+            files: {
+                '<%= destinationWorkingDirectory %>/css/stylesheet.min.css': '<%= sourceWorkingDirectory %>/less/stylesheet.less'
+            }
         }
 
     };
