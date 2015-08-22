@@ -1,4 +1,5 @@
 [
-  { "name" : "Website" },
-  { "name" : "Raspberry Pi Backup Server" }
+  { "name": "Website" },
+  { "name": "Raspberry Pi Backup Server" },
+  { "name": "grunt-sorcery" }
 ]
