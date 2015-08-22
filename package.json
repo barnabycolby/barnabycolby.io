@@ -14,6 +14,8 @@
   },
   "devDependencies": {
     "angular-jsdoc": "^1.0.9",
+    "autoprefixer-core": "^5.2.1",
+    "cssnano": "^2.6.1",
     "grunt": "*",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",
@@ -29,13 +31,12 @@
     "grunt-jsonmin": "^0.2.4",
     "grunt-karma": "*",
     "grunt-newer": "^1.1.1",
+    "grunt-postcss": "^0.5.5",
     "jsdoc": "^3.3.2",
     "karma": "*",
     "karma-jasmine": "*",
     "karma-ng-html2js-preprocessor": "*",
     "karma-phantomjs-launcher": "*",
-    "less-plugin-autoprefix": "^1.4.2",
-    "less-plugin-clean-css": "^1.5.1",
     "load-grunt-config": "^0.17.2",
     "phantomjs": "*",
     "time-grunt": "^1.2.1"

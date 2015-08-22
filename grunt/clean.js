@@ -4,7 +4,8 @@
 
     module.exports = {
 
-        modulesjs: '<%= sourceWorkingDirectory %>/modules/modules.*'
+        modulesjs: '<%= sourceWorkingDirectory %>/modules/modules.*',
+        css: '<%= destinationWorkingDirectory %>/css/stylesheet.css'
 
     };
 }());

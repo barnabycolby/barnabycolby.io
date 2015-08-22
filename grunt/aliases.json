@@ -13,6 +13,8 @@
         "clean:modulesjs",
         "newer:csscomb",
         "newer:less",
+        "newer:postcss",
+        "clean:css",
         "newer:jsonmin",
         "karma:distribution",
         "newer:htmlangular:distribution",

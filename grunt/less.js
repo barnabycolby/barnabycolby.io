@@ -5,15 +5,16 @@
     module.exports = {
 
         options: {
-            paths: ['.'],
-            plugins: [
-                new (require('less-plugin-autoprefix'))({browsers: '> 5%'}),
-                new (require('less-plugin-clean-css'))()
-            ]
+            paths: ['.']
         },
         main: {
+            options: {
+                sourceMap: true,
+                sourceMapURL: '/css/stylesheet.css.map',
+                outputSourceFiles: true
+            },
             files: {
-                '<%= destinationWorkingDirectory %>/css/stylesheet.min.css': '<%= sourceWorkingDirectory %>/less/stylesheet.less'
+                '<%= destinationWorkingDirectory %>/css/stylesheet.css': '<%= sourceWorkingDirectory %>/less/stylesheet.less'
             }
         }
 
