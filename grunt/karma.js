@@ -31,7 +31,7 @@
                     'bower_components/angular-mocks/angular-mocks.js',
                     '<%= sourceWorkingDirectory %>/modules/**/*.js',
                     '<%= sourceWorkingDirectory %>/snippets/**/*.html',
-                    'test/**/*.spec.js'
+                    'test/unit/**/*.spec.js'
                 ],
                 ngHtml2JsPreprocessor: {
                     stripPrefix: '<%= sourceWorkingDirectory %>'
@@ -49,7 +49,7 @@
                     'bower_components/angular-mocks/angular-mocks.js',
                     '<%= destinationWorkingDirectory %>/js/modules.min.js',
                     '<%= destinationWorkingDirectory %>/snippets/**/*.html',
-                    'test/**/*.spec.js'
+                    'test/unit/**/*.spec.js'
                 ],
                 ngHtml2JsPreprocessor: {
                     stripPrefix: '<%= destinationWorkingDirectory %>'

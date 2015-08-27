@@ -4,6 +4,7 @@
         "karma:source",
         "process",
         "karma:distribution",
+        "protractor",
         "newer:htmlangular:distribution",
         "jsdoc"
     ],
