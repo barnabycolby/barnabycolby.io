@@ -13,7 +13,7 @@
             logLevel: 'INFO',
             autoWatch: false,
             browsers: ['PhantomJS'],
-            singleRun: true,
+            singleRun: false,
             plugins: [
                 'karma-jasmine',
                 'karma-phantomjs-launcher',

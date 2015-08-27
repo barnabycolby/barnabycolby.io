@@ -1,12 +1,16 @@
 {
     "default": [
         "lint",
-        "karma:source",
+        "karma:source:run",
         "process",
-        "karma:distribution",
+        "karma:distribution:run",
         "protractor",
         "newer:htmlangular:distribution",
         "jsdoc"
+    ],
+
+    "servers": [
+        "karma:source:start"
     ],
 
     "lint": [
