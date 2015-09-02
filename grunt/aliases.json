@@ -4,6 +4,7 @@
         "karma:source:run",
         "process",
         "karma:distribution:run",
+        "protractor_webdriver:main",
         "protractor",
         "newer:htmlangular:distribution",
         "jsdoc"
