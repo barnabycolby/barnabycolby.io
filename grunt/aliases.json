@@ -4,13 +4,13 @@
         "karma:source:run",
         "process",
         "karma:distribution:run",
-        "protractor_webdriver:main",
         "protractor",
         "newer:htmlangular:distribution",
         "jsdoc"
     ],
 
     "servers": [
+        "protractor_webdriver:main",
         "karma:source:start"
     ],
 

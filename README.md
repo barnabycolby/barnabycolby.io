@@ -14,7 +14,13 @@ Assuming you already have the node package manager installed on your system (npm
 npm install
 ```
 
-Next, run grunt to build and test the source code:
+The website build is automated using grunt. The pipeline relies on some background servers for testing the source and distribution code. Instead of intialising and destroying these servers on each grunt run, the servers task allows the servers to be initiated once per session, speeding up the build pipeline.
+
+```
+grunt servers
+```
+
+Once the servers have been initialised, run grunt to build the code.
 
 ```
 grunt

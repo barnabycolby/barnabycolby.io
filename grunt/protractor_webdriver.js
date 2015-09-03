@@ -4,7 +4,11 @@
 
     module.exports = {
 
-        main: {}
+        main: {
+            options: {
+                keepAlive: true
+            }
+        }
 
     };
 }());
