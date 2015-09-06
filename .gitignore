@@ -2,6 +2,3 @@ node_modules
 bower_components
 docs
 phantomjsdriver.log
-
-# We do not want to store the private files in a public repository
-dist/private
