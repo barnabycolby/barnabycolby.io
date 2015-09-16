@@ -7,6 +7,7 @@
 
     describe('index page', function () {
         var FooterPageObject, footerPageObject,
+            HeaderPageObject, headerPageObject,
             Variables, variables;
 
         Variables = require('./variables.js');
@@ -20,5 +21,9 @@
         FooterPageObject = require('./components/footer.js');
         footerPageObject = new FooterPageObject();
         footerPageObject.test();
+
+        HeaderPageObject = require('./components/header.js');
+        headerPageObject = new HeaderPageObject();
+        headerPageObject.test();
     });
 }());
