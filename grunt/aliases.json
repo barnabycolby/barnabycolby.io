@@ -6,7 +6,7 @@
         "karma:distribution:run",
         "protractor",
         "newer:htmlangular:distribution",
-        "jsdoc"
+        "newer:jsdoc"
     ],
 
     "servers": [
