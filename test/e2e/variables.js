@@ -2,7 +2,7 @@
     'use strict';
 
     var Variables = function () {
-        this.websiteUrl = 'https://www.barnabycolby.io';
+        this.websiteUrl = 'https://test.barnabycolby.io';
     };
 
     module.exports = Variables;
