@@ -22,6 +22,11 @@
                     var githubElement = element(by.css('a[href="https://github.com/barnabycolby"]'));
                     expect(githubElement.isPresent()).toBe(true);
                 });
+
+                it('should contain copyright text', function () {
+                    var copyrightElement = element(by.css('#copyright'));
+                    expect(copyrightElement.getText()).toBe('© 2015 Barnaby Colby. All rights reserved.');
+                });
             });
         }
     };
