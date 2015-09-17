@@ -5,8 +5,8 @@
         "process",
         "karma:distribution:run",
         "protractor",
-        "newer:htmlangular:distribution",
-        "newer:jsdoc"
+        "htmlangular:distribution",
+        "jsdoc"
     ],
 
     "servers": [
@@ -15,41 +15,40 @@
     ],
 
     "lint": [
-        "newer:jslint:grunt",
-        "newer:jslint:test",
-        "newer:jslint:source",
-        "newer:json_schema",
-        "newer:htmlangular:source"
+        "jslint:grunt",
+        "jslint:test",
+        "jslint:source",
+        "json_schema",
+        "htmlangular:source"
     ],
 
     "process": [
-        "newer:copy",
-        "newer:processhtml:includes",
-        "newer:htmlmin:snippets",
+        "copy",
+        "processhtml:includes",
+        "htmlmin:snippets",
         "js",
-        "newer:jsonmin",
+        "jsonmin",
         "css",
-        "newer:htmlmin:webpages"
+        "htmlmin:webpages"
     ],
 
     "js": [
-        "newer:concat",
-        "newer:uglify",
+        "concat",
+        "uglify",
         "clean:modulesjs"
     ],
 
     "css": [
-        "newer:csscomb",
-        "newer:less",
+        "csscomb",
+        "less",
         "uncss",
         "processhtml:css",
-        "newer:postcss",
+        "postcss",
         "clean:css"
     ],
 
     "cleanbuild": [
         "clean:dist",
-        "newer-clean",
         "default"
     ]
 }
