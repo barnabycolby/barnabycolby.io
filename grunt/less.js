@@ -14,7 +14,7 @@
                 outputSourceFiles: true
             },
             files: {
-                '<%= destinationWorkingDirectory %>/css/stylesheet.css': '<%= sourceWorkingDirectory %>/less/stylesheet.less'
+                '<%= destinationWorkingDirectory %>/css/custom.css': '<%= sourceWorkingDirectory %>/less/stylesheet.less'
             }
         }
 

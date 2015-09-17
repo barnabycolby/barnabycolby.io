@@ -24,15 +24,12 @@
 
     "process": [
         "newer:copy",
-        "html",
+        "newer:processhtml:includes",
+        "newer:htmlmin:snippets",
         "js",
+        "newer:jsonmin",
         "css",
-        "newer:jsonmin"
-    ],
-
-    "html": [
-        "newer:processhtml",
-        "newer:htmlmin"
+        "newer:htmlmin:webpages"
     ],
 
     "js": [
@@ -44,6 +41,8 @@
     "css": [
         "newer:csscomb",
         "newer:less",
+        "uncss",
+        "processhtml:css",
         "newer:postcss",
         "clean:css"
     ],

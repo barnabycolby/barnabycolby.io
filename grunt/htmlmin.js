@@ -14,7 +14,9 @@
             removeIgnored: true,
             keepClosingSlash: true,
             minifyJS: true,
-            minifyCSS: true
+            minifyCSS: true,
+            // processhtml comments should be ignored
+            ignoreCustomComments: [new RegExp(' (\/?)build(.*)')]
         },
         webpages: {
             expand: true,
