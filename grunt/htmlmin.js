@@ -14,13 +14,11 @@
             removeIgnored: true,
             keepClosingSlash: true,
             minifyJS: true,
-            minifyCSS: true,
-            // SSI statements need to be ignored
-            ignoreCustomComments: [new RegExp('#(.*)')]
+            minifyCSS: true
         },
         webpages: {
             expand: true,
-            cwd: '<%= sourceWorkingDirectory %>',
+            cwd: '<%= destinationWorkingDirectory %>',
             src: ['*.html', '!boilerplate.html'],
             dest: '<%= destinationWorkingDirectory %>'
         },

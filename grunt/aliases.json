@@ -24,6 +24,7 @@
 
     "process": [
         "newer:copy",
+        "newer:processhtml",
         "newer:htmlmin",
         "js",
         "css",

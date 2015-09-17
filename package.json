@@ -32,6 +32,7 @@
     "grunt-karma": "*",
     "grunt-newer": "^1.1.1",
     "grunt-postcss": "^0.5.5",
+    "grunt-processhtml": "^0.3.8",
     "grunt-protractor-runner": "^2.1.0",
     "grunt-protractor-webdriver": "^0.2.0",
     "jsdoc": "^3.3.2",
