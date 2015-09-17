@@ -41,7 +41,7 @@
     "css": [
         "newer:csscomb",
         "newer:less",
-        "uncss",
+        "newer:uncss",
         "processhtml:css",
         "newer:postcss",
         "clean:css"
