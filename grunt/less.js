@@ -8,11 +8,6 @@
             paths: ['.']
         },
         main: {
-            options: {
-                sourceMap: true,
-                sourceMapURL: '/css/stylesheet.css.map',
-                outputSourceFiles: true
-            },
             files: {
                 '<%= destinationWorkingDirectory %>/css/custom.css': '<%= sourceWorkingDirectory %>/less/stylesheet.less'
             }
