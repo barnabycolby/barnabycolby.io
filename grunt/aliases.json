@@ -24,11 +24,15 @@
 
     "process": [
         "newer:copy",
-        "newer:processhtml",
-        "newer:htmlmin",
+        "html",
         "js",
         "css",
         "newer:jsonmin"
+    ],
+
+    "html": [
+        "newer:processhtml",
+        "newer:htmlmin"
     ],
 
     "js": [
