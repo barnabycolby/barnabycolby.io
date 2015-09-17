@@ -46,5 +46,11 @@
         "newer:less",
         "newer:postcss",
         "clean:css"
+    ],
+
+    "cleanbuild": [
+        "clean:dist",
+        "newer-clean",
+        "default"
     ]
 }
