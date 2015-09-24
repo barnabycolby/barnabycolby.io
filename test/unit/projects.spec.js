@@ -5,7 +5,7 @@
 (function () {
     'use strict';
     describe('The projects element directive', function () {
-        var $compile, $rootScope, $httpBackend, testData, testDataString, compileElement;
+        var $compile, $rootScope, $httpBackend, testData, testDataString, compileElement, dataFileUrl;
 
         // Load the project module, which contains the projects directive
         beforeEach(module('projects'));
@@ -37,6 +37,8 @@
         ];
         testDataString = JSON.stringify(testData);
 
+        dataFileUrl = '/data/projects.json';
+
         compileElement = function () {
             var element = $compile("<projects></projects>")($rootScope);
             $rootScope.$digest();
@@ -46,20 +48,20 @@
         };
 
         it('does not expand to anything when projects.json is empty', function () {
-            $httpBackend.whenGET('/data/projects.json').respond(200, '');
+            $httpBackend.whenGET(dataFileUrl).respond(200, '');
             var element = compileElement();
             expect(element.find('h3').length).toBe(0);
         });
 
         it('does not expand to anything when projects.json contains an empty array', function () {
-            $httpBackend.whenGET('/data/projects.json').respond(200, '[]');
+            $httpBackend.whenGET(dataFileUrl).respond(200, '[]');
             var element = compileElement();
             expect(element.find('h3').length).toBe(0);
         });
 
         it('creates a h3 element for each object in the array with the correct text', function () {
             var element, h3s;
-            $httpBackend.whenGET('/data/projects.json').respond(200, testDataString);
+            $httpBackend.whenGET(dataFileUrl).respond(200, testDataString);
             element = compileElement();
 
             h3s = element.find('h3');
