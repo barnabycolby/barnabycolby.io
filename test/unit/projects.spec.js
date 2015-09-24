@@ -64,9 +64,9 @@
 
             h3s = element.find('h3');
             expect(h3s.length).toBe(3);
-            expect(h3s.eq(0).text()).toBe('Website');
-            expect(h3s.eq(1).text()).toBe('Backup Server');
-            expect(h3s.eq(2).text()).toBe('VPN Server');
+            expect(h3s.eq(0).text()).toBe(testData[0].name);
+            expect(h3s.eq(1).text()).toBe(testData[1].name);
+            expect(h3s.eq(2).text()).toBe(testData[2].name);
         });
 
         /*
