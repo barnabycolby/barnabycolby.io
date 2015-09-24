@@ -5,7 +5,7 @@
 (function () {
     'use strict';
     describe('The projects element directive', function () {
-        var $compile, $rootScope, $httpBackend, testData, compileElement;
+        var $compile, $rootScope, $httpBackend, testData, testDataString, compileElement;
 
         // Load the project module, which contains the projects directive
         beforeEach(module('projects'));
@@ -21,7 +21,21 @@
             $httpBackend = $injector.get('$httpBackend');
         }));
 
-        testData = '[{"name":"Website"},{"name":"Backup Server"},{"name":"VPN Server"}]';
+        testData = [
+            {
+                name: "Website",
+                description: "What you're looking at."
+            },
+            {
+                name: "Backup Server",
+                description: "For backups."
+            },
+            {
+                name: "VPN Server",
+                description: "So that I can work on the other projects from Starbucks."
+            }
+        ];
+        testDataString = JSON.stringify(testData);
 
         compileElement = function () {
             var element = $compile("<projects></projects>")($rootScope);
@@ -45,7 +59,7 @@
 
         it('creates a h3 element for each object in the array with the correct text', function () {
             var element, h3s;
-            $httpBackend.whenGET('/data/projects.json').respond(200, testData);
+            $httpBackend.whenGET('/data/projects.json').respond(200, testDataString);
             element = compileElement();
 
             h3s = element.find('h3');
