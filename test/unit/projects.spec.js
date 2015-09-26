@@ -71,10 +71,16 @@
             expect(h3s.eq(2).text()).toBe(testData[2].name);
         });
 
-        /*
         it('creates a p element for each object in the array with the correct description', function () {
-        
+            var element, ps;
+            $httpBackend.whenGET(dataFileUrl).respond(200, testDataString);
+            element = compileElement();
+
+            ps = element.find('p');
+            expect(ps.length).toBe(3);
+            expect(ps.eq(0).text()).toBe(testData[0].description);
+            expect(ps.eq(1).text()).toBe(testData[1].description);
+            expect(ps.eq(2).text()).toBe(testData[2].description);
         });
-        */
     });
 }());
