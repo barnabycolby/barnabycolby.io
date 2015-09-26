@@ -3,10 +3,14 @@
         "lint",
         "karma:source:run",
         "process",
+        "testdistribution",
+        "jsdoc"
+    ],
+
+    "testdistribution": [
         "karma:distribution:run",
         "protractor",
-        "htmlangular:distribution",
-        "jsdoc"
+        "htmlangular:distribution"
     ],
 
     "servers": [
