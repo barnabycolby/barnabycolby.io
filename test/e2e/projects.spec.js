@@ -7,15 +7,11 @@
 
     var ProjectsPage = function () {
         this.getProjectHeaderTextByIndex = function (i) {
-            // We're using a 0-index system, so 1 needs to be added when using nth-child
-            var nthChildIndex = i + 1;
-            return element(by.css('.project:nth-child(' + nthChildIndex + ') > h3')).getText();
+            return element.all(by.css('.project > h3')).get(i).getText();
         };
 
         this.getProjectDescriptionTextByIndex = function (i) {
-            // We're using a 0-index system, so 1 needs to be added when using nth-child
-            var nthChildIndex = i + 1;
-            return element(by.css('.project:nth-child(' + nthChildIndex + ') > p')).getText();
+            return element.all(by.css('.project > p')).get(i).getText();
         };
     };
 

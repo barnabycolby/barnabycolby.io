@@ -2,7 +2,13 @@
 <!-- HTML template for a project on the projects.html page.            -->
 <!-- ================================================================= -->
 
-<div class="project" ng-repeat="project in projectsController.projects">
-    <h3>{{project.name}}</h3>
-    <p>{{project.description}}</p>
+<div class="row">
+    <div ng-repeat="project in projectsController.projects">
+        <!-- The clearfix class allows a new bootstrap row to be started -->
+        <div ng-if="$index % 3 == 0" class="clearfix"></div>
+        <div class="project col-md-4">
+            <h3>{{project.name}}</h3>
+            <p>{{project.description}}</p>
+        </div>
+    </div>
 </div>
