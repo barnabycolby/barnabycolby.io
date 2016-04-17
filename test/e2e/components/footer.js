@@ -24,8 +24,10 @@
                 });
 
                 it('should contain copyright text', function () {
-                    var copyrightElement = element(by.css('#copyright'));
-                    expect(copyrightElement.getText()).toBe('© 2015 Barnaby Colby. All rights reserved.');
+                    var copyrightElement, currentYear;
+                    copyrightElement = element(by.css('#copyright'));
+                    currentYear = new Date().getFullYear();
+                    expect(copyrightElement.getText()).toBe('© ' + currentYear + ' Barnaby Colby. All rights reserved.');
                 });
             });
         }
