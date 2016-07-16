@@ -14,7 +14,7 @@
                 });
 
                 it('should contain a link to my linkedin profile', function () {
-                    var linkedinElement = element(by.css('a[href="https://uk.linkedin.com/in/barneycolby"]'));
+                    var linkedinElement = element(by.css('a[href="https://uk.linkedin.com/in/barnabycolby"]'));
                     expect(linkedinElement.isPresent()).toBe(true);
                 });
 
