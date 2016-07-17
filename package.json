@@ -4,13 +4,13 @@
   "description": "The source code, testing and build automation for the barnabycolby.io website.",
   "author": {
     "name": "Barnaby Colby",
-    "email": "barneycolby@gmail.com",
+    "email": "barnaby.colby@gmail.com",
     "url": "http://barnabycolby.io"
   },
   "homepage": "http://barnabycolby.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/barneycolby/barnabycolby.io.git"
+    "url": "https://github.com/barnabycolby/barnabycolby.io.git"
   },
   "devDependencies": {
     "angular-jsdoc": "^1.0.9",
