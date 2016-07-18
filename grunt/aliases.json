@@ -9,7 +9,6 @@
 
     "testdistribution": [
         "karma:distribution:run",
-        "protractor",
         "htmlangular:distribution"
     ],
 
