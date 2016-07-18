@@ -32,7 +32,7 @@
         "htmlmin:snippets",
         "js",
         "jsonmin",
-        "css",
+        "csstemp",
         "htmlmin:webpages"
     ],
 
@@ -46,6 +46,14 @@
         "csscomb",
         "less",
         "uncss",
+        "processhtml:css",
+        "postcss",
+        "clean:css"
+    ],
+
+    "csstemp": [
+        "csscomb",
+        "less",
         "processhtml:css",
         "postcss",
         "clean:css"
