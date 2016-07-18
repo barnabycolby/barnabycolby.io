@@ -44,7 +44,8 @@
     "load-grunt-config": "latest",
     "phantomjs-prebuilt": "latest",
     "protractor": "latest",
-    "time-grunt": "latest"
+    "time-grunt": "latest",
+    "grunt-nunjucks-render": "latest"
   },
   "scripts": {
     "postinstall": "bower install"

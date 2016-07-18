@@ -3,14 +3,11 @@
     'use strict';
 
     module.exports = {
-
-        css: {
+        main: {
             expand: true,
-            cwd: '<%= destinationWorkingDirectory %>',
-            src: ['*.html'],
+            cwd: '<%= sourceWorkingDirectory %>',
+            src: ['*.html', '!boilerplate.html'],
             dest: '<%= destinationWorkingDirectory %>/'
         }
-
     };
-
 }());
