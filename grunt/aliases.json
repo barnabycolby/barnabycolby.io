@@ -1,20 +1,13 @@
 {
     "default": [
         "lint",
-        "karma:source:run",
         "process",
         "testdistribution",
         "jsdoc"
     ],
 
     "testdistribution": [
-        "karma:distribution:run",
         "htmlangular:distribution"
-    ],
-
-    "servers": [
-        "protractor_webdriver:main",
-        "karma:source:start"
     ],
 
     "lint": [
