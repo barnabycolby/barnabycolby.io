@@ -31,11 +31,13 @@
     "grunt-jsonmin": "latest",
     "grunt-karma": "latest",
     "grunt-newer": "latest",
+    "grunt-nunjucks-render": "latest",
     "grunt-postcss": "latest",
     "grunt-processhtml": "latest",
     "grunt-protractor-runner": "latest",
     "grunt-protractor-webdriver": "latest",
     "grunt-uncss": "latest",
+    "grunt-webdriver": "latest",
     "jsdoc": "latest",
     "karma": "latest",
     "karma-jasmine": "latest",
@@ -45,7 +47,7 @@
     "phantomjs-prebuilt": "latest",
     "protractor": "latest",
     "time-grunt": "latest",
-    "grunt-nunjucks-render": "latest"
+    "wdio-jasmine-framework": "latest"
   },
   "scripts": {
     "postinstall": "bower install"

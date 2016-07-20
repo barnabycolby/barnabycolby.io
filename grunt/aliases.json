@@ -2,11 +2,12 @@
     "default": [
         "lint",
         "process",
-        "testdistribution",
+        "test",
         "jsdoc"
     ],
 
-    "testdistribution": [
+    "test": [
+        "webdriver",
         "htmlangular:distribution"
     ],
 
