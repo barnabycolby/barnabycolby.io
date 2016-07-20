@@ -14,13 +14,13 @@ Assuming you already have the node package manager installed on your system (npm
 npm install
 ```
 
-The website build is automated using grunt. The pipeline relies on some background servers for testing the source and distribution code. Instead of intialising and destroying these servers on each grunt run, the servers task allows the servers to be initiated once per session, speeding up the build pipeline.
+The website build is automated using grunt and relies on a running PhantomJS ghostdriver server to test the project. Instead of intialising and destroying this server on each grunt run, the user is expected to manually initialise the server during development, allowing the speed of the grunt pipeline to be increased. The PhantomJS ghostdriver server can be started using the following command:
 
 ```
-grunt servers
+phantomjs --webdriver=4444
 ```
 
-Once the servers have been initialised, run grunt to build the code.
+Once the server has been initialised, run grunt to build the site.
 
 ```
 grunt
