@@ -1,27 +1,29 @@
-/*global
-    describe, it, expect, element, by
-*/
-
+/*global beforeEach, browser, describe, it, expect */
 (function () {
     'use strict';
 
-    var HeaderPageObject = function () {
+    var HeaderTest = function () {
+        var existsAndIsVisible = function (selector) {
+            expect(browser.isExisting(selector)).toBe(true);
+            expect(browser.isVisible(selector)).toBe(true);
+        }
+
         this.test = function () {
-            describe('header', function () {
+            describe("The header", function () {
                 it('should contain my name as a link to the homepage', function () {
-                    var nameElement = element(by.css('#header a[href="/"]'));
-                    expect(nameElement.isPresent()).toBe(true);
-                    expect(nameElement.getText()).toBe('Barnaby Colby');
+                    var selector = '#header a[href="/"]';
+                    existsAndIsVisible(selector);
+                    expect(browser.getText(selector)).toBe('Barnaby Colby');
                 });
 
                 it('should contain a link to the projects page', function () {
-                    var projectsElement = element(by.css('#header ul.nav a[href="/projects.html"]'));
-                    expect(projectsElement.isPresent()).toBe(true);
-                    expect(projectsElement.getText()).toBe('Projects');
+                    var selector = '#header ul.nav a[href="/projects.html"]';
+                    existsAndIsVisible(selector);
+                    expect(browser.getText(selector)).toBe('Projects');
                 });
             });
         }
     };
 
-    module.exports = HeaderPageObject;
+    module.exports = HeaderTest;
 }());

@@ -34,8 +34,6 @@
     "grunt-nunjucks-render": "latest",
     "grunt-postcss": "latest",
     "grunt-processhtml": "latest",
-    "grunt-protractor-runner": "latest",
-    "grunt-protractor-webdriver": "latest",
     "grunt-uncss": "latest",
     "grunt-webdriver": "latest",
     "jsdoc": "latest",
@@ -45,7 +43,6 @@
     "karma-phantomjs-launcher": "latest",
     "load-grunt-config": "latest",
     "phantomjs-prebuilt": "latest",
-    "protractor": "latest",
     "time-grunt": "latest",
     "wdio-jasmine-framework": "latest"
   },

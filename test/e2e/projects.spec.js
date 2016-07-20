@@ -1,5 +1,5 @@
 /*global
-    describe, require, browser, beforeEach, expect, it, console, element, by
+    expect, require, it, describe, beforeEach, browser
 */
 
 (function () {
@@ -7,17 +7,19 @@
 
     var ProjectsPage = function () {
         this.getProjectHeaderTextByIndex = function (i) {
-            return element.all(by.css('.project > h3')).get(i).getText();
+            var elementId = browser.elements('.project > h3').value[i].ELEMENT;
+            return browser.elementIdText(elementId).value;
         };
 
         this.getProjectDescriptionTextByIndex = function (i) {
-            return element.all(by.css('.project > p')).get(i).getText();
+            var elementId = browser.elements('.project > p').value[i].ELEMENT;
+            return browser.elementIdText(elementId).value;
         };
     };
 
     describe('projects page', function () {
-        var FooterPageObject, footerPageObject,
-            HeaderPageObject, headerPageObject,
+        var FooterTest, footerTest,
+            HeaderTest, headerTest,
             Variables, variables;
 
         Variables = require('./variables.js');
@@ -25,17 +27,16 @@
 
         beforeEach(function () {
             var page = '/projects.html';
-            browser.get(variables.websiteUrl + page);
-            expect(browser.getCurrentUrl()).toBe(variables.websiteUrl + page);
+            browser.url(variables.websiteUrl + page);
         });
 
-        FooterPageObject = require('./components/footer.js');
-        footerPageObject = new FooterPageObject();
-        footerPageObject.test();
+        FooterTest = require('./components/footer.js');
+        footerTest = new FooterTest();
+        footerTest.test();
 
-        HeaderPageObject = require('./components/header.js');
-        headerPageObject = new HeaderPageObject();
-        headerPageObject.test();
+        HeaderTest = require('./components/header.js');
+        headerTest = new HeaderTest();
+        headerTest.test();
 
         it('should contain the details of each project', function () {
             var projectsPage, expectedProjectsData, expectedProjectData, i;

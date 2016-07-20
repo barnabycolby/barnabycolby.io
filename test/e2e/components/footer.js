@@ -1,30 +1,36 @@
-/*global
-    describe, it, expect, element, by
-*/
-
+/*global beforeEach, browser, describe, it, expect */
 (function () {
     'use strict';
 
-    var FooterPageObject = function () {
+    var FooterTest = function () {
+        var existsAndIsVisible = function (selector) {
+            expect(browser.isExisting(selector)).toBe(true);
+            expect(browser.isVisible(selector)).toBe(true);
+        }
+
         this.test = function () {
-            describe('footer', function () {
+            describe("The footer", function () {
                 it('should contain a link to my email address', function () {
-                    var emailElement = element(by.css('a[href="mailto:barnaby.colby@gmail.com"]'));
-                    expect(emailElement.isPresent()).toBe(true);
+                    existsAndIsVisible('a[href="mailto:barnaby.colby@gmail.com"]');
                 });
 
                 it('should contain a link to my linkedin profile', function () {
-                    var linkedinElement = element(by.css('a[href="https://uk.linkedin.com/in/barnabycolby"]'));
-                    expect(linkedinElement.isPresent()).toBe(true);
+                    existsAndIsVisible('a[href="https://uk.linkedin.com/in/barnabycolby"]');
                 });
 
                 it('should contain a link to my github profile', function () {
-                    var githubElement = element(by.css('a[href="https://github.com/barnabycolby"]'));
-                    expect(githubElement.isPresent()).toBe(true);
+                    existsAndIsVisible('a[href="https://github.com/barnabycolby"]');
+                });
+
+                it("should contain copyright text", function () {
+                    var copyrightElementText, currentYear;
+                    copyrightElementText = browser.getText('#copyright');
+                    currentYear = new Date().getFullYear();
+                    expect(copyrightElementText).toBe('© ' + currentYear + ' Barnaby Colby. All rights reserved.');
                 });
             });
         }
     };
 
-    module.exports = FooterPageObject;
+    module.exports = FooterTest;
 }());

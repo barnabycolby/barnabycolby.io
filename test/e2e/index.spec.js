@@ -6,24 +6,23 @@
     'use strict';
 
     describe('index page', function () {
-        var FooterPageObject, footerPageObject,
-            HeaderPageObject, headerPageObject,
+        var FooterTest, footerTest,
+            HeaderTest, headerTest,
             Variables, variables;
 
         Variables = require('./variables.js');
         variables = new Variables();
 
         beforeEach(function () {
-            browser.get(variables.websiteUrl + '/');
-            expect(browser.getCurrentUrl()).toBe(variables.websiteUrl + '/');
+            browser.url(variables.websiteUrl + '/');
         });
 
-        FooterPageObject = require('./components/footer.js');
-        footerPageObject = new FooterPageObject();
-        footerPageObject.test();
+        FooterTest = require('./components/footer.js');
+        footerTest = new FooterTest();
+        footerTest.test();
 
-        HeaderPageObject = require('./components/header.js');
-        headerPageObject = new HeaderPageObject();
-        headerPageObject.test();
+        HeaderTest = require('./components/header.js');
+        headerTest = new HeaderTest();
+        headerTest.test();
     });
 }());
