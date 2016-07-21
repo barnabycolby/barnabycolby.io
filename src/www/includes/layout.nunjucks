@@ -1,19 +1,19 @@
 <!DOCTYPE html>
  <html lang="en-GB">
     <head>
-        {% include "src/www/includes/commonheadtags.tmpl.html" %}
+        {% include "src/www/includes/commonheadtags.nunjucks" %}
         <title>{{ pageName }} | Barnaby Colby</title>
 	</head>
 
 	<body>
-        {% include "src/www/includes/noscript.tmpl.html" %}
-        {% import "src/www/includes/header.tmpl.html" as header %}
+        {% include "src/www/includes/noscript.nunjucks" %}
+        {% import "src/www/includes/header.nunjucks" as header %}
         {{ header.output(navigationLinks, pageName) }}
 
         <div class="container">
             {% block content %} {% endblock %}
         </div>
 
-        {% include "src/www/includes/footer.tmpl.html" %}
+        {% include "src/www/includes/footer.nunjucks" %}
 	</body>
 </html>
