@@ -14,14 +14,12 @@
         source: {
             expand: true,
             cwd: '<%= sourceWorkingDirectory %>',
-            // commonheadtags.tmpl.html must be ignored as htmlangular is not smart enough to wrap head tags for the W3C validator
-            src: ['snippets/*.html', '!snippets/header.tmpl.html', '!snippets/commonheadtags.tmpl.html']
+            src: ['snippets/*.tmpl.html']
         },
         distribution: {
             expand: true,
             cwd: '<%= destinationWorkingDirectory %>',
-            // commonheadtags.tmpl.html must be ignored as htmlangular is not smart enough to wrap head tags for the W3C validator
-            src: ['*.html', 'snippets/*.html', '!snippets/header.tmpl.html', '!snippets/commonheadtags.tmpl.html']
+            src: ['snippets/*.tmpl.html']
         }
 
     };
