@@ -11,7 +11,8 @@
 
 	<body>
         {% include "src/www/includes/noscript.tmpl.html" %}
-        <header></header>
+        {% import "src/www/snippets/header.tmpl.html" as header %}
+        {{ header.output(navigationLinks, 'Projects') }}
         
         <div class="container">
             <projects></projects>

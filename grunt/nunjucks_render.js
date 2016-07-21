@@ -7,7 +7,8 @@
             expand: true,
             cwd: '<%= sourceWorkingDirectory %>',
             src: ['*.html', '!boilerplate.html'],
-            dest: '<%= destinationWorkingDirectory %>/'
+            dest: '<%= destinationWorkingDirectory %>/',
+            data: '<%= sourceWorkingDirectory %>/data/*.json'
         }
     };
 }());

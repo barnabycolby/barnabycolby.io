@@ -27,7 +27,7 @@
         snippets: {
             expand: true,
             cwd: '<%= sourceWorkingDirectory %>',
-            src: ['snippets/**/*.html'],
+            src: ['snippets/**/*.html', '!snippets/header.tmpl.html'],
             dest: '<%= destinationWorkingDirectory %>'
         }
 

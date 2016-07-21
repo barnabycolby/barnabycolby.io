@@ -2,6 +2,7 @@
 <!-- HTML template for the header.                                     -->
 <!-- ================================================================= -->
 
+{% macro output(navigationLinks, activePage='Home') %}
 <nav id="header" class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
@@ -9,14 +10,17 @@
         </div>
 
         <!-- Navigation links -->
-        <nav ng-controller="NavigationLinkController" class="navigationlinks">
+        <nav class="navigationlinks">
             <ul class="nav navbar-nav">
-                <li ng-repeat="link in links" ng-class="{ active: isActive(link.href) }">
-                    <a ng-href="{{link.href}}">{{link.text}}</a>
+                {% for link in navigationLinks %}
+                <li>
+                    <a href="{{ link.href }}" {% if activePage == link.text %}class="active"{% endif %}>{{ link.text }}</a>
                 </li>
+                {% endfor %}
             </ul>
         </nav>
 
         <p class="navbar-text navbar-right hidden-xs">Computer Scientist</p>
     </div>
 </nav>
+{% endmacro %}

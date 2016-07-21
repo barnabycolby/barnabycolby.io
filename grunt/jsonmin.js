@@ -7,7 +7,7 @@
         main: {
             expand: true,
             cwd: '<%= sourceWorkingDirectory %>',
-            src: 'data/**/*.json',
+            src: ['data/**/*.json', '!data/navigation.json'],
             dest: '<%= destinationWorkingDirectory %>'
         }
 

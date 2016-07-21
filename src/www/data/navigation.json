@@ -1,3 +1,5 @@
-[
-    { "text": "Projects", "href": "/projects.html" }
-]
+{
+    "navigationLinks": [
+        { "text": "Projects", "href": "/projects.html" }
+    ]
+}
