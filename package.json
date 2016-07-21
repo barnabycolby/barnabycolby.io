@@ -13,7 +13,6 @@
     "url": "https://github.com/barnabycolby/barnabycolby.io.git"
   },
   "devDependencies": {
-    "angular-jsdoc": "latest",
     "autoprefixer-core": "latest",
     "cssnano": "latest",
     "grunt": "latest",
@@ -25,22 +24,17 @@
     "grunt-html-angular-validate": "latest",
     "grunt-jslint": "latest",
     "grunt-json-schema": "latest",
-    "grunt-karma": "latest",
     "grunt-newer": "latest",
     "grunt-nunjucks-render": "latest",
     "grunt-postcss": "latest",
     "grunt-processhtml": "latest",
     "grunt-uncss": "latest",
     "grunt-webdriver": "latest",
-    "jsdoc": "latest",
-    "karma": "latest",
-    "karma-jasmine": "latest",
-    "karma-ng-html2js-preprocessor": "latest",
-    "karma-phantomjs-launcher": "latest",
     "load-grunt-config": "latest",
     "phantomjs-prebuilt": "latest",
     "time-grunt": "latest",
-    "wdio-jasmine-framework": "latest"
+    "wdio-jasmine-framework": "latest",
+    "webdriverio": "latest"
   },
   "scripts": {
     "postinstall": "bower install"
