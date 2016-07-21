@@ -7,7 +7,7 @@
 (function () {
     "use strict";
 
-    var app = angular.module('projects', ['footer']);
+    var app = angular.module('projects', []);
 
     /**
      * @memberof projectsModule

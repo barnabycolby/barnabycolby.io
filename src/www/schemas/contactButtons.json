@@ -1,16 +1,22 @@
 {
-    "type": "array",
+    "type": "object",
     "required": true,
-    "items": {
-        "type": "object",
-        "properties": {
-            "href": {
-                "type": "string",
-                "required": true
-            },
-            "faCode": {
-                "type": "string",
-                "required": true
+    "properties": {
+        "contactButtons": {
+            "type": "array",
+            "required": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "type": "string",
+                        "required": true
+                    },
+                    "faCode": {
+                        "type": "string",
+                        "required": true
+                    }
+                }
             }
         }
     }

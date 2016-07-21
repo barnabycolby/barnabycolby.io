@@ -1,0 +1,15 @@
+<!-- ======================= footer.tmpl.html ======================== -->
+<!-- HTML template for the footer.                                     -->
+<!-- ================================================================= -->
+
+<nav id="footer">
+    <div class="container text-center">
+        {% for contactButton in contactButtons %}
+            <a href="{{ contactButton.href }}" target="_blank" class="btn btn-default">
+                <span class="fa fa-{{ contactButton.faCode }}" aria-hidden="true"></span>
+            </a>
+        {% endfor %}
+
+        <p id="copyright" class="text-muted">&copy;&nbsp;<script>document.write(new Date().getFullYear())</script>&nbsp;Barnaby Colby.<span id="rightsreserved">&nbsp;All rights reserved.</span></p>
+    </div>
+</nav>

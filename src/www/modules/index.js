@@ -6,5 +6,5 @@
 (function () {
     "use strict";
 
-    angular.module('index', ['footer']);
+    angular.module('index', []);
 }());
