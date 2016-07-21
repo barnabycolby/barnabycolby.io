@@ -2,10 +2,9 @@
 <!-- Lists past, current and future personal projects.                 -->
 <!-- ================================================================= -->
 
-{% set angularApp = 'projects' %}
 {% set pageName = 'Projects' %}
 {% extends "src/www/includes/layout.tmpl.html" %}
 
 {% block content %}
-<projects></projects>
+    {% include "src/www/includes/projects.tmpl.html" %}
 {% endblock %}

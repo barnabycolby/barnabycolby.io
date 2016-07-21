@@ -11,15 +11,10 @@
             reportCheckstylePath: null,
             charset: false
         },
-        source: {
-            expand: true,
-            cwd: '<%= sourceWorkingDirectory %>',
-            src: ['snippets/*.tmpl.html']
-        },
         distribution: {
             expand: true,
             cwd: '<%= destinationWorkingDirectory %>',
-            src: ['snippets/*.tmpl.html']
+            src: ['*.html']
         }
 
     };

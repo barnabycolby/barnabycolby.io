@@ -23,12 +23,6 @@
             cwd: '<%= destinationWorkingDirectory %>',
             src: ['*.html', '!boilerplate.html'],
             dest: '<%= destinationWorkingDirectory %>'
-        },
-        snippets: {
-            expand: true,
-            cwd: '<%= sourceWorkingDirectory %>',
-            src: ['snippets/**/*.html'],
-            dest: '<%= destinationWorkingDirectory %>'
         }
 
     };

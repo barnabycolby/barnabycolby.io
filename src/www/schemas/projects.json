@@ -1,16 +1,22 @@
 {
-    "type": "array",
+    "type": "object",
     "required": true,
-    "items": {
-        "type": "object",
-        "properties": {
-            "name": {
-                "type": "string",
-                "required": true
-            },
-            "description": {
-                "type": "string",
-                "required": true
+    "properties": {
+        "projects": {
+            "type": "array",
+            "required": true,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "required": true
+                    },
+                    "description": {
+                        "type": "string",
+                        "required": true
+                    }
+                }
             }
         }
     }

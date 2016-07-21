@@ -3,12 +3,14 @@
 <!-- ================================================================= -->
 
 <div class="row">
-    <div ng-repeat="project in projectsController.projects">
+    {% for project in projects %}
+    <div>
         <!-- The clearfix class allows a new bootstrap row to be started -->
-        <div ng-if="$index % 3 == 0" class="clearfix"></div>
+        {% if loop.index0 % 3 == 0 %}<div class="clearfix"></div>{% endif %}
         <div class="project col-md-4">
-            <h3>{{project.name}}</h3>
-            <p>{{project.description}}</p>
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.description }}</p>
         </div>
     </div>
+    {% endfor %}
 </div>

@@ -43,7 +43,7 @@
 
             projectsPage = new ProjectsPage();
 
-            expectedProjectsData = require('../../dist/www/data/projects.json');
+            expectedProjectsData = require('../../src/www/data/projects.json');
             expect(expectedProjectsData).toBeTruthy();
             for (i = 0; i < expectedProjectsData.length; i += 1) {
                 expectedProjectData = expectedProjectsData[i];

@@ -2,8 +2,7 @@
     "default": [
         "lint",
         "process",
-        "test",
-        "jsdoc"
+        "test"
     ],
 
     "test": [
@@ -14,25 +13,14 @@
     "lint": [
         "jslint:grunt",
         "jslint:test",
-        "jslint:source",
-        "json_schema",
-        "htmlangular:source"
+        "json_schema"
     ],
 
     "process": [
         "copy",
         "nunjucks_render",
-        "htmlmin:snippets",
-        "js",
-        "jsonmin",
         "csstemp",
         "htmlmin:webpages"
-    ],
-
-    "js": [
-        "concat",
-        "uglify",
-        "clean:modulesjs"
     ],
 
     "css": [

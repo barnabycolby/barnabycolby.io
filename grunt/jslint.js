@@ -7,9 +7,6 @@
         grunt: {
             src: ['Gruntfile.js', 'grunt/**/*.js']
         },
-        source: {
-            src: ['<%= sourceWorkingDirectory %>/modules/**/*.js']
-        },
         test: {
             src: ['test/**/*.spec.js']
         }
