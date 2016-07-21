@@ -2,22 +2,10 @@
 <!-- Lists past, current and future personal projects.                 -->
 <!-- ================================================================= -->
 
-<!DOCTYPE html>
-<html ng-app="projects">
-	<head>
-        {% include "src/www/includes/commonheadtags.tmpl.html" %}
-		<title>Projects | Barnaby Colby</title>
-	</head>
+{% set angularApp = 'projects' %}
+{% set pageName = 'Projects' %}
+{% extends "src/www/includes/layout.tmpl.html" %}
 
-	<body>
-        {% include "src/www/includes/noscript.tmpl.html" %}
-        {% import "src/www/snippets/header.tmpl.html" as header %}
-        {{ header.output(navigationLinks, 'Projects') }}
-        
-        <div class="container">
-            <projects></projects>
-        </div>
-
-        <footer></footer>
-	</body>
-</html>
+{% block content %}
+<projects></projects>
+{% endblock %}

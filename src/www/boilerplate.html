@@ -4,22 +4,15 @@
 <!-- ### should be replaced once the new page has been created.        -->
 <!-- ================================================================= -->
 
-<!DOCTYPE html>
-<html ng-app="###">
-	<head>
-        {% include "src/www/includes/commonheadtags.tmpl.html" %}
-		<title>### | Barnaby Colby</title>
-	</head>
+<!-- The name of the angular app -->
+{% set angularApp = '###' %}
 
-	<body>
-        {% include "src/www/includes/noscript.tmpl.html" %}
-        {% import "src/www/snippets/header.tmpl.html" as header %}
-        {{ header.output(navigationLinks, 'Home' }}
+<!-- The name of the page, included in the title and the navigation links -->
+{% set pageName = '###' %}
 
-        <div class="container">
-            ###
-        </div>
+{% extends "src/www/includes/layout.tmpl.html %}
 
-        <footer></footer>
-	</body>
-</html>
+<!-- All page-specific content should be placed here -->
+{% block content %}
+###
+{% endblock %}

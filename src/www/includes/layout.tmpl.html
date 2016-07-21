@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="{{ angularApp }}">
+    <head>
+        {% include "src/www/includes/commonheadtags.tmpl.html" %}
+        <title>{{ pageName }} | Barnaby Colby</title>
+	</head>
+
+	<body>
+        {% include "src/www/includes/noscript.tmpl.html" %}
+        {% import "src/www/includes/header.tmpl.html" as header %}
+        {{ header.output(navigationLinks, pageName) }}
+
+        <div class="container">
+            {% block content %} {% endblock %}
+        </div>
+
+        <footer></footer>
+	</body>
+</html>

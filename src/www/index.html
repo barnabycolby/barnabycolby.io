@@ -2,21 +2,6 @@
 <!-- The homepage for the website.                                     -->
 <!-- ================================================================= -->
 
-<!DOCTYPE html>
-<html ng-app="index">
-	<head>
-        {% include "src/www/includes/commonheadtags.tmpl.html" %}
-		<title>Home | Barnaby Colby</title>
-	</head>
-
-	<body>
-        {% include "src/www/includes/noscript.tmpl.html" %}
-        {% import "src/www/snippets/header.tmpl.html" as header %}
-        {{ header.output(navigationLinks, 'Home') }}
-
-        <div class="container">
-        </div>
-
-        <footer></footer>
-	</body>
-</html>
+{% set angularApp = 'index' %}
+{% set pageName = 'Home' %}
+{% extends "src/www/includes/layout.tmpl.html" %}
