@@ -13,7 +13,7 @@
     "url": "https://github.com/barnabycolby/barnabycolby.io.git"
   },
   "devDependencies": {
-    "autoprefixer-core": "latest",
+    "autoprefixer": "latest",
     "cssnano": "latest",
     "grunt": "latest",
     "grunt-contrib-clean": "latest",
