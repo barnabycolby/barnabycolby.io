@@ -10,6 +10,9 @@
             </a>
         {% endfor %}
 
-        <p id="copyright" class="text-muted">&copy;&nbsp;<script>document.write(new Date().getFullYear())</script>&nbsp;Barnaby Colby.<span id="rightsreserved">&nbsp;All rights reserved.</span></p>
+        <div>
+            <p id="copyright" class="text-muted">&copy;&nbsp;<script>document.write(new Date().getFullYear())</script>&nbsp;Barnaby Colby.<span id="rightsreserved">&nbsp;All rights reserved.</span></p>
+            <p id="lastUpdated">This page was last updated on {{ template_date | date('DD/MM/YYYY') }}.</p>
+        </div>
     </div>
 </nav>
