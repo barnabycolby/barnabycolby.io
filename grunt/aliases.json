@@ -19,7 +19,7 @@
     "process": [
         "copy",
         "nunjucks_render",
-        "csstemp",
+        "css",
         "htmlmin:webpages"
     ],
 
@@ -27,14 +27,6 @@
         "csscomb",
         "less",
         "uncss",
-        "processhtml:css",
-        "postcss",
-        "clean:css"
-    ],
-
-    "csstemp": [
-        "csscomb",
-        "less",
         "processhtml:css",
         "postcss",
         "clean:css"
