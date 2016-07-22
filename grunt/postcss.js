@@ -7,7 +7,7 @@
         options: {
             processors: [
                 require('autoprefixer-core')({browsers: '> 5%'}),
-                require('cssnano')()
+                require('cssnano')({ discardComments: { removeAll: true } })
             ]
         },
         main: {
