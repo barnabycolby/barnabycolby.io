@@ -6,6 +6,30 @@
 
 #header
 {
+    // Set the background colour to white
+    // Note that the header is still separated from the main page by a border
+    background-color: #fff;
+
+    // Set the navigation bar text to black
+    // Apart from the navigation links, which are set to a dark grey in order to stand out
+    // On hover, they are then set to black
+    .navbar-brand,
+    .navbar-text,
+    .navbar-nav > li > a:hover
+    {
+        color: black;
+    }
+    .navbar-nav > li > a
+    {
+        color: #777;
+    }
+
+    // The active navigation link should be given a different colour to allow it to stand out
+    .navbar-nav > li > a.active
+    {
+        color: @accent;
+    }
+
     @media (max-width: @screen-xs-max)
     {
         /* Center the brand */
