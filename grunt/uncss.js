@@ -6,8 +6,7 @@
 
         main: {
             options: {
-                htmlroot: '<%= destinationWorkingDirectory %>',
-                ignoreSheets: ['https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css']
+                htmlroot: '<%= destinationWorkingDirectory %>'
             },
             // nonull must be included to prevent Grunt from removing the URL sources because it cannot find them locally
             nonull: true,
