@@ -9,7 +9,8 @@ body
     height: 495px;
 }
 
-.vertical-center
+// Vertically and horizontally centers an element using flexbox
+.centervh
 {
     display: flex;
 
@@ -17,16 +18,40 @@ body
 
     align-items: center;
     justify-content: center;
-
-    h1
-    {
-        font-size: 80px;
-    }
 }
 
 .indexcontent
 {
-    display: block;
+    h1
+    {
+        font-size: 80px;
 
-    text-align: center;
+        text-align: center;
+    }
+
+    // The navigation is styled as a horizontal menu
+    .navigation
+    {
+        // Top margin ensures blurb is evenly spaced between the title and the navigation links
+        margin-top: 20px;
+        padding-left: 0;
+
+        list-style-type: none;
+
+        text-align: center;
+
+        > li
+        {
+            font-size: 20px;
+
+            display: inline-block;
+
+            padding: 0 10px;
+        }
+
+        > li:hover
+        {
+            text-decoration: underline;
+        }
+    }
 }

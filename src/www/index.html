@@ -17,10 +17,17 @@
 	<body>
         {% include "src/www/includes/noscript.nunjucks" %}
 
-        <div class="container vertical-center">
+        <div class="container centervh">
             <div class="indexcontent">
                 <h1>Barnaby Colby</h1>
                 <h3>I like programming. Check out my <a href="/projects.html">projects</a> on <a href="https://github.com/barnabycolby">GitHub</a>.</h3>
+                <ul class="text-muted navigation">
+                    {% for link in navigationLinks %}
+                    <li>
+                        <a href="{{ link.href }}">{{ link.text }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
 
