@@ -6,14 +6,26 @@
 
 body > .container
 {
-    padding-top: 10%;
-    padding-bottom: 10%;
-
     text-align: center;
+    // The top of the container is padded so that the title and blurb look more vertically centered
+    // On landscape phones, the padding pushes the content off the bottom of the screen
+    @media (min-height: 380px)
+    {
+        padding-top: 10%;
+    }
 
     h1
     {
         font-size: 80px;
+    }
+
+    // The font-size used on tablets/computers is too large for phones
+    @media (max-width: @screen-xs-max)
+    {
+        h1
+        {
+            font-size: 50px;
+        }
     }
 
     // The navigation is styled as a horizontal menu
