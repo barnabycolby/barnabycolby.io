@@ -4,29 +4,16 @@
 
 @import 'common.less';
 
-body
+body > .container
 {
-    height: 495px;
-}
+    padding-top: 10%;
+    padding-bottom: 10%;
 
-// Vertically and horizontally centers an element using flexbox
-.centervh
-{
-    display: flex;
+    text-align: center;
 
-    height: 100%;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.indexcontent
-{
     h1
     {
         font-size: 80px;
-
-        text-align: center;
     }
 
     // The navigation is styled as a horizontal menu
@@ -37,8 +24,6 @@ body
         padding-left: 0;
 
         list-style-type: none;
-
-        text-align: center;
 
         > li
         {
