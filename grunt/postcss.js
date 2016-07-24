@@ -11,8 +11,10 @@
             ]
         },
         main: {
-            src: '<%= destinationWorkingDirectory %>/css/stylesheet.css',
-            dest: '<%= destinationWorkingDirectory %>/css/stylesheet.min.css'
+            files: {
+                '<%= destinationWorkingDirectory %>/css/stylesheet.min.css': '<%= destinationWorkingDirectory %>/css/stylesheet.css',
+                '<%= destinationWorkingDirectory %>/css/index.min.css': '<%= destinationWorkingDirectory %>/css/index.css'
+            }
         }
 
     };

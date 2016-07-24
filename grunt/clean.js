@@ -6,7 +6,8 @@
 
         css: [
             '<%= destinationWorkingDirectory %>/css/stylesheet.css',
-            '<%= destinationWorkingDirectory %>/css/custom.css'
+            '<%= destinationWorkingDirectory %>/css/custom.css',
+            '<%= destinationWorkingDirectory %>/css/index.css'
         ],
         dist: '<%= destinationWorkingDirectory %>'
 

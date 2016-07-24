@@ -2,5 +2,28 @@
 <!-- The homepage for the website.                                     -->
 <!-- ================================================================= -->
 
-{% set pageName = 'Home' %}
-{% extends "src/www/includes/layout.nunjucks" %}
+<!DOCTYPE html>
+ <html lang="en-GB">
+    <head>
+        {% include "src/www/includes/commonheadtags.nunjucks" %}
+
+        <!-- build:css /css/index.min.css -->
+        <link rel="stylesheet" href="/css/index.css"/>
+        <!-- /build -->
+
+        <title>Home | Barnaby Colby</title>
+	</head>
+
+	<body>
+        {% include "src/www/includes/noscript.nunjucks" %}
+
+        <div class="container vertical-center">
+            <div class="indexcontent">
+                <h1>Barnaby Colby</h1>
+                <h3>I like programming. Check out my <a href="/projects.html">projects</a> on <a href="https://github.com/barnabycolby">GitHub</a>.</h3>
+            </div>
+        </div>
+
+        {% include "src/www/includes/footer.nunjucks" %}
+	</body>
+</html>

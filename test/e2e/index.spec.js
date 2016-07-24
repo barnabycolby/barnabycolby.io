@@ -7,7 +7,6 @@
 
     describe('index page', function () {
         var FooterTest, footerTest,
-            HeaderTest, headerTest,
             Variables, variables;
 
         Variables = require('./variables.js');
@@ -20,9 +19,5 @@
         FooterTest = require('./components/footer.js');
         footerTest = new FooterTest();
         footerTest.test();
-
-        HeaderTest = require('./components/header.js');
-        headerTest = new HeaderTest();
-        headerTest.test();
     });
 }());

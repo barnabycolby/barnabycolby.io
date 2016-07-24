@@ -11,15 +11,15 @@
         this.test = function () {
             describe("The footer", function () {
                 it('should contain a link to my email address', function () {
-                    existsAndIsVisible('a[href="mailto:barnaby.colby@gmail.com"]');
+                    existsAndIsVisible('#footer a[href="mailto:barnaby.colby@gmail.com"]');
                 });
 
                 it('should contain a link to my linkedin profile', function () {
-                    existsAndIsVisible('a[href="https://uk.linkedin.com/in/barnabycolby"]');
+                    existsAndIsVisible('#footer a[href="https://uk.linkedin.com/in/barnabycolby"]');
                 });
 
                 it('should contain a link to my github profile', function () {
-                    existsAndIsVisible('a[href="https://github.com/barnabycolby"]');
+                    existsAndIsVisible('#footer a[href="https://github.com/barnabycolby"]');
                 });
 
                 it("should contain copyright text", function () {
