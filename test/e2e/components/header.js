@@ -21,10 +21,15 @@
 
         this.testNavigation = function () {
             describe("navigation bar", function () {
-                it('should contain a link to the projects page', function () {
-                    var selector = '#navigation li a[href="/projects.html"]';
-                    helper.existsAndIsVisible(selector);
-                    expect(browser.getText(selector)).toBe('Projects');
+                it('should contain all navigation links', function () {
+                    var navigationLinks = require('../../../src/www/data/navigation.json').navigationLinks;
+
+                    for (var i = 0; i < navigationLinks.length; i++) {
+                        var navigationLink = navigationLinks[i];
+                        var selector = '#navigation li a[href="' + navigationLink.href + '"]';
+                        helper.existsAndIsVisible(selector);
+                        expect(browser.getText(selector)).toBe(navigationLink.text);
+                    }
                 });
             });
         }
