@@ -1,4 +1,4 @@
-/*global beforeEach, browser, describe, it, expect */
+/*global beforeEach, browser, describe, it, expect, require, module */
 (function () {
     'use strict';
 
@@ -17,22 +17,24 @@
             });
 
             this.testNavigation();
-        }
+        };
 
         this.testNavigation = function () {
             describe("navigation bar", function () {
                 it('should contain all navigation links', function () {
-                    var navigationLinks = require('../../../src/www/data/navigation.json').navigationLinks;
+                    var i, navigationLink, selector,
+                        navigationLinks = require('../../../src/www/data/navigation.json').navigationLinks;
 
-                    for (var i = 0; i < navigationLinks.length; i++) {
-                        var navigationLink = navigationLinks[i];
-                        var selector = '#navigation li a[href="' + navigationLink.href + '"]';
+                    for (i = 0; i < navigationLinks.length; i += 1) {
+                        navigationLink = navigationLinks[i];
+                        selector = '#navigation li a[href="' + navigationLink.href + '"]';
+
                         helper.existsAndIsVisible(selector);
                         expect(browser.getText(selector)).toBe(navigationLink.text);
                     }
                 });
             });
-        }
+        };
     };
 
     module.exports = HeaderTest;

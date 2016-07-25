@@ -1,4 +1,4 @@
-/*global beforeEach, browser, describe, it, expect */
+/*global beforeEach, browser, describe, it, expect, require, module */
 (function () {
     'use strict';
 
@@ -28,7 +28,7 @@
                     expect(copyrightElementText).toBe('© ' + currentYear + ' Barnaby Colby. All rights reserved.');
                 });
             });
-        }
+        };
     };
 
     module.exports = FooterTest;

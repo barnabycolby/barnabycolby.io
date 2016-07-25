@@ -8,7 +8,7 @@
             src: ['Gruntfile.js', 'grunt/**/*.js']
         },
         test: {
-            src: ['test/**/*.spec.js']
+            src: ['test/**/*.js']
         }
 
     };

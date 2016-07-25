@@ -1,3 +1,4 @@
+/*global expect, browser, module */
 (function () {
     'use strict';
 
@@ -5,7 +6,7 @@
         this.existsAndIsVisible = function (selector) {
             expect(browser.isExisting(selector)).toBe(true);
             expect(browser.isVisible(selector)).toBe(true);
-        }
+        };
     };
 
     module.exports = Helper;

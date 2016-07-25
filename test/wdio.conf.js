@@ -1,7 +1,8 @@
+/*global exports */
 exports.config = {
     host: '127.0.0.1',
     port: 4444,
-    
+
     //
     // ==================
     // Specify Test Files
@@ -120,18 +121,10 @@ exports.config = {
     //
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {
-        //
-        defaultTimeoutInterval: 10000,
         // Jasmine default timeout
-        //
-        // The Jasmine framework allows interception of each assertion in order to log the state of the application
-        // or website depending on the result. For example, it is pretty handy to take a screenshot every time
-        // an assertion fails.
-        expectationResultHandler: function(passed, assertion) {
-            // do something
-        }
-    },
-    
+        defaultTimeoutInterval: 10000
+    }
+
     //
     // =====
     // Hooks
@@ -193,4 +186,4 @@ exports.config = {
     // possible to defer the end of the process using a promise.
     // onComplete: function(exitCode) {
     // }
-}
+};
