@@ -15,9 +15,15 @@
                     existsAndIsVisible(selector);
                     expect(browser.getText(selector)).toBe('Barnaby Colby');
                 });
+            });
 
+            this.testNavigation();
+        }
+
+        this.testNavigation = function () {
+            describe("navigation bar", function () {
                 it('should contain a link to the projects page', function () {
-                    var selector = '#header ul.nav a[href="/projects.html"]';
+                    var selector = '#navigation li a[href="/projects.html"]';
                     existsAndIsVisible(selector);
                     expect(browser.getText(selector)).toBe('Projects');
                 });

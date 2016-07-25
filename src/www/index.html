@@ -21,7 +21,7 @@
             <h1>Barnaby Colby</h1>
             <!-- The safe filter disables auto-escaping, allowing raw HTML to be used in the blurb -->
             <h3>{{ blurb | safe }}</h3>
-            <ul class="text-muted navigation">
+            <ul id="navigation" class="text-muted">
                 {% for link in navigationLinks %}
                 <li>
                     <a href="{{ link.href }}">{{ link.text }}</a>
