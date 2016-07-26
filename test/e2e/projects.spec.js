@@ -5,7 +5,9 @@
 (function () {
     'use strict';
 
-    var ProjectsPage = function () {
+    var ProjectsPage, Helper, helper;
+
+    ProjectsPage = function () {
         this.getProjectHeaderTextByIndex = function (i) {
             var elementId = browser.elements('.project > h3').value[i].ELEMENT;
             return browser.elementIdText(elementId).value;
@@ -17,10 +19,14 @@
         };
     };
 
+    Helper = require('./helper.js');
+    helper = new Helper();
+
     describe('projects page', function () {
         var FooterTest, footerTest,
             HeaderTest, headerTest,
-            Variables, variables;
+            Variables, variables,
+            projectData;
 
         Variables = require('./variables.js');
         variables = new Variables();
@@ -38,12 +44,19 @@
         headerTest = new HeaderTest();
         headerTest.test();
 
+        projectData = require('../../src/www/data/projects.json').projects;
+
+        it('should contain some introduction text', function () {
+            var expectedText = projectData.introduction;
+            helper.existsAndIsVisibleWithGivenText('#introduction', expectedText);
+        });
+
         it('should contain the details of each project', function () {
             var projectsPage, expectedProjectsData, expectedProjectData, i;
 
             projectsPage = new ProjectsPage();
 
-            expectedProjectsData = require('../../src/www/data/projects.json');
+            expectedProjectsData = projectData.projects;
             expect(expectedProjectsData).toBeTruthy();
             for (i = 0; i < expectedProjectsData.length; i += 1) {
                 expectedProjectData = expectedProjectsData[i];

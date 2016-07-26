@@ -6,5 +6,8 @@
 {% extends "src/www/includes/layout.nunjucks" %}
 
 {% block content %}
+    <div class="row">
+        <blockquote id="introduction">{{ projects.introduction }}</blockquote>
+    </div>
     {% include "src/www/includes/projects.nunjucks" %}
 {% endblock %}
