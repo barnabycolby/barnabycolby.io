@@ -2,6 +2,13 @@
  <html lang="en-GB">
     <head>
         {% include "src/www/includes/commonheadtags.nunjucks" %}
+
+        {% if customStylesheet %}
+        <!-- build:css /css/{{ customStylesheet }}.min.css -->
+        <link rel="stylesheet" href="/css/{{ customStylesheet }}.css"/>
+        <!-- /build -->
+        {% endif %}
+
         <title>{{ pageName }} | Barnaby Colby</title>
 	</head>
 

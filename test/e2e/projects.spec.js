@@ -1,5 +1,5 @@
 /*global
-    expect, require, it, describe, beforeEach, browser
+    expect, require, it, describe, beforeEach, browser, console
 */
 
 (function () {
@@ -9,13 +9,20 @@
 
     ProjectsPage = function () {
         this.getProjectHeaderTextByIndex = function (i) {
-            var elementId = browser.elements('.project > h3').value[i].ELEMENT;
+            var elementId = browser.elements('.project h3').value[i].ELEMENT;
             return browser.elementIdText(elementId).value;
         };
 
         this.getProjectDescriptionTextByIndex = function (i) {
             var elementId = browser.elements('.project > p').value[i].ELEMENT;
             return browser.elementIdText(elementId).value;
+        };
+
+        this.getProjectLinkByIndex = function (i) {
+            // We can't just use the selector '.project > a' as not all projects have links
+            var projectElementId = browser.elements('.project').value[i].ELEMENT,
+                linkElementId = browser.elementIdElement(projectElementId, 'a').value.ELEMENT;
+            return browser.elementIdAttribute(linkElementId, 'href').value;
         };
     };
 
@@ -52,7 +59,7 @@
         });
 
         it('should contain the details of each project', function () {
-            var projectsPage, expectedProjectsData, expectedProjectData, i;
+            var projectsPage, expectedProjectsData, expectedProjectData, i, link;
 
             projectsPage = new ProjectsPage();
 
@@ -62,6 +69,12 @@
                 expectedProjectData = expectedProjectsData[i];
                 expect(projectsPage.getProjectHeaderTextByIndex(i)).toBe(expectedProjectData.name);
                 expect(projectsPage.getProjectDescriptionTextByIndex(i)).toBe(expectedProjectData.description);
+
+                // If the project has a link, check that it is displayed correctly
+                link = expectedProjectData.link;
+                if (link !== undefined) {
+                    expect(projectsPage.getProjectLinkByIndex(i)).toBe(link);
+                }
             }
         });
     });

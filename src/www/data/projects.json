@@ -8,11 +8,13 @@
             },
             {
                 "name": "Website",
-                "description": "This website was initially created to store a public listing of the projects I was working on. A nice side effect is that it gave me the opportunity to work with lots of new technologies and frameworks that I had wanted to play with, such as angular and grunt."
+                "description": "This website was initially created to store a public listing of the projects I was working on. A nice side effect is that it gave me the opportunity to work with lots of new technologies and frameworks that I had wanted to play with, such as angular and grunt.",
+                "link": "https://github.com/barnabycolby/barnabycolby.io"
             },
             {
                 "name": "Backup Server",
-                "description": "I'd really like to write some simple backup software that's easy to use and just works. It needs to be continuous and have incremental daily and monthly backups."
+                "description": "I'd really like to write some simple backup software that's easy to use and just works. It needs to be continuous and have incremental daily and monthly backups.",
+                "link": "https://github.com/barnabycolby/backup"
             }
         ]
     }

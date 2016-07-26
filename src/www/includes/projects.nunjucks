@@ -8,7 +8,14 @@
         <!-- The clearfix class allows a new bootstrap row to be started -->
         {% if loop.index0 % 3 == 0 %}<div class="clearfix"></div>{% endif %}
         <div class="project col-md-4">
+            {% if project.link %}
+                <a href="{{ project.link }}" target="_blank">
+            {% endif %}
             <h3>{{ project.name }}</h3>
+            {% if project.link %}
+                <i class="fa fa-link fa-2x" aria-hidden="true"></i>
+                </a>
+            {% endif %}
             <p>{{ project.description }}</p>
         </div>
     </div>
