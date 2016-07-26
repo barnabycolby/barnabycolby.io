@@ -33,9 +33,7 @@
         headerTest.testNavigation();
 
         it('should display my name', function () {
-            var selector = '.container > h1';
-            helper.existsAndIsVisible(selector);
-            expect(browser.getText(selector)).toBe('Barnaby Colby');
+            helper.existsAndIsVisibleWithGivenText('.container > h1', 'Barnaby Colby');
         });
 
         it('should display the blurb', function () {

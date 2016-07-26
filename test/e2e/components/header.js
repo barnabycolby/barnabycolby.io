@@ -11,8 +11,7 @@
             describe("The header", function () {
                 it('should contain my name as a link to the homepage', function () {
                     var selector = '#header a[href="/"]';
-                    helper.existsAndIsVisible(selector);
-                    expect(browser.getText(selector)).toBe('Barnaby Colby');
+                    helper.existsAndIsVisibleWithGivenText(selector, 'Barnaby Colby');
                 });
             });
 
@@ -29,8 +28,7 @@
                         navigationLink = navigationLinks[i];
                         selector = '#navigation li a[href="' + navigationLink.href + '"]';
 
-                        helper.existsAndIsVisible(selector);
-                        expect(browser.getText(selector)).toBe(navigationLink.text);
+                        helper.existsAndIsVisibleWithGivenText(selector, navigationLink.text);
                     }
                 });
             });

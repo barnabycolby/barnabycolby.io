@@ -22,10 +22,9 @@
                 });
 
                 it("should contain copyright text", function () {
-                    var copyrightElementText, currentYear;
-                    copyrightElementText = browser.getText('#copyright');
-                    currentYear = new Date().getFullYear();
-                    expect(copyrightElementText).toBe('© ' + currentYear + ' Barnaby Colby. All rights reserved.');
+                    var currentYear = new Date().getFullYear(),
+                        expectedText = '© ' + currentYear + ' Barnaby Colby. All rights reserved.';
+                    helper.existsAndIsVisibleWithGivenText('#copyright', expectedText);
                 });
             });
         };
