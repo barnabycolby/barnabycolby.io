@@ -58,6 +58,16 @@
             helper.existsAndIsVisibleWithGivenText('#introduction', expectedText);
         });
 
+        it('should display the current project', function () {
+            var currentProject = projectData.current;
+            helper.existsAndIsVisibleWithGivenText('#current > h1', currentProject.name);
+            helper.existsAndIsVisibleWithGivenText('#current > p', currentProject.description);
+
+            if (currentProject.link !== undefined) {
+                helper.linkExistsAndIsVisible('#current > a', currentProject.link);
+            }
+        });
+
         it('should contain the details of each project', function () {
             var projectsPage, expectedProjectsData, expectedProjectData, i, link;
 

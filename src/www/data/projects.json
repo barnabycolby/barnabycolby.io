@@ -1,15 +1,15 @@
 {
     "projects": {
         "introduction": "I maintain a long list of projects that I someday wish to complete, including a variety of applications, servers and tools. In an effort to keep this list organised, I am documenting my past, current and future projects, in chronological order, on this page.",
+        "current": {
+            "name": "Website",
+            "description": "This website was initially created to store a public listing of the projects I was working on. A nice side effect is that it gave me the opportunity to work with lots of new technologies and frameworks that I had wanted to play with, such as angular and grunt.",
+            "link": "https://github.com/barnabycolby/barnabycolby.io"
+        },
         "projects": [
             {
                 "name": "VPN Server",
                 "description": "I set up a VPN server using a raspberry pi connected to my home network. This allowed me to work on my website (see below) from outside the house without allowing public ssh access to the web server. It should also come in handy for many other uses, such as providing more secure internet access in public places."
-            },
-            {
-                "name": "Website",
-                "description": "This website was initially created to store a public listing of the projects I was working on. A nice side effect is that it gave me the opportunity to work with lots of new technologies and frameworks that I had wanted to play with, such as angular and grunt.",
-                "link": "https://github.com/barnabycolby/barnabycolby.io"
             },
             {
                 "name": "Backup Server",

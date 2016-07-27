@@ -15,6 +15,18 @@
             this.existsAndIsVisible(selector);
             expect(browser.getText(selector)).toBe(expectedText);
         };
+
+        this.linkExistsAndIsVisible = function (selector, expectedHref) {
+            var elementId, actualHref;
+
+            // Check the element exists
+            this.existsAndIsVisible(selector);
+
+            // Check the element href
+            elementId = browser.element(selector).value.ELEMENT;
+            actualHref = browser.elementIdAttribute(elementId, 'href').value;
+            expect(actualHref).toBe(expectedHref);
+        };
     };
 
     module.exports = Helper;

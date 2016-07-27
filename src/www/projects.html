@@ -10,5 +10,14 @@
     <div class="row">
         <blockquote id="introduction">{{ projects.introduction }}</blockquote>
     </div>
+</div>
+<div class="jumbotron">
+    <div id="current" class="container">
+        <h1>{{ projects.current.name }}</h1>
+        <p>{{ projects.current.description }}</p>
+        <a class="btn btn-primary btn-lg" href="{{ projects.current.link }}" role="button" target="_blank">View on GitHub<i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+    </div>
+</div>
+<div class="container">
     {% include "src/www/includes/projects.nunjucks" %}
 {% endblock %}
