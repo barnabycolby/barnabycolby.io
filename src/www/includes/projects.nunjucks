@@ -2,6 +2,7 @@
 <!-- HTML template for a project on the projects.html page.            -->
 <!-- ================================================================= -->
 
+<h1 class="timeframe">Past</h1>
 <div class="row">
     {% for project in projects.past %}
     <div>
