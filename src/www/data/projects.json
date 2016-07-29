@@ -16,6 +16,8 @@
                 "description": "I'd really like to write some simple backup software that's easy to use and just works. It needs to be continuous and have incremental daily and monthly backups.",
                 "link": "https://github.com/barnabycolby/backup"
             }
+        ],
+        "future": [
         ]
     }
 }
