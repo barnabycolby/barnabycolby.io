@@ -3,7 +3,7 @@
 <!-- ================================================================= -->
 
 <div class="row">
-    {% for project in projects.projects %}
+    {% for project in projects.past %}
     <div>
         <!-- The clearfix class allows a new bootstrap row to be started -->
         {% if loop.index0 % 3 == 0 %}<div class="clearfix"></div>{% endif %}

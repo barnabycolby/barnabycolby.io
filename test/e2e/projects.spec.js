@@ -68,12 +68,12 @@
             }
         });
 
-        it('should contain the details of each project', function () {
+        it('should contain the details of each past project', function () {
             var projectsPage, expectedProjectsData, expectedProjectData, i, link;
 
             projectsPage = new ProjectsPage();
 
-            expectedProjectsData = projectData.projects;
+            expectedProjectsData = projectData.past;
             expect(expectedProjectsData).toBeTruthy();
             for (i = 0; i < expectedProjectsData.length; i += 1) {
                 expectedProjectData = expectedProjectsData[i];

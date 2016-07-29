@@ -28,7 +28,7 @@
                         }
                     }
                 },
-                "projects": {
+                "past": {
                     "type": "array",
                     "required": true,
                     "items": {
