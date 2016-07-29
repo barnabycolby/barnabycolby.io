@@ -23,8 +23,8 @@
     {% import "src/www/includes/projects.nunjucks" as projectsMacro %}
 
     <h1 class="timeframe">Past</h1>
-    {{ projectsMacro.output(projects.past) }}
+    {{ projectsMacro.output('past', projects.past) }}
 
     <h1 class="timeframe">Future</h1>
-    {{ projectsMacro.output(projects.future) }}
+    {{ projectsMacro.output('future', projects.future) }}
 {% endblock %}

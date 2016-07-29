@@ -2,8 +2,8 @@
 <!-- HTML template for a project on the projects.html page.            -->
 <!-- ================================================================= -->
 
-{% macro output(projects) %}
-<div class="row">
+{% macro output(id, projects) %}
+<div id="{{ id }}" class="row">
     {% for project in projects %}
     <div>
         <!-- The clearfix class allows a new bootstrap row to be started -->

@@ -8,13 +8,15 @@
     var ProjectsPage, Helper, helper;
 
     ProjectsPage = function () {
-        this.getProjectHeaderTextByIndex = function (i) {
-            var elementId = browser.elements('.project h3').value[i].ELEMENT;
+        this.getProjectHeaderTextByIndex = function (i, selectorPrefix) {
+            var selector = selectorPrefix + ' .project h3',
+                elementId = browser.elements(selector).value[i].ELEMENT;
             return browser.elementIdText(elementId).value;
         };
 
-        this.getProjectDescriptionTextByIndex = function (i) {
-            var elementId = browser.elements('.project > p').value[i].ELEMENT;
+        this.getProjectDescriptionTextByIndex = function (i, selectorPrefix) {
+            var selector = selectorPrefix + ' .project > p',
+                elementId = browser.elements(selector).value[i].ELEMENT;
             return browser.elementIdText(elementId).value;
         };
 
@@ -23,6 +25,27 @@
             var projectElementId = browser.elements('.project').value[i].ELEMENT,
                 linkElementId = browser.elementIdElement(projectElementId, 'a').value.ELEMENT;
             return browser.elementIdAttribute(linkElementId, 'href').value;
+        };
+
+        /**
+         * Checks that the projects described by the expectedProjectsData are being displayed correctly within the projects found within the
+         * given selector elements.
+         */
+        this.checkProjectsAreShown = function (expectedProjectsData, selectorPrefix) {
+            var i, expectedProjectData, link;
+
+            expect(expectedProjectsData).toBeTruthy();
+            for (i = 0; i < expectedProjectsData.length; i += 1) {
+                expectedProjectData = expectedProjectsData[i];
+                expect(this.getProjectHeaderTextByIndex(i, selectorPrefix)).toBe(expectedProjectData.name);
+                expect(this.getProjectDescriptionTextByIndex(i, selectorPrefix)).toBe(expectedProjectData.description);
+
+                // If the project has a link, check that it is displayed correctly
+                link = expectedProjectData.link;
+                if (link !== undefined) {
+                    expect(this.getProjectLinkByIndex(i)).toBe(link);
+                }
+            }
         };
     };
 
@@ -68,24 +91,10 @@
             }
         });
 
-        it('should contain the details of each past project', function () {
-            var projectsPage, expectedProjectsData, expectedProjectData, i, link;
-
-            projectsPage = new ProjectsPage();
-
-            expectedProjectsData = projectData.past;
-            expect(expectedProjectsData).toBeTruthy();
-            for (i = 0; i < expectedProjectsData.length; i += 1) {
-                expectedProjectData = expectedProjectsData[i];
-                expect(projectsPage.getProjectHeaderTextByIndex(i)).toBe(expectedProjectData.name);
-                expect(projectsPage.getProjectDescriptionTextByIndex(i)).toBe(expectedProjectData.description);
-
-                // If the project has a link, check that it is displayed correctly
-                link = expectedProjectData.link;
-                if (link !== undefined) {
-                    expect(projectsPage.getProjectLinkByIndex(i)).toBe(link);
-                }
-            }
+        it('should contain the details of each project', function () {
+            var projectsPage = new ProjectsPage();
+            projectsPage.checkProjectsAreShown(projectData.past, '#past');
+            projectsPage.checkProjectsAreShown(projectData.future, '#future');
         });
     });
 }());
