@@ -19,5 +19,9 @@
     </div>
 </div>
 <div class="container">
-    {% include "src/www/includes/projects.nunjucks" %}
+    <!-- Import the macro required to produce the projects output -->
+    {% import "src/www/includes/projects.nunjucks" as projectsMacro %}
+
+    <h1 class="timeframe">Past</h1>
+    {{ projectsMacro.output(projects.past) }}
 {% endblock %}

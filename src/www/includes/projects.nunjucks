@@ -2,9 +2,9 @@
 <!-- HTML template for a project on the projects.html page.            -->
 <!-- ================================================================= -->
 
-<h1 class="timeframe">Past</h1>
+{% macro output(projects) %}
 <div class="row">
-    {% for project in projects.past %}
+    {% for project in projects %}
     <div>
         <!-- The clearfix class allows a new bootstrap row to be started -->
         {% if loop.index0 % 3 == 0 %}<div class="clearfix"></div>{% endif %}
@@ -22,3 +22,4 @@
     </div>
     {% endfor %}
 </div>
+{% endmacro %}
