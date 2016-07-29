@@ -20,9 +20,10 @@
             return browser.elementIdText(elementId).value;
         };
 
-        this.getProjectLinkByIndex = function (i) {
+        this.getProjectLinkByIndex = function (i, selectorPrefix) {
             // We can't just use the selector '.project > a' as not all projects have links
-            var projectElementId = browser.elements('.project').value[i].ELEMENT,
+            var selector = selectorPrefix + ' .project',
+                projectElementId = browser.elements(selector).value[i].ELEMENT,
                 linkElementId = browser.elementIdElement(projectElementId, 'a').value.ELEMENT;
             return browser.elementIdAttribute(linkElementId, 'href').value;
         };
@@ -43,7 +44,7 @@
                 // If the project has a link, check that it is displayed correctly
                 link = expectedProjectData.link;
                 if (link !== undefined) {
-                    expect(this.getProjectLinkByIndex(i)).toBe(link);
+                    expect(this.getProjectLinkByIndex(i, selectorPrefix)).toBe(link);
                 }
             }
         };
