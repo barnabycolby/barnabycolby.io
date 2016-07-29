@@ -8,11 +8,36 @@
         },
         "past": [
             {
+                "name": "PhantomJS Alarm",
+                "description": "My website build pipeline relies heavily on PhantomJS, which unfortunately has no official support for the ARM architecture. Relatively few ARM binaries exist in the wild due to the large amount of resources, uncommonly found in ARM machines, required to build them. Fortunately, the Arch Linux ARM package repositories host the single latest binary, so I wrote a script to automatically check for and download new releases, packaging them in the same way as the official PhantomJS binaries for other architectures are packaged. The resulting archive can be found at https://phantomjs.barnabycolby.io.",
+                "link": "https://github.com/barnabycolby/phantomjs-alarm"
+            },
+            {
                 "name": "VPN Server",
                 "description": "I set up a VPN server using a raspberry pi connected to my home network. This allowed me to work on my website from outside the house without allowing public ssh access to the web server. I also use it to provide more secure internet access when using public networks."
+            },
+            {
+                "name": "iPlayer Podcast",
+                "description": "As an avid listener of Zane Lowe on BBC Radio 1, I wanted to playback the shows during my commute. Although the BBC offered a playback facility through iPlayer, this was not practical over a non-existant data connection. To solve the problem, I wrote a shell script to automatically download each new show and broadcast them as episodes of a podcast, available only in my home network. Without having to do anything, the new episodes were automatically downloaded to my phone overnight using my phones podcast application, completely solving the problem and offering a better experience.",
+                "link": "https://github.com/barnabycolby/iplayerPodcast"
+            },
+            {
+                "name": "screenSnake",
+                "description": "I wrote a classic snake game in C++ that used the entirity of the screen space, overlaying it with a translucent background. It was tested on Linux and Windows but a points system was never added.",
+                "link": "https://github.com/barnabycolby/screenSnake"
+            },
+            {
+                "name": "Magneto",
+                "description": "Probably the earliest programming project I attempted was a C++ BitTorrent client. This was very amibitious at the time and shows in the resulting code. The project was never completed and likely never will be.",
+                "link": "https://github.com/barnabycolby/Magneto"
             }
         ],
         "future": [
+            {
+                "name": "SQRL Android Application",
+                "description": "I wrote a SQRL Client for Android as the Final Year Project for my undergraduate degree. The app can successfully be used to login to SQRL enabled servers but still has a ways to go to achieve full compatibility with the SQRL specification.",
+                "link": "https://github.com/barnabycolby/SQRLClient"
+            },
             {
                 "name": "Backups",
                 "description": "I want to write some backup software that will run on a Raspberry Pi connected to some hard drives. It should be simple enough to use that a non technical user could set it up with their own raspberry pi, providing an alternative solution to commercial cloud backup software.",
