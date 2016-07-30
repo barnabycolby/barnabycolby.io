@@ -42,6 +42,30 @@
                 "name": "Backups",
                 "description": "I want to write some backup software that will run on a Raspberry Pi connected to some hard drives. It should be simple enough to use that a non technical user could set it up with their own raspberry pi, providing an alternative solution to commercial cloud backup software.",
                 "link": "https://github.com/barnabycolby/backup"
+            },
+            {
+                "name": "Mail Server",
+                "description": "It would be useful to have my own mail server, allowing me to setup my own @barnabycolby.io email addresses, instead of having to search for available gmail usernames."
+            },
+            {
+                "name": "OCR Monospace Font browser plugin",
+                "description": "To help prevent phishing attacks, I want to create a browser plugin that displays the URL in an OCR monospace font, making devious characters more obvious in URLs such as amaz0n.com."
+            },
+            {
+                "name": "Improve dotfiles repositories",
+                "description": "I have several dotfile repositories on GitHub, each with a specified purpose. It would be tidier and easier to update if they were combined into a single repository, and should also include a script to set up the appropriate symlinks. Perhaps a systemd-timer unit can be created to ensure that the repository is always up to date on system boot. Inspiration can also be drawn from dotfiles.github.io."
+            },
+            {
+                "name": "Zane Lowe Apple Music Podcast",
+                "description": "In a similar vein to the iPlayer Podcast, the Zane Lowe shows broadcast live on Apple Music should be automatically recorded and broadcast as episodes of a local podcast. Research needs to be done into Apples secure HLS streams to see if this is even possible."
+            },
+            {
+                "name": "Podcast App",
+                "description": "I listen to a lot of podcasts, and whilst I'm pretty happy with my current app, I think I can do slightly better. Writing another application would also be a good exercise in improving my Android skill set."
+            },
+            {
+                "name": "Todo App",
+                "description": "My todo list app is the most frequently used on my phone, but I have not found one that I like. Most of them are too complicated and contain lots of unnecessary features. I think I can do better."
             }
         ]
     }
