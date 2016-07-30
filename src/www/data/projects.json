@@ -66,6 +66,14 @@
             {
                 "name": "Todo App",
                 "description": "My todo list app is the most frequently used on my phone, but I have not found one that I like. Most of them are too complicated and contain lots of unnecessary features. I think I can do better."
+            },
+            {
+                "name": "Better DD-WRT Upgrading",
+                "description": "When upgrading DD-WRT, you have to reset your routers configuration before updating it and then manually configuring it again. This is so tedious that updates are less likely to happen. It would be better to retain the configuration during an update and even better to update the firmware automatically."
+            },
+            {
+                "name": "Android LED Colour Manager",
+                "description": "Not all applications allow you to configure the colour of the LED notification light. Recent versions of Android allow a manager application to be created."
             }
         ]
     }
