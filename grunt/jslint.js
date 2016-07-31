@@ -7,6 +7,9 @@
         grunt: {
             src: ['Gruntfile.js', 'grunt/**/*.js']
         },
+        main: {
+            src: ['src/www/js/**/*.js']
+        },
         test: {
             src: ['test/**/*.js']
         }

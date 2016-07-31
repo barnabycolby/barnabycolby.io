@@ -11,16 +11,20 @@
     ],
 
     "lint": [
-        "jslint:grunt",
-        "jslint:test",
+        "jslint",
         "json_schema"
     ],
 
     "process": [
         "copy",
         "nunjucks_render",
+        "js",
         "css",
         "htmlmin:webpages"
+    ],
+
+    "js": [
+        "uglify"
     ],
 
     "css": [

@@ -21,6 +21,24 @@
     }
 }
 
+// Initially, the number of commits should be hidden. Only the spinner should be visible
+#numberOfCommits
+{
+    display: none;
+}
+
+#githubSpinner
+{
+    // We want the spinner to be displayed on a separate line
+    display: block;
+}
+
+#current > a
+{
+    // We require an extra margin between the GitHub content and the button
+    margin-top: 15px;
+}
+
 .timeframe
 {
     text-align: center;

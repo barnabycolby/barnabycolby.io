@@ -6,6 +6,10 @@
 {% set customStylesheet = 'projects' %}
 {% extends "src/www/includes/layout.nunjucks" %}
 
+{% block head %}
+    <script type="text/javascript" src="/js/projects.min.js"></script>
+{% endblock %}
+
 {% block content %}
     <div class="row">
         <blockquote id="introduction">{{ projects.introduction }}</blockquote>
@@ -15,6 +19,8 @@
     <div id="current" class="container">
         <h1>{{ projects.current.name }}</h1>
         <p>{{ projects.current.description }}</p>
+        <i id="githubSpinner" class="fa fa-refresh fa-spin fa-lg fa-fw"></i>
+        <h2 id="numberOfCommits">Retrieving number of commits...</h2>
         <a class="btn btn-primary btn-lg" href="{{ projects.current.link }}" role="button" target="_blank">View on GitHub<i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
     </div>
 </div>

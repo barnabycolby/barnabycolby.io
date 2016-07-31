@@ -20,6 +20,7 @@
     "grunt-contrib-copy": "latest",
     "grunt-contrib-htmlmin": "latest",
     "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
     "grunt-csscomb": "latest",
     "grunt-html-angular-validate": "latest",
     "grunt-jslint": "latest",

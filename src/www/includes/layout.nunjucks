@@ -10,6 +10,9 @@
         {% endif %}
 
         <title>{{ pageName }} | Barnaby Colby</title>
+
+        {% block head %}
+        {% endblock %}
 	</head>
 
 	<body>
