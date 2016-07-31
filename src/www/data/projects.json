@@ -1,6 +1,6 @@
 {
     "projects": {
-        "introduction": "I maintain a long list of projects that I someday wish to complete, including a variety of applications, servers and tools. In an effort to keep this list organised, I am documenting my past, current and future projects, in chronological order, on this page.",
+        "introduction": "I maintain a long list of projects that I someday wish to complete, including a variety of applications, servers and tools. In an effort to keep this list organised, I am documenting my past, current and future projects chronologically on this page.",
         "current": {
             "name": "Website",
             "description": "This website was initially created to store a public listing of the projects I was working on, but now serves several other purposes. A nice side effect is that it gave me the opportunity to work with lots of new technologies and frameworks that I had wanted to play with, such as angular and grunt.",
