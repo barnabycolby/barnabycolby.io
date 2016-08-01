@@ -6,7 +6,8 @@
         numberOfCommitsId = 'numberOfCommits',
         lastCommitMessageId = 'lastCommitMessage',
         githubIntegrationsId = 'githubIntegrations',
-        authorLoginId = 'authorLogin';
+        authorLoginId = 'authorLogin',
+        avatarId = 'avatar';
 
     function getJSON(url, callback) {
         var xhr = new XMLHttpRequest();
@@ -55,19 +56,23 @@
             var commitsApiLink = baseApiLink + '/commits';
 
             getJSON(commitsApiLink, function (err, data) {
-                var lastCommitMessage, authorLogin;
+                var lastCommitMessage, authorLogin, avatarUrl;
 
                 if (err !== null || data.length < 0 || !data[0].hasOwnProperty('commit') || !data[0].commit.hasOwnProperty('message')
-                        || !data[0].hasOwnProperty('author') || !data[0].author.hasOwnProperty('login')) {
+                        || !data[0].hasOwnProperty('author') || !data[0].author.hasOwnProperty('login')
+                        || !data[0].author.hasOwnProperty('avatar_url')) {
                     hideGitHubIntegrations();
                     return;
                 }
 
                 lastCommitMessage = data[0].commit.message;
                 authorLogin = data[0].author.login;
+                // We append the s=40 parameter so that a smaller 40x40 image is returned
+                avatarUrl = data[0].author.avatar_url + '&s=30';
 
                 // Display the commit total in the appropriate element, and hide the loading spinner
                 document.getElementById(numberOfCommitsId).innerHTML = commitTotal + ' Commits';
+                document.getElementById(avatarId).src = avatarUrl;
                 document.getElementById(authorLoginId).innerHTML = authorLogin;
                 document.getElementById(lastCommitMessageId).innerHTML = lastCommitMessage;
                 document.getElementById(githubSpinnerId).style.display = 'none';
