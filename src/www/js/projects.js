@@ -3,7 +3,9 @@
     'use strict';
 
     var githubSpinnerId = 'githubSpinner',
-        numberOfCommitsId = 'numberOfCommits';
+        numberOfCommitsId = 'numberOfCommits',
+        lastCommitMessageId = 'lastCommitMessage',
+        githubIntegrationsId = 'githubIntegrations';
 
     function getJSON(url, callback) {
         var xhr = new XMLHttpRequest();
@@ -25,7 +27,7 @@
      */
     function hideGitHubIntegrations() {
         document.getElementById(githubSpinnerId).style.display = 'none';
-        document.getElementById(numberOfCommitsId).style.display = 'none';
+        document.getElementById(githubIntegrationsId).style.display = 'none';
         console.log("GitHub integration failed.");
     }
 
@@ -46,21 +48,42 @@
         // In order to query the GitHub API We require the owner and repository name, which can be extracted from the github link
         // More precisely, we transform the old link
         apiLink = githubLink.replace('github.com', 'api.github.com/repos');
-        apiLink += '/contributors?anon=true';
 
-        // This function gets the total number of commits using the given api link
-        // Once it has the final total, it updates the webpage accordingly
+        // Gets the last commit message, and applys the retrieved GitHub data to the webpage
+        function finishGitHubIntegration(baseApiLink, commitTotal) {
+            var commitsApiLink = baseApiLink + '/commits';
+
+            getJSON(commitsApiLink, function (err, data) {
+                var lastCommitMessage;
+
+                if (err !== null || data.length < 0 || !data[0].hasOwnProperty('commit') || !data[0].commit.hasOwnProperty('message')) {
+                    hideGitHubIntegrations();
+                    return;
+                }
+
+                lastCommitMessage = data[0].commit.message;
+
+                // Display the commit total in the appropriate element, and hide the loading spinner
+                document.getElementById(numberOfCommitsId).innerHTML = commitTotal + ' Commits';
+                document.getElementById(lastCommitMessageId).innerHTML = 'Last commit message: ' + lastCommitMessage;
+                document.getElementById(githubSpinnerId).style.display = 'none';
+                document.getElementById(githubIntegrationsId).style.display = 'block';
+            });
+        }
+
+        // This function starts the GitHub integration process by getting the total number of commits using the given api link
+        // Once it has the final total, it calls the finishGitHubIntegration function, which finishes the GitHub integration
         // It needs to be defined as a function because it calls itself recursively
-        (function getAndSetCommitTotal(baseApiLink, commitTotalSoFar, startingPageNumber) {
+        (function performGitHubIntegration(baseApiLink, commitTotalSoFar, startingPageNumber) {
             // We need to set default values for commitTotalSoFar and startingPageNumber if they have not been given
             commitTotalSoFar = commitTotalSoFar === undefined ? 0 : commitTotalSoFar;
             startingPageNumber = startingPageNumber === undefined ? 1 : startingPageNumber;
 
             // To handle the GitHub API pagination functionality, we need to append a page number to the link
-            var paginatedApiLink = baseApiLink + "&page=" + startingPageNumber;
+            var paginatedApiLink = baseApiLink + '/contributors?anon=true&page=' + startingPageNumber;
 
             getJSON(paginatedApiLink, function (err, data) {
-                var i, commitTotalElement;
+                var i;
                 if (err !== null) {
                     hideGitHubIntegrations();
                     return;
@@ -74,13 +97,10 @@
                 // GitHub limits the response to contain at most 30 objects (see https://developer.github.com/v3/#pagination)
                 // We need to check that there isn't more pages of contributors
                 if (data.length === 30) {
-                    getAndSetCommitTotal(baseApiLink, commitTotalSoFar, startingPageNumber + 1);
+                    performGitHubIntegration(baseApiLink, commitTotalSoFar, startingPageNumber + 1);
                 } else {
-                    // Display the commit total in the appropriate element, and hide the loading spinner
-                    commitTotalElement = document.getElementById(numberOfCommitsId);
-                    commitTotalElement.innerHTML = commitTotalSoFar + ' Commits';
-                    document.getElementById(githubSpinnerId).style.display = 'none';
-                    commitTotalElement.style.display = 'block';
+                    // Proceed with the next part of the github integration
+                    finishGitHubIntegration(baseApiLink, commitTotalSoFar);
                 }
             });
         }(apiLink));
