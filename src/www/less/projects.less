@@ -21,10 +21,25 @@
     }
 }
 
-// Initially, the github integrations should be hidden (as they are not loaded). Only the spinner should be visible.
 #githubIntegrations
 {
+    // Initially, the github integrations should be hidden (as they are not loaded). Only the spinner should be visible.
     display: none;
+
+    #authorLogin,
+    #lastCommitMessage
+    {
+        // We want the authorLogin and lastCommitMessage to be on the same line
+        display: inline;
+    }
+
+    // Mimic the GitHub style
+    #authorLogin
+    {
+        font-weight: bold;
+
+        padding-right: 10px;
+    }
 }
 
 #githubSpinner

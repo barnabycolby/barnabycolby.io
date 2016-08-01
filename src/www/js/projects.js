@@ -5,7 +5,8 @@
     var githubSpinnerId = 'githubSpinner',
         numberOfCommitsId = 'numberOfCommits',
         lastCommitMessageId = 'lastCommitMessage',
-        githubIntegrationsId = 'githubIntegrations';
+        githubIntegrationsId = 'githubIntegrations',
+        authorLoginId = 'authorLogin';
 
     function getJSON(url, callback) {
         var xhr = new XMLHttpRequest();
@@ -54,18 +55,21 @@
             var commitsApiLink = baseApiLink + '/commits';
 
             getJSON(commitsApiLink, function (err, data) {
-                var lastCommitMessage;
+                var lastCommitMessage, authorLogin;
 
-                if (err !== null || data.length < 0 || !data[0].hasOwnProperty('commit') || !data[0].commit.hasOwnProperty('message')) {
+                if (err !== null || data.length < 0 || !data[0].hasOwnProperty('commit') || !data[0].commit.hasOwnProperty('message')
+                        || !data[0].hasOwnProperty('author') || !data[0].author.hasOwnProperty('login')) {
                     hideGitHubIntegrations();
                     return;
                 }
 
                 lastCommitMessage = data[0].commit.message;
+                authorLogin = data[0].author.login;
 
                 // Display the commit total in the appropriate element, and hide the loading spinner
                 document.getElementById(numberOfCommitsId).innerHTML = commitTotal + ' Commits';
-                document.getElementById(lastCommitMessageId).innerHTML = 'Last commit message: ' + lastCommitMessage;
+                document.getElementById(authorLoginId).innerHTML = authorLogin;
+                document.getElementById(lastCommitMessageId).innerHTML = lastCommitMessage;
                 document.getElementById(githubSpinnerId).style.display = 'none';
                 document.getElementById(githubIntegrationsId).style.display = 'block';
             });

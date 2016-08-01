@@ -7,7 +7,8 @@
         options: {
             reportpath: null,
             reportCheckstylePath: null,
-            charset: false
+            charset: false,
+            relaxerror: ['Empty heading.']
         },
         distribution: {
             expand: true,
