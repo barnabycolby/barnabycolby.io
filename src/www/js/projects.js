@@ -58,7 +58,7 @@
 
             // To get the total commit count, we sum the number of commits from every contributor
             for (i = 0; i < data.length; i += 1) {
-                commitTotal += data[0].contributions;
+                commitTotal += data[i].contributions;
             }
 
             // Display the commit total in the appropriate element, and hide the loading spinner
