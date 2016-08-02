@@ -9,8 +9,6 @@
             options: {
                 htmlroot: '<%= destinationWorkingDirectory %>',
                 ignoreSheets: [
-                    // We don't uncss font-awesome as the symbols don't get displayed properly
-                    'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css',
                     // If we didn't ignore index.css and projects.css, the styles would be included in stylesheet.css too and therefore twice
                     // By ignoring it we lose the benefit of removing rules from index.css and projects.css that we don't use, but as this is
                     // a custom stylesheet there is unlikely to be many, if any, unused rules
