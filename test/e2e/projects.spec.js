@@ -1,6 +1,7 @@
 /*global
-    expect, require, it, describe, beforeEach, browser, console
+    expect, require, it, describe, beforeEach, browser
 */
+/*jslint regexp: true */
 
 (function () {
     'use strict';
@@ -39,7 +40,7 @@
             for (i = 0; i < expectedProjectsData.length; i += 1) {
                 expectedProjectData = expectedProjectsData[i];
                 expect(this.getProjectHeaderTextByIndex(i, selectorPrefix)).toBe(expectedProjectData.name);
-                expect(this.getProjectDescriptionTextByIndex(i, selectorPrefix)).toBe(expectedProjectData.description);
+                expect(this.getProjectDescriptionTextByIndex(i, selectorPrefix)).toBe(this.htmlToText(expectedProjectData.description));
 
                 // If the project has a link, check that it is displayed correctly
                 link = expectedProjectData.link;
@@ -47,6 +48,10 @@
                     expect(this.getProjectLinkByIndex(i, selectorPrefix)).toBe(link);
                 }
             }
+        };
+
+        this.htmlToText = function (htmlString) {
+            return htmlString.replace(/<(?:.|\n)*?>/gm, '');
         };
     };
 

@@ -9,7 +9,7 @@
         "past": [
             {
                 "name": "PhantomJS Alarm",
-                "description": "My website build pipeline relies heavily on PhantomJS, which unfortunately has no official support for the ARM architecture. Relatively few ARM binaries exist in the wild due to the large amount of resources, uncommonly found in ARM machines, required to build them. Fortunately, the Arch Linux ARM package repositories host the single latest binary, so I wrote a script to automatically check for and download new releases, packaging them in the same way as the official PhantomJS binaries for other architectures are packaged. The resulting archive can be found at https://phantomjs.barnabycolby.io.",
+                "description": "My website build pipeline relies heavily on PhantomJS, which unfortunately has no official support for the ARM architecture. Relatively few ARM binaries exist in the wild due to the large amount of resources, uncommonly found in ARM machines, required to build them. Fortunately, the Arch Linux ARM package repositories host the single latest binary, so I wrote a script to automatically check for and download new releases, packaging them in the same way as the official PhantomJS binaries for other architectures are packaged. The resulting archive can be found at <a href=\"https://phantomjs.barnabycolby.io\">https://phantomjs.barnabycolby.io</a>.",
                 "link": "https://github.com/barnabycolby/phantomjs-alarm"
             },
             {
