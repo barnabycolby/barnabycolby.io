@@ -34,6 +34,10 @@
         ],
         "future": [
             {
+                "name": "Magic Mirror",
+                "description": "I want to set up a magic mirror using a raspberry pi. Initially I will experiment with the MagicMirror project at <a href=\"https://github.com/MichMich/MagicMirror\">https://github.com/MichMich/MagicMirror</a> and decide whether to continue using it, potentially writing my own plugins, or to write my own version."
+            },
+            {
                 "name": "Virgin Media Router Security",
                 "description": "Virgin Media customer support have the ability to configure their superhub externally, without requiring the administrator password. Also worrying are the strange <a href=\"https://www.grc.com/shieldsup\" target=\"_blank\">ShieldsUP</a> results. Given normal standards of router security, this needs to be investigated."
             },
