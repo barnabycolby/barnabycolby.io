@@ -10,7 +10,11 @@
             '<%= destinationWorkingDirectory %>/css/index.css',
             '<%= destinationWorkingDirectory %>/css/projects.css'
         ],
-        dist: '<%= destinationWorkingDirectory %>'
+        dist: '<%= destinationWorkingDirectory %>',
+        unversioned_assets: [
+            '<%= destinationWorkingDirectory %>/favicon.ico',
+            '<%= destinationWorkingDirectory %>/assetMap.json'
+        ]
 
     };
 }());

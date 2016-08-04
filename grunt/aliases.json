@@ -17,10 +17,17 @@
 
     "process": [
         "copy",
-        "nunjucks_render",
+        "nunjucks_render:main",
         "js",
         "css",
+        "assetVersioning",
         "htmlmin:webpages"
+    ],
+
+    "assetVersioning": [
+        "assets_versioning",
+        "nunjucks_render:assetVersioning",
+        "clean:unversioned_assets"
     ],
 
     "js": [
