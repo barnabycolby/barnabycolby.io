@@ -12,8 +12,12 @@
         ],
         dist: '<%= destinationWorkingDirectory %>',
         unversioned_assets: [
+            '<%= destinationWorkingDirectory %>/assetMap.json',
             '<%= destinationWorkingDirectory %>/favicon.ico',
-            '<%= destinationWorkingDirectory %>/assetMap.json'
+            '<%= destinationWorkingDirectory %>/css/stylesheet.min.css',
+            '<%= destinationWorkingDirectory %>/css/index.min.css',
+            '<%= destinationWorkingDirectory %>/css/projects.min.css',
+            '<%= destinationWorkingDirectory %>/js/projects.min.js'
         ]
 
     };

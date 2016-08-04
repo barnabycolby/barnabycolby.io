@@ -21,6 +21,7 @@
         "js",
         "css",
         "assetVersioning",
+        "processhtml:css",
         "htmlmin:webpages"
     ],
 
@@ -38,7 +39,6 @@
         "csscomb",
         "less",
         "uncss",
-        "processhtml:css",
         "postcss",
         "clean:css"
     ],

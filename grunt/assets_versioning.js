@@ -12,8 +12,11 @@
         },
         main: {
             files: {
-                cwd: '<%= destinationWorkingDirectory %>',
-                "<%= destinationWorkingDirectory %>/favicon.ico": ["<%= sourceWorkingDirectory %>/favicon.ico"]
+                "<%= destinationWorkingDirectory %>/favicon.ico": ["<%= sourceWorkingDirectory %>/favicon.ico"],
+                "<%= destinationWorkingDirectory %>/css/stylesheet.min.css": ["<%= destinationWorkingDirectory %>/css/stylesheet.min.css"],
+                "<%= destinationWorkingDirectory %>/css/index.min.css": ["<%= destinationWorkingDirectory %>/css/index.min.css"],
+                "<%= destinationWorkingDirectory %>/css/projects.min.css": ["<%= destinationWorkingDirectory %>/css/projects.min.css"],
+                "<%= destinationWorkingDirectory %>/js/projects.min.js": ["<%= destinationWorkingDirectory %>/js/projects.min.js"]
             }
         }
 

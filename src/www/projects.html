@@ -7,7 +7,7 @@
 {% extends "src/www/includes/layout.nunjucks" %}
 
 {% block head %}
-    <script type="text/javascript" src="/js/projects.min.js"></script>
+    <script type="text/javascript" src="{% raw %}{{ assetPaths["/js/projects.min.js"] }}{% endraw %}"></script>
 {% endblock %}
 
 {% block content %}

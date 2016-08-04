@@ -4,7 +4,7 @@
         {% include "src/www/includes/commonheadtags.nunjucks" %}
 
         {% if customStylesheet %}
-        <!-- build:css /css/{{ customStylesheet }}.min.css -->
+        <!-- build:css {% raw %}{{ assetPaths["/css/{% endraw %}{{ customStylesheet }}{% raw %}.min.css"] }}{% endraw %} -->
         <link rel="stylesheet" href="/css/{{ customStylesheet }}.css"/>
         <!-- /build -->
         {% endif %}

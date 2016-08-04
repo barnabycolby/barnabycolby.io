@@ -12,7 +12,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="{% raw %}{{ assetPaths["/favicon.ico"] }}{% endraw %}" />
 
 <!-- CSS -->
-<!-- build:css /css/stylesheet.min.css -->
+<!-- build:css {% raw %}{{ assetPaths["/css/stylesheet.min.css"] }}{% endraw %} -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="/css/custom.css"/>
