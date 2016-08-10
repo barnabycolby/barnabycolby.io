@@ -22,7 +22,8 @@
         "css",
         "assetVersioning",
         "processhtml:css",
-        "htmlmin:webpages"
+        "htmlmin:webpages",
+        "html_compare"
     ],
 
     "assetVersioning": [
