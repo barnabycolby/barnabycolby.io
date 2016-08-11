@@ -7,7 +7,9 @@
 {% extends "src/www/includes/layout.nunjucks" %}
 
 {% block head %}
-    <script type="text/javascript" src="{% raw %}{{ assetPaths["/js/projects.min.js"] }}{% endraw %}"></script>
+    {% if projects.current.link %}
+        <script type="text/javascript" src="{% raw %}{{ assetPaths["/js/projects.min.js"] }}{% endraw %}"></script>
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -19,12 +21,14 @@
     <div id="current" class="container">
         <h1>{{ projects.current.name }}</h1>
         <p>{{ projects.current.description | safe }}</p>
-        <i id="githubSpinner" class="fa fa-refresh fa-spin fa-lg fa-fw"></i>
-        <div id="githubIntegrations">
-            <h3 id="numberOfCommits"></h3>
-            <div id="lastCommitGroup"><img id="avatar" alt="avatar" src="https://github.com/identicons/jasonlong.png"></img><h4 id="authorLogin"></h4><h4 id="lastCommitMessage"></h4></div>
-        </div>
-        <a class="btn btn-primary btn-lg" href="{{ projects.current.link }}" role="button" target="_blank">View on GitHub<i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        {% if projects.current.link %}
+            <i id="githubSpinner" class="fa fa-refresh fa-spin fa-lg fa-fw"></i>
+            <div id="githubIntegrations">
+                <h3 id="numberOfCommits"></h3>
+                <div id="lastCommitGroup"><img id="avatar" alt="avatar" src="https://github.com/identicons/jasonlong.png"></img><h4 id="authorLogin"></h4><h4 id="lastCommitMessage"></h4></div>
+            </div>
+            <a class="btn btn-primary btn-lg" href="{{ projects.current.link }}" role="button" target="_blank">View on GitHub<i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        {% endif %}
     </div>
 </div>
 <div class="container">
