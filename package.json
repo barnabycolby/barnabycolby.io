@@ -24,6 +24,7 @@
     "grunt-contrib-uglify": "latest",
     "grunt-csscomb": "latest",
     "grunt-html-angular-validate": "latest",
+    "grunt-html-compare": "latest",
     "grunt-jslint": "latest",
     "grunt-json-schema": "latest",
     "grunt-newer": "latest",
