@@ -62,7 +62,7 @@
         var FooterTest, footerTest,
             HeaderTest, headerTest,
             Variables, variables,
-            projectData;
+            projectData, projectsPage;
 
         Variables = require('./variables.js');
         variables = new Variables();
@@ -82,6 +82,8 @@
 
         projectData = require('../../src/www/data/projects.json').projects;
 
+        projectsPage = new ProjectsPage();
+
         it('should contain some introduction text', function () {
             var expectedText = projectData.introduction;
             helper.existsAndIsVisibleWithGivenText('#introduction', expectedText);
@@ -90,7 +92,7 @@
         it('should display the current project', function () {
             var currentProject = projectData.current;
             helper.existsAndIsVisibleWithGivenText('#current > h1', currentProject.name);
-            helper.existsAndIsVisibleWithGivenText('#current > p', currentProject.description);
+            helper.existsAndIsVisibleWithGivenText('#current > p', projectsPage.htmlToText(currentProject.description));
 
             if (currentProject.link !== undefined) {
                 helper.linkExistsAndIsVisible('#current > a', currentProject.link);
@@ -98,7 +100,6 @@
         });
 
         it('should contain the details of each project', function () {
-            var projectsPage = new ProjectsPage();
             projectsPage.checkProjectsAreShown(projectData.past, '#past');
             projectsPage.checkProjectsAreShown(projectData.future, '#future');
         });

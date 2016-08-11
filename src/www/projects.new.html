@@ -18,7 +18,7 @@
 <div class="jumbotron">
     <div id="current" class="container">
         <h1>{{ projects.current.name }}</h1>
-        <p>{{ projects.current.description }}</p>
+        <p>{{ projects.current.description | safe }}</p>
         <i id="githubSpinner" class="fa fa-refresh fa-spin fa-lg fa-fw"></i>
         <div id="githubIntegrations">
             <h3 id="numberOfCommits"></h3>
