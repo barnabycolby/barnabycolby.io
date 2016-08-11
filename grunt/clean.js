@@ -18,6 +18,13 @@
             '<%= destinationWorkingDirectory %>/css/index.min.css',
             '<%= destinationWorkingDirectory %>/css/projects.min.css',
             '<%= destinationWorkingDirectory %>/js/projects.min.js'
+        ],
+        old_assets: [
+            '<%= destinationWorkingDirectory %>/favicon.*.ico',
+            '<%= destinationWorkingDirectory %>/css/stylesheet.min.*.css',
+            '<%= destinationWorkingDirectory %>/css/index.min.*.css',
+            '<%= destinationWorkingDirectory %>/css/projects.min.*.css',
+            '<%= destinationWorkingDirectory %>/js/projects.min.*.js'
         ]
 
     };

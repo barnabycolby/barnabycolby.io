@@ -27,6 +27,7 @@
     ],
 
     "assetVersioning": [
+        "clean:old_assets",
         "assets_versioning",
         "nunjucks_render:assetVersioning",
         "clean:unversioned_assets"
