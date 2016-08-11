@@ -12,7 +12,10 @@
                 if (result) {
                     grunt.file.delete(newFilePath);
                 } else {
-                    grunt.file.delete(currentFilePath);
+                    // If the result is undefined, then the current file does not exist, and therefore we do not need to delete it
+                    if (result === false) {
+                        grunt.file.delete(currentFilePath);
+                    }
 
                     // Rename using copy and delete
                     grunt.file.copy(newFilePath, currentFilePath);
@@ -24,7 +27,8 @@
         return {
 
             options: {
-                ignoreSelectors: '#lastUpdated'
+                ignoreSelectors: '#lastUpdated',
+                ignoreMissingSrc: true
             },
             index: {
                 expand: true,
