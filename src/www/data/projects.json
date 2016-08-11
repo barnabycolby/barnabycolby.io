@@ -2,11 +2,16 @@
     "projects": {
         "introduction": "I maintain a long list of projects that I someday wish to complete, including a variety of applications, servers and tools. In an effort to keep this list organised, I am documenting my past, current and future projects chronologically on this page.",
         "current": {
-            "name": "grunt-html-compare",
-            "description": "To facilitate improvements to the last updated feature of my website, I am creating a grunt plugin that compares two HTML files and passes the result to a user defined function. This will allow me to construct a build pipeline that only changes the last updated date in the HTML files if other content within the file has changed, as opposed to updating the date every time the pipeline is run.",
-            "link": "https://github.com/barnabycolby/grunt-html-compare"
+            "name": "Website",
+            "description": "This website was initially created to store a public listing of the projects I was working on, but now serves several other purposes. A nice side effect is that it gave me the opportunity to work with lots of new technologies and frameworks that I had wanted to play with, such as angular and grunt.",
+            "link": "https://github.com/barnabycolby/barnabycolby.io"
         },
         "past": [
+            {
+                "name": "grunt-html-compare",
+                "description": "To facilitate improvements to the last updated feature of my website, I am creating a grunt plugin that compares two HTML files and passes the result to a user defined function. This will allow me to construct a build pipeline that only changes the last updated date in the HTML files if other content within the file has changed, as opposed to updating the date every time the pipeline is run.",
+                "link": "https://github.com/barnabycolby/grunt-html-compare"
+            },
             {
                 "name": "PhantomJS Alarm",
                 "description": "My website build pipeline relies heavily on PhantomJS, which unfortunately has no official support for the ARM architecture. Relatively few ARM binaries exist in the wild due to the large amount of resources, uncommonly found in ARM machines, required to build them. Fortunately, the Arch Linux ARM package repositories host the single latest binary, so I wrote a script to automatically check for and download new releases, packaging them in the same way as the official PhantomJS binaries for other architectures are packaged. The resulting archive can be found at <a href=\"https://phantomjs.barnabycolby.io\">https://phantomjs.barnabycolby.io</a>.",
@@ -33,11 +38,6 @@
             }
         ],
         "future": [
-            {
-                "name": "Website",
-                "description": "This website was initially created to store a public listing of the projects I was working on, but now serves several other purposes. A nice side effect is that it gave me the opportunity to work with lots of new technologies and frameworks that I had wanted to play with, such as angular and grunt.",
-                "link": "https://github.com/barnabycolby/barnabycolby.io"
-            },
             {
                 "name": "Magic Mirror",
                 "description": "I want to set up a magic mirror using a raspberry pi. Initially I will experiment with the MagicMirror project at <a href=\"https://github.com/MichMich/MagicMirror\">https://github.com/MichMich/MagicMirror</a> and decide whether to continue using it, potentially writing my own plugins, or to write my own version."
