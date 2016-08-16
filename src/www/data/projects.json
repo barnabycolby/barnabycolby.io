@@ -3,7 +3,8 @@
         "introduction": "I maintain a long list of projects that I someday wish to complete, including a variety of applications, servers and tools. In an effort to keep this list organised, I am documenting my past, current and future projects chronologically on this page.",
         "current": {
                 "name": "Magic Mirror",
-                "description": "I want to set up a magic mirror using a raspberry pi. Initially I will experiment with the MagicMirror project at <a href=\"https://github.com/MichMich/MagicMirror\" target=\"_blank\">https://github.com/MichMich/MagicMirror</a> and decide whether to continue using it, potentially writing my own plugins, or to write my own version."
+                "description": "I want to set up a magic mirror using a raspberry pi. Initially I experimented with the MagicMirror project at <a href=\"https://github.com/MichMich/MagicMirror\" target=\"_blank\">https://github.com/MichMich/MagicMirror</a> and decided to build a custom module to display the other modules in a carousel like fashion. This is useful on smaller screens where there is not enough space to display several components at once.",
+                "link": "https://github.com/barnabycolby/MMM-Carousel"
         },
         "past": [
             {
