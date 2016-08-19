@@ -2,11 +2,15 @@
     "projects": {
         "introduction": "I maintain a long list of projects that I someday wish to complete, including a variety of applications, servers and tools. In an effort to keep this list organised, I am documenting my past, current and future projects chronologically on this page.",
         "current": {
-                "name": "Magic Mirror",
-                "description": "I want to set up a magic mirror using a raspberry pi. Initially I experimented with the MagicMirror project at <a href=\"https://github.com/MichMich/MagicMirror\" target=\"_blank\">https://github.com/MichMich/MagicMirror</a> and decided to build a custom module to display the other modules in a carousel like fashion. This is useful on smaller screens where there is not enough space to display several components at once.",
-                "link": "https://github.com/barnabycolby/MMM-Carousel"
+            "name": "Virgin Media Router Security",
+            "description": "Virgin Media customer support have the ability to configure their superhub externally, without requiring the administrator password. Also worrying are the strange <a href=\"https://www.grc.com/shieldsup\" target=\"_blank\">ShieldsUP</a> results. Given normal standards of router security, this needs to be investigated."
         },
         "past": [
+            {
+                "name": "Magic Mirror",
+                "description": "Using the MagicMirror project at <a href=\"https://github.com/MichMich/MagicMirror\" target=\"_blank\">https://github.com/MichMich/MagicMirror</a>, I set up a display unit using a Raspberry Pi and a small 4 inch display. The lack of screen space led me to develop a custom module to display the individiual components in turn. The mirror displays the BBC top news stories, a clock, the current weather and the weather forecast among other things.",
+                "link": "https://github.com/barnabycolby/MMM-Carousel"
+            },
             {
                 "name": "Website",
                 "description": "This website was initially created to store a public listing of the projects I was working on, but now serves several other purposes. A nice side effect is that it gave me the opportunity to work with lots of new technologies and frameworks that I had wanted to play with, such as angular and grunt.",
@@ -43,10 +47,6 @@
             }
         ],
         "future": [
-            {
-                "name": "Virgin Media Router Security",
-                "description": "Virgin Media customer support have the ability to configure their superhub externally, without requiring the administrator password. Also worrying are the strange <a href=\"https://www.grc.com/shieldsup\" target=\"_blank\">ShieldsUP</a> results. Given normal standards of router security, this needs to be investigated."
-            },
             {
                 "name": "SQRL Android Application",
                 "description": "I wrote a SQRL Client for Android as the Final Year Project for my undergraduate degree. The app can successfully be used to login to SQRL enabled servers but still has a ways to go to achieve full compatibility with the SQRL specification.",
