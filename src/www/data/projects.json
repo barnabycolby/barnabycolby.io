@@ -2,8 +2,9 @@
     "projects": {
         "introduction": "I maintain a long list of projects that I someday wish to complete, including a variety of applications, servers and tools. In an effort to keep this list organised, I am documenting my past, current and future projects chronologically on this page.",
         "current": {
-            "name": "Virgin Media Router Security",
-            "description": "Virgin Media customer support have the ability to configure their superhub externally, without requiring the administrator password. Also worrying are the strange <a href=\"https://www.grc.com/shieldsup\" target=\"_blank\">ShieldsUP</a> results. Given normal standards of router security, this needs to be investigated."
+            "name": "SQRL Android Application",
+            "description": "I wrote a SQRL Client for Android as the Final Year Project for my undergraduate degree. The app can successfully be used to login to SQRL enabled servers but still has a ways to go to achieve full compatibility with the SQRL specification.",
+            "link": "https://github.com/barnabycolby/SQRLClient"
         },
         "past": [
             {
@@ -47,11 +48,6 @@
             }
         ],
         "future": [
-            {
-                "name": "SQRL Android Application",
-                "description": "I wrote a SQRL Client for Android as the Final Year Project for my undergraduate degree. The app can successfully be used to login to SQRL enabled servers but still has a ways to go to achieve full compatibility with the SQRL specification.",
-                "link": "https://github.com/barnabycolby/SQRLClient"
-            },
             {
                 "name": "Backups",
                 "description": "I want to write some backup software that will run on a Raspberry Pi connected to some hard drives. It should be simple enough to use that a non technical user could set it up with their own raspberry pi, providing an alternative solution to commercial cloud backup software.",
