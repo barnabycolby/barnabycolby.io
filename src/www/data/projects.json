@@ -49,6 +49,10 @@
         ],
         "future": [
             {
+                "name": "grunt-jslint-better",
+                "description": "The grunt-jslint project is unmaintained and outdated. A new grunt-jslint-better project should be created to solve this issue."
+            },
+            {
                 "name": "Backups",
                 "description": "I want to write some backup software that will run on a Raspberry Pi connected to some hard drives. It should be simple enough to use that a non technical user could set it up with their own raspberry pi, providing an alternative solution to commercial cloud backup software.",
                 "link": "https://github.com/barnabycolby/backup"
