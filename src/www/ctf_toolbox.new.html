@@ -6,5 +6,7 @@
 {% extends "src/www/includes/layout.nunjucks" %}
 
 {% block content %}
-    <p>This is a CTF toolbox!</p>
+    {% markdown %}
+    {% include "src/www/ctf_toolbox/index.md" %}
+    {% endmarkdown %}
 {% endblock %}
