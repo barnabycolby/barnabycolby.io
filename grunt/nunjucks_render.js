@@ -1,6 +1,9 @@
-/*global module */
+/*global module, require */
 (function () {
     'use strict';
+
+    var markdown = require('nunjucks-markdown'),
+        marked = require('marked');
 
     module.exports = {
         main: {
@@ -8,7 +11,15 @@
             cwd: '<%= sourceWorkingDirectory %>',
             src: ['*.html', '!boilerplate.html'],
             dest: '<%= destinationWorkingDirectory %>/',
-            data: '<%= sourceWorkingDirectory %>/data/*.json'
+            data: '<%= sourceWorkingDirectory %>/data/*.json',
+            options: {
+                modifyEnv: function (env) {
+                    // Enable markdown rendering
+                    markdown.register(env, marked);
+
+                    return env;
+                }
+            }
         },
         assetVersioning: {
             expand: true,

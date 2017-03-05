@@ -1,6 +1,7 @@
 {
     "navigationLinks": [
         { "text": "Projects", "href": "/projects.html" },
-        { "text": "SQRL Server", "href": "https://sqrldemo.barnabycolby.io" }
+        { "text": "SQRL Server", "href": "https://sqrldemo.barnabycolby.io" },
+        { "text": "CTF Toolbox", "href": "/ctf_toolbox.html" }
     ]
 }

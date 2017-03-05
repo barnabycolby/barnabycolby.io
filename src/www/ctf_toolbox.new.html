@@ -1,0 +1,12 @@
+<!-- ========================== projects.html ======================== -->
+<!-- Lists past, current and future personal projects.                 -->
+<!-- ================================================================= -->
+
+{% set pageName = 'CTF Toolbox' %}
+{% extends "src/www/includes/layout.nunjucks" %}
+
+{% block content %}
+    {% markdown %}
+    {% include "src/www/ctf_toolbox/index.md" %}
+    {% endmarkdown %}
+{% endblock %}
