@@ -18,7 +18,11 @@
             },
             // nonull must be included to prevent Grunt from removing the URL sources because it cannot find them locally
             nonull: true,
-            src: [ 'https://test.barnabycolby.io/index.new.html', 'https://test.barnabycolby.io/projects.new.html' ],
+            src: [
+                'https://test.barnabycolby.io/ctf_toolbox.new.html',
+                'https://test.barnabycolby.io/index.new.html',
+                'https://test.barnabycolby.io/projects.new.html'
+            ],
             dest: '<%= destinationWorkingDirectory %>/css/stylesheet.css'
         }
 

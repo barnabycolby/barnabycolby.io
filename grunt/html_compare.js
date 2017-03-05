@@ -30,6 +30,12 @@
                 ignoreSelectors: '#lastUpdated',
                 ignoreMissingSrc: true
             },
+            ctf_toolbox: {
+                expand: true,
+                cwd: '<%= destinationWorkingDirectory %>',
+                src: ['ctf_toolbox.html', 'ctf_toolbox.new.html'],
+                result: updateIfChanged('ctf_toolbox')
+            },
             index: {
                 expand: true,
                 cwd: '<%= destinationWorkingDirectory %>',
