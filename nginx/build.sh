@@ -31,7 +31,7 @@ if [ -d "${nginx_built}" ]; then
 fi
 mkdir ${nginx_built}
 
-for nginx_file_path in ${NGINX_DIR}/nginx-*.conf; do
+for nginx_file_path in ${NGINX_DIR}/*.nginx; do
     base_nginx_file_path="${nginx_file_path##*/}"
     sed -- "s/{{top}}/${escaped_top_value}/g" ${nginx_file_path} > ${nginx_built}/${base_nginx_file_path}
 done

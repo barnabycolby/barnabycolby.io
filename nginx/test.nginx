@@ -1,13 +1,13 @@
 # HTTP
 server {
     server_name test.barnabycolby.io;
-    include {{top}}/nginx-http-common.conf;
+    include {{top}}/http-common.nginx;
 }
 
 # HTTPS
 server {
     server_name test.barnabycolby.io;
-    include {{top}}/nginx-https-common.conf;
+    include {{top}}/https-common.nginx;
 
     location / {
         include /etc/nginx/mime.types;

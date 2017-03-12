@@ -1,0 +1,8 @@
+# Include configuration for each individual site
+include {{top}}/prod.nginx;
+include {{top}}/files.nginx;
+include {{top}}/sqrldemo.nginx;
+include {{top}}/phantomjs.nginx;
+include {{top}}/brnby.nginx;
+include {{top}}/test.nginx;
+include {{top}}/private.nginx;
