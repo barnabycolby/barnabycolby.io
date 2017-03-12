@@ -23,7 +23,8 @@
         "assetVersioning",
         "processhtml:css",
         "htmlmin:webpages",
-        "html_compare"
+        "html_compare",
+        "shell:nginx"
     ],
 
     "assetVersioning": [
