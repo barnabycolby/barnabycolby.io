@@ -17,6 +17,9 @@ server {
         # Matches all html files as well as the root (/)
         location ~ ^\/(.*\.html)?$ {
             add_header cache-control no-cache;
+
+            # When adding headers, we must redeclare all other headers
+            add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
         }
 
         # Matches all static assets
@@ -25,6 +28,9 @@ server {
             # As all static assets have a content hash as part of their name, we can tell the browser to cache them effectively forever (a year)
             # If their content changes, then so does their filename, and the browser requests the new file instead
             add_header cache-control max-age=31536000;
+
+            # When adding headers, we must redeclare all other headers
+            add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
         }
     }
 }

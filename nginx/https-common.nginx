@@ -16,3 +16,6 @@ ssl_prefer_server_ciphers on;
 # Use custom Diffie-Helman parameters to prevent brute force attacks on
 # widely used values
 ssl_dhparam /etc/ssl/barnabycolby.io.dhparams.pem;
+
+# Enable HSTS
+add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
