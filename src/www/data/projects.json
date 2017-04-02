@@ -2,9 +2,9 @@
     "projects": {
         "introduction": "I maintain a long list of projects that I someday wish to complete, including a variety of applications, servers and tools. In an effort to keep this list organised, I am documenting my past, current and future projects chronologically on this page.",
         "current": {
-            "name": "SQRL Android Application",
-            "description": "I wrote a SQRL Client for Android as the Final Year Project for my undergraduate degree. The app can successfully be used to login to SQRL enabled servers but still has a ways to go to achieve full compatibility with the SQRL specification.",
-            "link": "https://github.com/barnabycolby/SQRLClient"
+                "name": "Improve dotfiles repositories",
+                "description": "I have several dotfile repositories on GitHub, each with a specified purpose. It would be tidier and easier to update if they were combined into a single repository, and should also include a script to set up the appropriate symlinks. Perhaps a systemd-timer unit can be created to ensure that the repository is always up to date on system boot. Inspiration can also be drawn from dotfiles.github.io.",
+                "link": "https://github.com/barnabycolby/dotfiles"
         },
         "past": [
             {
@@ -49,6 +49,11 @@
         ],
         "future": [
             {
+                "name": "SQRL Android Application",
+                "description": "I wrote a SQRL Client for Android as the Final Year Project for my undergraduate degree. The app can successfully be used to login to SQRL enabled servers but still has a ways to go to achieve full compatibility with the SQRL specification.",
+                "link": "https://github.com/barnabycolby/SQRLClient"
+            },
+            {
                 "name": "grunt-jslint-better",
                 "description": "The grunt-jslint project is unmaintained and outdated. A new grunt-jslint-better project should be created to solve this issue."
             },
@@ -64,10 +69,6 @@
             {
                 "name": "OCR Monospace Font browser plugin",
                 "description": "To help prevent phishing attacks, I want to create a browser plugin that displays the URL in an OCR monospace font, making devious characters more obvious in URLs such as amaz0n.com."
-            },
-            {
-                "name": "Improve dotfiles repositories",
-                "description": "I have several dotfile repositories on GitHub, each with a specified purpose. It would be tidier and easier to update if they were combined into a single repository, and should also include a script to set up the appropriate symlinks. Perhaps a systemd-timer unit can be created to ensure that the repository is always up to date on system boot. Inspiration can also be drawn from dotfiles.github.io."
             },
             {
                 "name": "Zane Lowe Apple Music Podcast",
