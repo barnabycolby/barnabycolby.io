@@ -2,11 +2,16 @@
     "projects": {
         "introduction": "I maintain a long list of projects that I someday wish to complete, including a variety of applications, servers and tools. In an effort to keep this list organised, I am documenting my past, current and future projects chronologically on this page.",
         "current": {
+            "name": "CTFQA",
+            "description": "A library that makes solving CTF question and answer style scripting challenges much simpler.",
+            "link": "https://github.com/barnabycolby/ctfqa"
+        },
+        "past": [
+            {
                 "name": "Improve dotfiles repositories",
                 "description": "I have several dotfile repositories on GitHub, each with a specified purpose. It would be tidier and easier to update if they were combined into a single repository, and should also include a script to set up the appropriate symlinks. Perhaps a systemd-timer unit can be created to ensure that the repository is always up to date on system boot. Inspiration can also be drawn from dotfiles.github.io.",
                 "link": "https://github.com/barnabycolby/dotfiles"
-        },
-        "past": [
+            },
             {
                 "name": "Magic Mirror",
                 "description": "Using the MagicMirror project at <a href=\"https://github.com/MichMich/MagicMirror\" target=\"_blank\">https://github.com/MichMich/MagicMirror</a>, I set up a display unit using a Raspberry Pi and a small 4 inch display. The lack of screen space led me to develop a custom module to display the individiual components in turn. The mirror displays the BBC top news stories, a clock, the current weather and the weather forecast among other things.",
