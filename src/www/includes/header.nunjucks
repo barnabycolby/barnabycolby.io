@@ -20,7 +20,7 @@
             </ul>
         </nav>
 
-        <p class="navbar-text navbar-right hidden-xs">Computer Scientist</p>
+        <p class="navbar-text navbar-right hidden-xs">Software Engineer</p>
     </div>
 </nav>
 {% endmacro %}
