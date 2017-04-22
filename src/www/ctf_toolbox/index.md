@@ -19,3 +19,6 @@ binwalk <file to check>
 
 ## Scripting boilerplates/libraries
 For question and answer style scripting challenges, use the [CTFQA](https://github.com/barnabycolby/ctfqa) library.
+
+## Programming quirks
+- Floats can be set to the `NaN` value
