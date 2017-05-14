@@ -17,6 +17,10 @@ Are they any other hidden file types?
 binwalk <file to check>
 ```
 
+## Heap exploitation
+- [how2heap](https://github.com/shellphish/how2heap) Examples and explanations of different heap exploits
+- [Diagram](https://raw.githubusercontent.com/cloudburst/libheap/master/heap.png) showing how `malloc`, `realloc` and `free` work
+
 ## Scripting boilerplates/libraries
 For question and answer style scripting challenges, use the [CTFQA](https://github.com/barnabycolby/ctfqa) library.
 
