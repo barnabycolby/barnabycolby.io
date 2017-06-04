@@ -19,3 +19,7 @@ ssl_dhparam /etc/ssl/barnabycolby.io.dhparams.pem;
 
 # Enable HSTS
 add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
+
+# Enable OCSP Stapling
+ssl_stapling on;
+ssl_stapling_verify on;
